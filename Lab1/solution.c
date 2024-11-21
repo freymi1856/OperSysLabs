@@ -96,6 +96,15 @@ int main() {
         // Родительский процесс
         close(pipe_fd[1]);
 
+        int status;
+        wait (&status);
+
+        if (WIFEXITED(status) && WEXITSTATUS(status) != 0){
+            fprintf(stderr, "Дочерний процесс завершился с ошибкой. Родительский процесс завершен\n");
+            close(pipe_fd[0]);
+            return 1;
+        }
+
         int count;
         int results[BUFFER_SIZE];
         while (read(pipe_fd[0], &count, sizeof(int)) > 0) {
