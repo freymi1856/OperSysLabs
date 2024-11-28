@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
-#include <time.h>
+#include <sys/time.h>
 
 #define RUN 32 // Минимальный размер сегмента для TimSort
 
@@ -80,10 +80,11 @@ int main() {
     int* arr = (int*)malloc(n * sizeof(int));
     printf("Введите элементы массива: ");
     for (int i = 0; i < n; i++) {
-        scanf("%d", &arr[i]);
+        arr[i] = rand() % 100;
     }
 
-    clock_t start = clock();
+    struct timeval start, end;
+    gettimeofday(&start, NULL);
 
     int chunkSize = (n + maxThreads - 1) / maxThreads;
     pthread_t threads[maxThreads];
@@ -116,13 +117,14 @@ int main() {
         }
     }
 
-    clock_t end = clock();
+    gettimeofday(&end, NULL);
+    double elapsed_time = (end.tv_sec - start.tv_sec) + (end.tv_usec - start.tv_usec) / 1000000.0;
 
     printf("Отсортированный массив: ");
     for (int i = 0; i < n; i++) {
         printf("%d ", arr[i]);
     }
-    printf("\nВремя выполнения: %f секунд\n", (double)(end - start) / CLOCKS_PER_SEC);
+    printf("\nВремя выполнения: %.6f секунд\n", elapsed_time);
 
     free(arr);
     return 0;
