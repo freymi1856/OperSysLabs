@@ -70,15 +70,23 @@ void* sortThread(void* arg) {
 }
 
 // Основная программа
-int main() {
-    int n, maxThreads;
-    printf("Введите размер массива: ");
-    scanf("%d", &n);
-    printf("Введите максимальное количество потоков: ");
-    scanf("%d", &maxThreads);
+int main(int argc, char* argv[]) {
+    if (argc != 3) {
+        printf("Введите: %s <number_of_threads> <number_of_array>\n", argv[0]);
+        return 1;
+    }
+    int n = atoi(argv[2]);
+    if (n <= 0){
+        printf("Неправильно задано количество чисел в массиве. Число дожно быть больше 0.\n");
+        return 2;
+    }
+    int maxThreads = atoi(argv[1]);
+    if (maxThreads <= 0) {
+        printf("Неправильно задано число потоков. Число должно быть больше 0.\n");
+        return 3;
+    }
 
     int* arr = (int*)malloc(n * sizeof(int));
-    printf("Введите элементы массива: ");
     for (int i = 0; i < n; i++) {
         arr[i] = rand() % 100;
     }
