@@ -131,16 +131,7 @@ int main() {
         sigaction(SIGCHLD, &sa_chld, NULL);
 
         while (1) {
-            if (child_terminated) {
-                // Дочерний процесс завершился, вызываем waitpid
-                int status;
-                waitpid(pid, &status, 0);
-                if (WIFEXITED(status) && WEXITSTATUS(status) != 0) {
-                    fprintf(stderr, "Дочерний процесс завершился с ошибкой\n");
-                }
-                break;
-            }
-
+            
             pause(); // Ждем сигнала
 
             if (shared_memory[0] == 0) break; // Если дочерний процесс закончил
