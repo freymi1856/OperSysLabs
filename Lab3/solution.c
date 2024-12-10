@@ -36,13 +36,13 @@ void process_line(const char *line, int *results, int *count, int *error) {
     }
 
     if (n < 2) {
-        *error = 1;  // Ошибка, если чисел меньше двух
+        *error = 1; // Ошибка, если чисел меньше двух
         return;
     }
 
     for (int i = 1; i < n; i++) {
         if (nums[i] == 0) {
-            *error = 1;  // Деление на 0
+            *error = 1; // Деление на 0
             return;
         }
         results[i - 1] = nums[0] / nums[i];
@@ -92,13 +92,14 @@ int main() {
 
             process_line(line, shared_memory + 1, &count, &error);
             if (error) {
-                fprintf(stderr, "Ошибка: деление на 0\n");
+                shared_memory[0] = -1; // Сигнализируем об ошибке через общую память
+                kill(getppid(), SIGUSR1); // Уведомляем родителя
                 fclose(file);
-                exit(1);
+                exit(1); // Завершаем работу с ошибкой
             }
 
             shared_memory[0] = count; // Записываем количество результатов
-            kill(getppid(), SIGUSR1); // Посылаем сигнал родительскому процессу
+            kill(getppid(), SIGUSR1); // Уведомляем родителя
 
             while (!data_ready); // Ждем подтверждения от родителя
             data_ready = 0;
@@ -130,9 +131,21 @@ int main() {
                 break;
             }
 
-            pause(); // Ждем сигнала
+            pause(); // Ждем сигнал от дочернего процесса
 
-            if (shared_memory[0] == 0) break; // Если дочерний процесс закончил
+            if (shared_memory[0] == 0) break; // Если дочерний процесс закончил работу
+
+            // Проверяем, есть ли ошибка
+            if (shared_memory[0] == -1) {
+                fprintf(stderr, "Ошибка: деление на 0\n");
+                kill(pid, SIGKILL); // Принудительно завершаем дочерний процесс
+                int status;
+                waitpid(pid, &status, 0); // Ждем завершения дочернего процесса
+                if (WIFEXITED(status) && WEXITSTATUS(status) != 0) {
+                    fprintf(stderr, "Дочерний процесс завершился с ошибкой\n");
+                }
+                break;
+            }
 
             printf("Результаты деления: ");
             for (int i = 0; i < shared_memory[0]; i++) {
@@ -143,6 +156,7 @@ int main() {
             kill(pid, SIGUSR1); // Подтверждаем получение данных
         }
 
+        // Очищаем ресурсы
         munmap(shared_memory, BUFFER_SIZE * sizeof(int));
         shm_unlink("/shared_memory");
     }
