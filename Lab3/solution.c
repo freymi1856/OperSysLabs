@@ -29,20 +29,23 @@ void process_line(const char *line, int *results, int *count, int *error) {
     int nums[BUFFER_SIZE];
     int n = 0;
 
+    // Разделяем строку на числа
     char *token = strtok((char *)line, " ");
     while (token != NULL) {
         nums[n++] = atoi(token);
         token = strtok(NULL, " ");
     }
 
+    // Проверка, что в строке как минимум два числа
     if (n < 2) {
-        *error = 1; // Ошибка, если чисел меньше двух
+        *error = 2;  // Ошибка, если чисел меньше двух (не деление на 0)
         return;
     }
 
+    // Выполняем деление, если числа есть
     for (int i = 1; i < n; i++) {
         if (nums[i] == 0) {
-            *error = 1; // Деление на 0
+            *error = 1;  // Деление на 0
             return;
         }
         results[i - 1] = nums[0] / nums[i];
@@ -91,15 +94,22 @@ int main() {
             int count = 0, error = 0;
 
             process_line(line, shared_memory + 1, &count, &error);
-            if (error) {
-                shared_memory[0] = -1; // Сигнализируем об ошибке через общую память
-                kill(getppid(), SIGUSR1); // Уведомляем родителя
+            if (error == 1) { // Деление на 0
+                fprintf(stderr, "Ошибка: деление на 0\n");
                 fclose(file);
-                exit(1); // Завершаем работу с ошибкой
+                shared_memory[0] = -1; // Устанавливаем ошибку в памяти
+                kill(getppid(), SIGUSR1); // Посылаем сигнал родителю
+                exit(1);
+            } else if (error == 2) { // Недостаточно чисел
+                fprintf(stderr, "Ошибка: недостаточно чисел для деления\n");
+                fclose(file);
+                shared_memory[0] = -1; // Устанавливаем ошибку в памяти
+                kill(getppid(), SIGUSR1); // Посылаем сигнал родителю
+                exit(1);
             }
 
             shared_memory[0] = count; // Записываем количество результатов
-            kill(getppid(), SIGUSR1); // Уведомляем родителя
+            kill(getppid(), SIGUSR1); // Посылаем сигнал родительскому процессу
 
             while (!data_ready); // Ждем подтверждения от родителя
             data_ready = 0;
@@ -121,20 +131,21 @@ int main() {
         sigaction(SIGCHLD, &sa_chld, NULL);
 
         while (1) {
-            
-            pause(); // Ждем сигнал от дочернего процесса
-
-            if (shared_memory[0] == 0) break; // Если дочерний процесс закончил работу
-
-            // Проверяем, есть ли ошибка
-            if (shared_memory[0] == -1) {
-                fprintf(stderr, "Ошибка: деление на 0\n");
-                kill(pid, SIGKILL); // Принудительно завершаем дочерний процесс
+            if (child_terminated) {
+                // Дочерний процесс завершился, вызываем waitpid
                 int status;
-                waitpid(pid, &status, 0); // Ждем завершения дочернего процесса
+                waitpid(pid, &status, 0);
                 if (WIFEXITED(status) && WEXITSTATUS(status) != 0) {
                     fprintf(stderr, "Дочерний процесс завершился с ошибкой\n");
                 }
+                break;
+            }
+
+            pause(); // Ждем сигнала
+
+            if (shared_memory[0] == 0) break; // Если дочерний процесс закончил
+
+            if (shared_memory[0] == -1) { // Обработка ошибки
                 break;
             }
 
@@ -147,7 +158,6 @@ int main() {
             kill(pid, SIGUSR1); // Подтверждаем получение данных
         }
 
-        // Очищаем ресурсы
         munmap(shared_memory, BUFFER_SIZE * sizeof(int));
         shm_unlink("/shared_memory");
     }
