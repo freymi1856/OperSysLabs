@@ -24,25 +24,21 @@ void handle_child_termination(int sig) {
     child_terminated = 1;
 }
 
-// Функция для обработки строки с числами
 void process_line(const char *line, int *results, int *count, int *error) {
     int nums[BUFFER_SIZE];
     int n = 0;
 
-    // Разделяем строку на числа
     char *token = strtok((char *)line, " ");
     while (token != NULL) {
         nums[n++] = atoi(token);
         token = strtok(NULL, " ");
     }
 
-    // Проверка, что в строке как минимум два числа
     if (n < 2) {
-        *error = 2;  // Ошибка, если чисел меньше двух (не деление на 0)
+        *error = 2;  // Если чисел меньше двух
         return;
     }
 
-    // Выполняем деление, если числа есть
     for (int i = 1; i < n; i++) {
         if (nums[i] == 0) {
             *error = 1;  // Деление на 0
@@ -59,7 +55,7 @@ int main() {
     printf("Введите имя файла: ");
     scanf("%s", filename);
 
-    // Создаем отображаемый файл
+    // Сощдание отображаемого файла
     int fd = shm_open("/shared_memory", O_CREAT | O_RDWR, 0666);
     if (fd == -1) {
         perror("Ошибка создания отображаемого файла");
@@ -97,21 +93,21 @@ int main() {
             if (error == 1) { // Деление на 0
                 fprintf(stderr, "Ошибка: деление на 0\n");
                 fclose(file);
-                shared_memory[0] = -1; // Устанавливаем ошибку в памяти
-                kill(getppid(), SIGUSR1); // Посылаем сигнал родителю
+                shared_memory[0] = -1;
+                kill(getppid(), SIGUSR1);
                 exit(1);
             } else if (error == 2) { // Недостаточно чисел
                 fprintf(stderr, "Ошибка: недостаточно чисел для деления\n");
                 fclose(file);
-                shared_memory[0] = -1; // Устанавливаем ошибку в памяти
-                kill(getppid(), SIGUSR1); // Посылаем сигнал родителю
+                shared_memory[0] = -1;
+                kill(getppid(), SIGUSR1);
                 exit(1);
             }
 
-            shared_memory[0] = count; // Записываем количество результатов
-            kill(getppid(), SIGUSR1); // Посылаем сигнал родительскому процессу
+            shared_memory[0] = count;
+            kill(getppid(), SIGUSR1);
 
-            while (!data_ready); // Ждем подтверждения от родителя
+            while (!data_ready);
             data_ready = 0;
         }
 
@@ -134,8 +130,9 @@ int main() {
             
             pause(); // Ждем сигнала
 
-            if (shared_memory[0] == 0) break; // Если дочерний процесс закончил
-
+            if (shared_memory[0] == 0) { // Если дочерний процесс закончил
+                break; 
+            }
             if (shared_memory[0] == -1) { // Обработка ошибки
                 break;
             }
