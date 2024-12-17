@@ -1,0 +1,89 @@
+execve("./program1", ["./program1"], 0x7ffe70d475b0 /* 35 vars */) = 0
+brk(NULL)                               = 0x558af35d2000
+arch_prctl(0x3001 /* ARCH_??? */, 0x7fffd5504560) = -1 EINVAL (Invalid argument)
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fa253ab5000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=18199, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 18199, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fa253ab0000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/local/lib/libgcf.so", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=15224, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 16424, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fa253aab000
+mmap(0x7fa253aac000, 4096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7fa253aac000
+mmap(0x7fa253aad000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7fa253aad000
+mmap(0x7fa253aae000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7fa253aae000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/local/lib/liblog.so", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=15640, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 16432, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fa253aa6000
+mmap(0x7fa253aa7000, 4096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7fa253aa7000
+mmap(0x7fa253aa8000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7fa253aa8000
+mmap(0x7fa253aa9000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7fa253aa9000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0I\17\357\204\3$\f\221\2039x\324\224\323\236S"..., 68, 896) = 68
+newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+mmap(NULL, 2264656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fa25387d000
+mprotect(0x7fa2538a5000, 2023424, PROT_NONE) = 0
+mmap(0x7fa2538a5000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7fa2538a5000
+mmap(0x7fa253a3a000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x7fa253a3a000
+mmap(0x7fa253a93000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x215000) = 0x7fa253a93000
+mmap(0x7fa253a99000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fa253a99000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=940560, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 942344, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fa253796000
+mmap(0x7fa2537a4000, 507904, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe000) = 0x7fa2537a4000
+mmap(0x7fa253820000, 372736, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8a000) = 0x7fa253820000
+mmap(0x7fa25387b000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe4000) = 0x7fa25387b000
+close(3)                                = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fa253794000
+arch_prctl(ARCH_SET_FS, 0x7fa253794b80) = 0
+set_tid_address(0x7fa253794e50)         = 71487
+set_robust_list(0x7fa253794e60, 24)     = 0
+rseq(0x7fa253795520, 0x20, 0, 0x53053053) = 0
+mprotect(0x7fa253a93000, 16384, PROT_READ) = 0
+mprotect(0x7fa25387b000, 4096, PROT_READ) = 0
+mprotect(0x7fa253aa9000, 4096, PROT_READ) = 0
+mprotect(0x7fa253aae000, 4096, PROT_READ) = 0
+mprotect(0x558aeba75000, 4096, PROT_READ) = 0
+mprotect(0x7fa253aef000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+munmap(0x7fa253ab0000, 18199)           = 0
+newfstatat(1, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x4), ...}, AT_EMPTY_PATH) = 0
+getrandom("\x4b\xe8\x4a\x2e\x0d\xf9\x32\x08", 8, GRND_NONBLOCK) = 8
+brk(NULL)                               = 0x558af35d2000
+brk(0x558af35f3000)                     = 0x558af35f3000
+write(1, "\320\232\320\276\320\274\320\260\320\275\320\264\321\213:\n", 16) = 16
+write(1, "1 <int> <int> \320\264\320\273\321\217 \320\277\320\276\320\264\321\201\321\207\320"..., 46) = 46
+write(1, "2 <int> \320\264\320\273\321\217 \320\277\320\276\320\264\321\201\321\207\320\265\321\202\320\260 "..., 35) = 35
+write(1, "q \320\264\320\273\321\217 \320\262\321\213\321\205\320\276\320\264\320\260.\n", 23) = 23
+write(1, "\n", 1)                       = 1
+newfstatat(0, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x4), ...}, AT_EMPTY_PATH) = 0
+write(1, "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \320\272\320\276\320\274\320\260\320\275\320\264\321\203: ", 31) = 31
+read(0, "1 16 128\n", 1024)             = 9
+write(1, "\320\235\320\236\320\224 (16, 128) - \320\225\320\262\320\272\320\273\320\270\320\264:"..., 36) = 36
+write(1, "\320\235\320\236\320\224 (16, 128) - \320\235\320\260\320\270\320\262\320\275\321\213\320"..., 38) = 38
+write(1, "\n", 1)                       = 1
+write(1, "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \320\272\320\276\320\274\320\260\320\275\320\264\321\203: ", 31) = 31
+read(0, "2 10\n", 1024)                 = 5
+write(1, "E(2) - \320\237\320\276 \321\204\320\276\321\200\320\274\321\203\320\273\320\265: 2.25"..., 37) = 37
+write(1, "E(2) - \320\237\320\276 \321\201\321\203\320\274\320\274\320\265 \321\200\321\217\320\264\320\276\320"..., 44) = 44
+write(1, "\n", 1)                       = 1
+write(1, "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \320\272\320\276\320\274\320\260\320\275\320\264\321\203: ", 31) = 31
+read(0, "xdxdxdxd\n", 1024)             = 9
+write(1, "\320\235\320\265\320\270\320\267\320\262\320\265\321\201\321\202\320\275\320\260\321\217 \320\272\320\276\320\274\320\260\320"..., 93) = 93
+write(1, "\n", 1)                       = 1
+write(1, "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \320\272\320\276\320\274\320\260\320\275\320\264\321\203: ", 31) = 31
+read(0, "q\n", 1024)                    = 2
+write(1, "\n", 1)                       = 1
+exit_group(0)                           = ?
++++ exited with 0 +++
