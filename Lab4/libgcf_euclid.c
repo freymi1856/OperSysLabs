@@ -1,6 +1,6 @@
 #include "libgcf.h"
 
-int GCF(int A, int B) {
+int GCF_EUCLID(int A, int B) {
     while (B != 0) {
         int temp = B;
         B = A % B;

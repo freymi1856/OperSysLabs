@@ -7,35 +7,40 @@ MATH_LIB = -lm
 RM = rm -f
 
 # Исходные файлы и программы
-GCF_SRCS = libgcf_euclid.c libgcf_naive.c
+GCF_SRCS = libgcf_euclid.c libgcf_native.c
 LOG_SRCS = liblog_formula.c liblog_summ.c
+GCF_OBJS = libgcf_euclid.o libgcf_native.o
+LOG_OBJS = liblog_formula.o liblog_summ.o
 PROGRAMS = program1 program2
 
 # Цели
 all: $(PROGRAMS)
 
 # Динамические библиотеки
-libgcf_euclid.so: libgcf_euclid.o
+libgcf.so: $(GCF_OBJS)
 	$(CC) $(LDFLAGS) -o $@ $^
 
-libgcf_naive.so: libgcf_naive.o
-	$(CC) $(LDFLAGS) -o $@ $^
-
-liblog_formula.so: liblog_formula.o
-	$(CC) $(LDFLAGS) -o $@ $^ $(MATH_LIB)
-
-liblog_summ.so: liblog_summ.o
+liblog.so: $(LOG_OBJS)
 	$(CC) $(LDFLAGS) -o $@ $^ $(MATH_LIB)
 
 # Компиляция исходников
-%.o: %.c
+libgcf_euclid.o: libgcf_euclid.c
+	$(CC) $(CFLAGS) $< -o $@
+
+libgcf_native.o: libgcf_native.c
+	$(CC) $(CFLAGS) $< -o $@
+
+liblog_formula.o: liblog_formula.c
+	$(CC) $(CFLAGS) $< -o $@
+
+liblog_summ.o: liblog_summ.c
 	$(CC) $(CFLAGS) $< -o $@
 
 # Сборка программ
-program1: program1.c libgcf_euclid.so liblog_formula.so
-	$(CC) -o $@ $< -L. -lgcf_euclid -llog_formula $(MATH_LIB)
+program1: program1.c libgcf.so liblog.so
+	$(CC) -o $@ $< -L. -lgcf -llog $(MATH_LIB)
 
-program2: program2.c libgcf_euclid.so liblog_formula.so
+program2: program2.c
 	$(CC) -o $@ $< $(DLFLAGS) $(MATH_LIB)
 
 # Запуск программ
