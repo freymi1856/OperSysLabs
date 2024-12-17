@@ -9,7 +9,6 @@ int main() {
     int (*GCF_EUCLID)(int, int), (*GCF_NATIVE)(int, int);
     float (*E_FORMULA)(int), (*E_SUMM)(int);
 
-    // Загружаем библиотеки
     gcf_lib = dlopen("./libgcf.so", RTLD_LAZY);
     if (!gcf_lib) {
         fprintf(stderr, "Ошибка при загрузке libgcf.so: %s\n", dlerror());
@@ -23,7 +22,6 @@ int main() {
         exit(EXIT_FAILURE);
     }
 
-    // Загружаем функции для НОД
     GCF_EUCLID = dlsym(gcf_lib, "GCF_EUCLID");
     if (!GCF_EUCLID) {
         fprintf(stderr, "Ошибка загрузки GCF_EUCLID: %s\n", dlerror());
@@ -40,7 +38,6 @@ int main() {
         exit(EXIT_FAILURE);
     }
 
-    // Загружаем функции для числа e
     E_FORMULA = dlsym(log_lib, "E_FORMULA");
     if (!E_FORMULA) {
         fprintf(stderr, "Ошибка загрузки E_FORMULA: %s\n", dlerror());
@@ -57,31 +54,47 @@ int main() {
         exit(EXIT_FAILURE);
     }
 
-    // Обработка команды
-    char command[100];
-    printf("Введите команду: ");
-    fgets(command, 100, stdin);
+    char command[256];
+    printf("Команды:\n");
+    printf("1 <int> <int> для подсчета НОД.\n");
+    printf("2 <int> для подсчета E.\n");
+    printf("q для выхода.\n");
+    printf("\n");
+    
+    while (1) {
+        printf("Введите команду: ");
+        fgets(command, sizeof(command), stdin);
 
-    if (strncmp(command, "1", 1) == 0) {
-        // Ввод чисел для НОД
-        int a, b;
-        sscanf(command, "1 %d %d", &a, &b);
+        if (command[0] == '1') { // Подсчет НОД
+            int a, b;
+            if (sscanf(command, "1 %d %d", &a, &b) != 2){
+                printf("Некорректный ввод. Введите: 1 <int> <int>\n\n");
+                continue;
+            }
         
-        // Вывод результата НОД для двух методов
-        printf("НОД (%d, %d) - Евклид: %d\n", a, b, GCF_EUCLID(a, b));
-        printf("НОД (%d, %d) - Наивный: %d\n", a, b, GCF_NATIVE(a, b));
+            printf("НОД (%d, %d) - Евклид: %d\n", a, b, GCF_EUCLID(a, b));
+            printf("НОД (%d, %d) - Наивный: %d\n", a, b, GCF_NATIVE(a, b));
+            printf("\n");
 
-    } else if (strncmp(command, "2", 1) == 0) {
-        // Ввод числа для вычисления e
-        int x;
-        sscanf(command, "2 %d", &x);
+        } else if (command[0] == '2') { //Подсчет числа e
+            int x;
+            if (sscanf(command, "2 %d", &x) != 1){
+                printf("Некорректный ввод. Введите: 2 <int>\n\n");
+                continue;
+            }
         
-        // Вывод результата вычисления числа e для двух методов
-        printf("Число e (%d) - по формуле: %.6f\n", x, E_FORMULA(x));
-        printf("Число e (%d) - по сумме рядов: %.6f\n", x, E_SUMM(x));
-    } else {
-        printf("Неизвестная команда.\n");
+            printf("Число e (%d) - по формуле: %.6f\n", x, E_FORMULA(x));
+            printf("Число e (%d) - по сумме рядов: %.6f\n", x, E_SUMM(x));
+            printf("\n");
+
+        } else if (command[0] == 'q') { //Выход
+            break;
+        } else {
+            printf("Неизвестная команда. Используйте 1 для НОД и 2 для E.\n\n");
+        }
     }
+
+    printf("\n");
 
     dlclose(gcf_lib);
     dlclose(log_lib);
