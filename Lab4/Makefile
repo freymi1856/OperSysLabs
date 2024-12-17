@@ -22,10 +22,10 @@ libgcf_naive.so: libgcf_naive.o
 	$(CC) $(LDFLAGS) -o $@ $^
 
 liblog_formula.so: liblog_formula.o
-	$(CC) $(LDFLAGS) -o $@ $^
+	$(CC) $(LDFLAGS) -o $@ $^ $(MATH_LIB)
 
 liblog_summ.so: liblog_summ.o
-	$(CC) $(LDFLAGS) -o $@ $^
+	$(CC) $(LDFLAGS) -o $@ $^ $(MATH_LIB)
 
 # Компиляция исходников
 %.o: %.c
