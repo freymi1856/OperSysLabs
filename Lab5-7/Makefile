@@ -2,16 +2,16 @@ CC = gcc
 CFLAGS = -Wall -Wextra -g
 LDFLAGS = -lzmq
 
-all: controller compute_node
+all: controller worker
 
 controller: controller.c
 	$(CC) $(CFLAGS) -o controller controller.c $(LDFLAGS)
 
-compute_node: compute_node.c
-	$(CC) $(CFLAGS) -o compute_node compute_node.c $(LDFLAGS)
+worker: worker.c
+	$(CC) $(CFLAGS) -o worker worker.c $(LDFLAGS)
 
 clean:
-	rm -f controller compute_node
+	rm -f controller worker
 
 run:
 	./controller
