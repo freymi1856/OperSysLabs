@@ -6,6 +6,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <errno.h>
+#include <signal.h>
 
 // Узел бинарного дерева
 typedef struct Node {
@@ -43,6 +44,12 @@ Node* find_node(Node *root, int id) {
     if (id == root->id) return root;
     if (id < root->id) return find_node(root->left, id);
     return find_node(root->right, id);
+}
+
+void sigchld_handler(int signum) {
+    while (waitpid(-1, NULL, WNOHANG) > 0) {
+        // Цикл извлекает все завершённые дочерние процессы.
+    }
 }
 
 // Рекурсивное освобождение дерева и завершение процессов
@@ -106,6 +113,11 @@ int send_request(void *context, const char *endpoint, const char *request, char 
 }
 
 int main() {
+    struct sigaction sa;
+    sa.sa_handler = sigchld_handler;
+    sa.sa_flags = SA_RESTART | SA_NOCLDSTOP;
+    sigaction(SIGCHLD, &sa, NULL);
+
     void *context = zmq_ctx_new();
     if (!context) {
         fprintf(stderr, "Error: cannot create ZMQ context\n");
