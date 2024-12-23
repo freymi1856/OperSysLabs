@@ -47,24 +47,53 @@ Node* find_node(Node *root, int id) {
 }
 
 void sigchld_handler(int signum) {
-    while (waitpid(-1, NULL, WNOHANG) > 0) {
-        // Цикл извлекает все завершённые дочерние процессы.
+    int saved_errno = errno; // Сохранение текущей ошибки
+    pid_t pid;
+
+    while ((pid = waitpid(-1, NULL, WNOHANG)) > 0) {
+
     }
+
+    if (pid == -1 && errno != ECHILD) {
+        perror("waitpid");
+    }
+
+    errno = saved_errno; // Восстановление ошибки
 }
 
-// Рекурсивное освобождение дерева и завершение процессов
-void cleanup_tree(Node *node) {
-    if (!node) return;
+// Освобождение дерева
+void free_tree(Node *root) {
+    if (!root) return;
+    free_tree(root->left);
+    free_tree(root->right);
+    free(root);
+}
 
-    cleanup_tree(node->left);
-    cleanup_tree(node->right);
+// Очистка завершённых процессов
+void cleanup_nodes(Node *root) {
+    if (!root) return;
 
-    if (node->pid > 0) {
-        kill(node->pid, SIGKILL);
-        waitpid(node->pid, NULL, 0);
+    if (root->pid > 0) {
+        if (kill(root->pid, 0) == -1 && errno == ESRCH) {
+            root->pid = -1; // Процесс завершён
+        }
     }
 
-    free(node);
+    if (root->pid == -1) {
+        unlink(root->endpoint + 6); // Удаление файла сокета
+    }
+
+    cleanup_nodes(root->left);
+    cleanup_nodes(root->right);
+}
+
+void cleanup_ipc_files(Node *root) {
+    if (!root) return;
+    if (root->pid == -1) {
+        unlink(root->endpoint + 6); // Удаление файла сокета
+    }
+    cleanup_ipc_files(root->left);
+    cleanup_ipc_files(root->right);
 }
 
 // Отправка запросов узлу
@@ -74,10 +103,11 @@ int send_request(void *context, const char *endpoint, const char *request, char 
 
     int timeout = 1000; 
     zmq_setsockopt(socket, ZMQ_RCVTIMEO, &timeout, sizeof(int));
+    zmq_setsockopt(socket, ZMQ_LINGER, &timeout, sizeof(int));
 
     if (zmq_connect(socket, endpoint) != 0) {
         zmq_close(socket);
-        return -1;
+        return -1; // Узел недоступен
     }
 
     zmq_msg_t msg;
@@ -96,7 +126,7 @@ int send_request(void *context, const char *endpoint, const char *request, char 
     if (rc == -1) {
         zmq_msg_close(&resp);
         zmq_close(socket);
-        return -1;
+        return -1; // Ошибка при получении ответа
     }
     int len = rc;
     if (len < (int)reply_size) {
@@ -215,6 +245,12 @@ int main() {
                 continue;
             }
 
+            // Проверка существования процесса
+            if (node->pid > 0 && kill(node->pid, 0) == -1 && errno == ESRCH) {
+                node->pid = -1; // Процесс завершён
+                unlink(node->endpoint + 6); // Удаление IPC-файла
+            }
+
             char reply[256];
             if (send_request(context, node->endpoint, "ping", reply, sizeof(reply)) != 0) {
                 printf("Ok: 0\n");
@@ -223,13 +259,18 @@ int main() {
             printf("%s\n", reply);
 
         } else if (strcmp(cmd, "exit") == 0) {
+            cleanup_nodes(root);
+            cleanup_ipc_files(root);
+            free_tree(root);
+            zmq_ctx_shutdown(context); // Принудительное завершение контекста
+            zmq_ctx_term(context); // Уничтожение контекста ZMQ
+
+            printf("Exiting...\n");
             break;
         } else {
             printf("Error: Unknown command\n");
         }
     }
 
-    cleanup_tree(root);
-    zmq_ctx_destroy(context);
     return 0;
 }
