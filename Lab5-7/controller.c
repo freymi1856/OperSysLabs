@@ -178,7 +178,7 @@ int main() {
 
             char reply[256];
             if (send_request(context, node->endpoint, "ping", reply, sizeof(reply)) != 0) {
-                printf("Error:%d: Node is unavailable\n", node_id);
+                printf("Ok: 0");
                 continue;
             }
             printf("%s\n", reply);

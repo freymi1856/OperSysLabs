@@ -78,7 +78,7 @@ int main(int argc, char *argv[]) {
             }
 
         } else if (strcmp(cmd, "ping") == 0) {
-            zmq_send(socket, "pong", 4, 0);
+            zmq_send(socket, "Ok: 1", 5, 0);
         } else {
             zmq_send(socket, "Error: Unknown command", 23, 0);
         }
