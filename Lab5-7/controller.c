@@ -16,22 +16,25 @@ typedef struct Node {
     struct Node *right;
 } Node;
 
-// Глобальный корень идеально сбалансированного дерева
+// Глобальный корень дерева
 Node *root = NULL;
 
-// Создание узла
-Node* create_balanced_tree(int *ids, int start, int end) {
-    if (start > end) return NULL;
-    int mid = (start + end) / 2;
-
-    Node *node = (Node*)malloc(sizeof(Node));
-    node->id = ids[mid];
-    snprintf(node->endpoint, sizeof(node->endpoint), "ipc:///tmp/node_%d", ids[mid]);
-    node->pid = -1; // Процесс создаётся позже
-    node->left = create_balanced_tree(ids, start, mid - 1);
-    node->right = create_balanced_tree(ids, mid + 1, end);
-
-    return node;
+// Создание нового узла
+Node* add_node(Node *root, int id) {
+    if (!root) {
+        Node *node = (Node*)malloc(sizeof(Node));
+        node->id = id;
+        snprintf(node->endpoint, sizeof(node->endpoint), "ipc:///tmp/node_%d", id);
+        node->pid = -1;
+        node->left = node->right = NULL;
+        return node;
+    }
+    if (id < root->id) {
+        root->left = add_node(root->left, id);
+    } else if (id > root->id) {
+        root->right = add_node(root->right, id);
+    }
+    return root;
 }
 
 // Поиск узла по ID
@@ -42,7 +45,22 @@ Node* find_node(Node *root, int id) {
     return find_node(root->right, id);
 }
 
-// Функция отправки запросов узлу
+// Рекурсивное освобождение дерева и завершение процессов
+void cleanup_tree(Node *node) {
+    if (!node) return;
+
+    cleanup_tree(node->left);
+    cleanup_tree(node->right);
+
+    if (node->pid > 0) {
+        kill(node->pid, SIGKILL);
+        waitpid(node->pid, NULL, 0);
+    }
+
+    free(node);
+}
+
+// Отправка запросов узлу
 int send_request(void *context, const char *endpoint, const char *request, char *reply, size_t reply_size) {
     void *socket = zmq_socket(context, ZMQ_REQ);
     if (!socket) return -1;
@@ -94,29 +112,6 @@ int main() {
         return 1;
     }
 
-    // Создаём идеально сбалансированное дерево
-    int ids[] = {10, 20, 30, 40, 50}; // Пример ID узлов
-    int n = sizeof(ids) / sizeof(ids[0]);
-    root = create_balanced_tree(ids, 0, n - 1);
-
-    // Запускаем процессы для узлов
-    for (int i = 0; i < n; i++) {
-        Node *node = find_node(root, ids[i]);
-        if (!node) continue;
-
-        pid_t pid = fork();
-        if (pid == -1) {
-            perror("fork");
-            continue;
-        }
-        if (pid == 0) {
-            execl("./worker", "./worker", node->endpoint, (char*)NULL);
-            perror("exec");
-            exit(1);
-        }
-        node->pid = pid;
-    }
-
     char line[1024];
     while (1) {
         printf("> ");
@@ -126,7 +121,39 @@ int main() {
         char *cmd = strtok(line, " \t\n");
         if (!cmd) continue;
 
-        if (strcmp(cmd, "exec") == 0) {
+        if (strcmp(cmd, "create") == 0) {
+            char *id_str = strtok(NULL, " \t\n");
+            if (!id_str) {
+                printf("Error: Invalid command\n");
+                continue;
+            }
+            int node_id = atoi(id_str);
+
+            Node *node = find_node(root, node_id);
+            if (node) {
+                printf("Error: Already exists\n");
+                continue;
+            }
+
+            root = add_node(root, node_id);
+            node = find_node(root, node_id);
+
+            pid_t pid = fork();
+            if (pid == -1) {
+                perror("fork");
+                printf("Error: Cannot create node\n");
+                continue;
+            }
+            if (pid == 0) {
+                execl("./worker", "./worker", node->endpoint, (char*)NULL);
+                perror("exec");
+                exit(1);
+            }
+
+            node->pid = pid;
+            printf("Ok: %d\n", pid);
+
+        } else if (strcmp(cmd, "exec") == 0) {
             char *id_str = strtok(NULL, " \t\n");
             if (!id_str) {
                 printf("Error: Invalid command\n");
@@ -149,8 +176,8 @@ int main() {
             char pattern_string[109];
             if (!fgets(pattern_string, sizeof(pattern_string), stdin)) continue;
 
-            text_string[strcspn(text_string, "\n")] = '\0';  // Убираем \n
-            pattern_string[strcspn(pattern_string, "\n")] = '\0'; // Убираем \n
+            text_string[strcspn(text_string, "\n")] = '\0';
+            pattern_string[strcspn(pattern_string, "\n")] = '\0';
 
             char request[256];
             snprintf(request, sizeof(request), "exec %s %s", text_string, pattern_string);
@@ -178,7 +205,7 @@ int main() {
 
             char reply[256];
             if (send_request(context, node->endpoint, "ping", reply, sizeof(reply)) != 0) {
-                printf("Ok: 0");
+                printf("Ok: 0\n");
                 continue;
             }
             printf("%s\n", reply);
@@ -190,14 +217,7 @@ int main() {
         }
     }
 
-    // Завершение работы
-    for (int i = 0; i < n; i++) {
-        Node *node = find_node(root, ids[i]);
-        if (node && node->pid > 0) {
-            kill(node->pid, SIGKILL);
-        }
-    }
-
+    cleanup_tree(root);
     zmq_ctx_destroy(context);
     return 0;
 }
