@@ -1,0 +1,2466 @@
+29185 execve("./controller", ["./controller"], 0x7ffcdd6b3338 /* 36 vars */) = 0
+29185 brk(NULL)                         = 0x555878bd2000
+29185 arch_prctl(0x3001 /* ARCH_??? */, 0x7fffff25f020) = -1 EINVAL (Invalid argument)
+29185 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f913b417000
+29185 access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+29185 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=20287, ...}, AT_EMPTY_PATH) = 0
+29185 mmap(NULL, 20287, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f913b412000
+29185 close(3)                          = 0
+29185 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libzmq.so.5", O_RDONLY|O_CLOEXEC) = 3
+29185 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\240\233\1\0\0\0\0\0"..., 832) = 832
+29185 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=634936, ...}, AT_EMPTY_PATH) = 0
+29185 mmap(NULL, 636784, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f913b376000
+29185 mmap(0x7f913b38e000, 397312, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x18000) = 0x7f913b38e000
+29185 mmap(0x7f913b3ef000, 106496, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x79000) = 0x7f913b3ef000
+29185 mmap(0x7f913b409000, 36864, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x92000) = 0x7f913b409000
+29185 close(3)                          = 0
+29185 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+29185 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+29185 pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+29185 pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+29185 pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0I\17\357\204\3$\f\221\2039x\324\224\323\236S"..., 68, 896) = 68
+29185 newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+29185 pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+29185 mmap(NULL, 2264656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f913b14d000
+29185 mprotect(0x7f913b175000, 2023424, PROT_NONE) = 0
+29185 mmap(0x7f913b175000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7f913b175000
+29185 mmap(0x7f913b30a000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x7f913b30a000
+29185 mmap(0x7f913b363000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x215000) = 0x7f913b363000
+29185 mmap(0x7f913b369000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f913b369000
+29185 close(3)                          = 0
+29185 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libbsd.so.0", O_RDONLY|O_CLOEXEC) = 3
+29185 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29185 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=89096, ...}, AT_EMPTY_PATH) = 0
+29185 mmap(NULL, 94432, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f913b135000
+29185 mprotect(0x7f913b139000, 69632, PROT_NONE) = 0
+29185 mmap(0x7f913b139000, 53248, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x7f913b139000
+29185 mmap(0x7f913b146000, 12288, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x11000) = 0x7f913b146000
+29185 mmap(0x7f913b14a000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x14000) = 0x7f913b14a000
+29185 mmap(0x7f913b14c000, 224, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f913b14c000
+29185 close(3)                          = 0
+29185 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libsodium.so.23", O_RDONLY|O_CLOEXEC) = 3
+29185 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29185 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=355040, ...}, AT_EMPTY_PATH) = 0
+29185 mmap(NULL, 357440, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f913b0dd000
+29185 mprotect(0x7f913b0e9000, 303104, PROT_NONE) = 0
+29185 mmap(0x7f913b0e9000, 229376, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xc000) = 0x7f913b0e9000
+29185 mmap(0x7f913b121000, 69632, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x44000) = 0x7f913b121000
+29185 mmap(0x7f913b133000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x55000) = 0x7f913b133000
+29185 close(3)                          = 0
+29185 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpgm-5.3.so.0", O_RDONLY|O_CLOEXEC) = 3
+29185 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\340L\0\0\0\0\0\0"..., 832) = 832
+29185 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=310264, ...}, AT_EMPTY_PATH) = 0
+29185 mmap(NULL, 329808, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f913b08c000
+29185 mmap(0x7f913b090000, 172032, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x7f913b090000
+29185 mmap(0x7f913b0ba000, 118784, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2e000) = 0x7f913b0ba000
+29185 mmap(0x7f913b0d7000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4a000) = 0x7f913b0d7000
+29185 mmap(0x7f913b0d9000, 14416, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f913b0d9000
+29185 close(3)                          = 0
+29185 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libnorm.so.1", O_RDONLY|O_CLOEXEC) = 3
+29185 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0 \255\0\0\0\0\0\0"..., 832) = 832
+29185 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=497824, ...}, AT_EMPTY_PATH) = 0
+29185 mmap(NULL, 1223168, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f913af61000
+29185 mprotect(0x7f913af6b000, 446464, PROT_NONE) = 0
+29185 mmap(0x7f913af6b000, 286720, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xa000) = 0x7f913af6b000
+29185 mmap(0x7f913afb1000, 155648, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x50000) = 0x7f913afb1000
+29185 mmap(0x7f913afd8000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x76000) = 0x7f913afd8000
+29185 mmap(0x7f913afdc000, 719360, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f913afdc000
+29185 close(3)                          = 0
+29185 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f913af5f000
+29185 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgssapi_krb5.so.2", O_RDONLY|O_CLOEXEC) = 3
+29185 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29185 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=338648, ...}, AT_EMPTY_PATH) = 0
+29185 mmap(NULL, 340960, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f913af0b000
+29185 mprotect(0x7f913af16000, 282624, PROT_NONE) = 0
+29185 mmap(0x7f913af16000, 229376, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xb000) = 0x7f913af16000
+29185 mmap(0x7f913af4e000, 49152, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x43000) = 0x7f913af4e000
+29185 mmap(0x7f913af5b000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4f000) = 0x7f913af5b000
+29185 close(3)                          = 0
+29185 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = 3
+29185 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29185 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=2260296, ...}, AT_EMPTY_PATH) = 0
+29185 mmap(NULL, 2275520, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f913acdf000
+29185 mprotect(0x7f913ad79000, 1576960, PROT_NONE) = 0
+29185 mmap(0x7f913ad79000, 1118208, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x9a000) = 0x7f913ad79000
+29185 mmap(0x7f913ae8a000, 454656, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1ab000) = 0x7f913ae8a000
+29185 mmap(0x7f913aefa000, 57344, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x21a000) = 0x7f913aefa000
+29185 mmap(0x7f913af08000, 10432, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f913af08000
+29185 close(3)                          = 0
+29185 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
+29185 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29185 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=125488, ...}, AT_EMPTY_PATH) = 0
+29185 mmap(NULL, 127720, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f913acbf000
+29185 mmap(0x7f913acc2000, 94208, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7f913acc2000
+29185 mmap(0x7f913acd9000, 16384, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a000) = 0x7f913acd9000
+29185 mmap(0x7f913acdd000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1d000) = 0x7f913acdd000
+29185 close(3)                          = 0
+29185 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libmd.so.0", O_RDONLY|O_CLOEXEC) = 3
+29185 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29185 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=47472, ...}, AT_EMPTY_PATH) = 0
+29185 mmap(NULL, 49384, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f913acb2000
+29185 mmap(0x7f913acb4000, 28672, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f913acb4000
+29185 mmap(0x7f913acbb000, 8192, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x9000) = 0x7f913acbb000
+29185 mmap(0x7f913acbd000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xa000) = 0x7f913acbd000
+29185 close(3)                          = 0
+29185 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+29185 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29185 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=21448, ...}, AT_EMPTY_PATH) = 0
+29185 mmap(NULL, 16424, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f913acad000
+29185 mmap(0x7f913acae000, 4096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7f913acae000
+29185 mmap(0x7f913acaf000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f913acaf000
+29185 mmap(0x7f913acb0000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f913acb0000
+29185 close(3)                          = 0
+29185 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+29185 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29185 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=940560, ...}, AT_EMPTY_PATH) = 0
+29185 mmap(NULL, 942344, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f913abc6000
+29185 mmap(0x7f913abd4000, 507904, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe000) = 0x7f913abd4000
+29185 mmap(0x7f913ac50000, 372736, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8a000) = 0x7f913ac50000
+29185 mmap(0x7f913acab000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe4000) = 0x7f913acab000
+29185 close(3)                          = 0
+29185 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f913abc4000
+29185 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libkrb5.so.3", O_RDONLY|O_CLOEXEC) = 3
+29185 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29185 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=827936, ...}, AT_EMPTY_PATH) = 0
+29185 mmap(NULL, 830576, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f913aaf9000
+29185 mprotect(0x7f913ab1a000, 634880, PROT_NONE) = 0
+29185 mmap(0x7f913ab1a000, 380928, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x21000) = 0x7f913ab1a000
+29185 mmap(0x7f913ab77000, 249856, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x7e000) = 0x7f913ab77000
+29185 mmap(0x7f913abb5000, 61440, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xbb000) = 0x7f913abb5000
+29185 close(3)                          = 0
+29185 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libk5crypto.so.3", O_RDONLY|O_CLOEXEC) = 3
+29185 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29185 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=182864, ...}, AT_EMPTY_PATH) = 0
+29185 mmap(NULL, 188472, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f913aaca000
+29185 mprotect(0x7f913aace000, 163840, PROT_NONE) = 0
+29185 mmap(0x7f913aace000, 110592, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x7f913aace000
+29185 mmap(0x7f913aae9000, 49152, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1f000) = 0x7f913aae9000
+29185 mmap(0x7f913aaf6000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2b000) = 0x7f913aaf6000
+29185 mmap(0x7f913aaf8000, 56, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f913aaf8000
+29185 close(3)                          = 0
+29185 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libcom_err.so.2", O_RDONLY|O_CLOEXEC) = 3
+29185 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29185 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=18504, ...}, AT_EMPTY_PATH) = 0
+29185 mmap(NULL, 20552, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f913aac4000
+29185 mmap(0x7f913aac6000, 4096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f913aac6000
+29185 mmap(0x7f913aac7000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7f913aac7000
+29185 mmap(0x7f913aac8000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7f913aac8000
+29185 close(3)                          = 0
+29185 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libkrb5support.so.0", O_RDONLY|O_CLOEXEC) = 3
+29185 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29185 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=52016, ...}, AT_EMPTY_PATH) = 0
+29185 mmap(NULL, 54224, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f913aab6000
+29185 mprotect(0x7f913aab9000, 36864, PROT_NONE) = 0
+29185 mmap(0x7f913aab9000, 24576, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7f913aab9000
+29185 mmap(0x7f913aabf000, 8192, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x9000) = 0x7f913aabf000
+29185 mmap(0x7f913aac2000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xb000) = 0x7f913aac2000
+29185 close(3)                          = 0
+29185 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libkeyutils.so.1", O_RDONLY|O_CLOEXEC) = 3
+29185 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29185 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=22600, ...}, AT_EMPTY_PATH) = 0
+29185 mmap(NULL, 24592, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f913aaaf000
+29185 mmap(0x7f913aab1000, 8192, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f913aab1000
+29185 mmap(0x7f913aab3000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x7f913aab3000
+29185 mmap(0x7f913aab4000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x7f913aab4000
+29185 close(3)                          = 0
+29185 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libresolv.so.2", O_RDONLY|O_CLOEXEC) = 3
+29185 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29185 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=68552, ...}, AT_EMPTY_PATH) = 0
+29185 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f913aaad000
+29185 mmap(NULL, 80456, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f913aa99000
+29185 mmap(0x7f913aa9c000, 40960, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7f913aa9c000
+29185 mmap(0x7f913aaa6000, 12288, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xd000) = 0x7f913aaa6000
+29185 mmap(0x7f913aaa9000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xf000) = 0x7f913aaa9000
+29185 mmap(0x7f913aaab000, 6728, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f913aaab000
+29185 close(3)                          = 0
+29185 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f913aa97000
+29185 mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f913aa94000
+29185 arch_prctl(ARCH_SET_FS, 0x7f913aa949c0) = 0
+29185 set_tid_address(0x7f913aa94c90)   = 29185
+29185 set_robust_list(0x7f913aa94ca0, 24) = 0
+29185 rseq(0x7f913aa95360, 0x20, 0, 0x53053053) = 0
+29185 mprotect(0x7f913b363000, 16384, PROT_READ) = 0
+29185 mprotect(0x7f913aaa9000, 4096, PROT_READ) = 0
+29185 mprotect(0x7f913aab4000, 4096, PROT_READ) = 0
+29185 mprotect(0x7f913aac2000, 4096, PROT_READ) = 0
+29185 mprotect(0x7f913aac8000, 4096, PROT_READ) = 0
+29185 mprotect(0x7f913aaf6000, 4096, PROT_READ) = 0
+29185 mprotect(0x7f913abb5000, 53248, PROT_READ) = 0
+29185 mprotect(0x7f913acab000, 4096, PROT_READ) = 0
+29185 mprotect(0x7f913acb0000, 4096, PROT_READ) = 0
+29185 mprotect(0x7f913acbd000, 4096, PROT_READ) = 0
+29185 mprotect(0x7f913acdd000, 4096, PROT_READ) = 0
+29185 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f913aa92000
+29185 mprotect(0x7f913aefa000, 45056, PROT_READ) = 0
+29185 mprotect(0x7f913af5b000, 8192, PROT_READ) = 0
+29185 mprotect(0x7f913afd8000, 12288, PROT_READ) = 0
+29185 mprotect(0x7f913b0d7000, 4096, PROT_READ) = 0
+29185 mprotect(0x7f913b133000, 4096, PROT_READ) = 0
+29185 mprotect(0x7f913b14a000, 4096, PROT_READ) = 0
+29185 mprotect(0x7f913b409000, 32768, PROT_READ) = 0
+29185 mprotect(0x55586c369000, 4096, PROT_READ) = 0
+29185 mprotect(0x7f913b451000, 8192, PROT_READ) = 0
+29185 prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+29185 munmap(0x7f913b412000, 20287)     = 0
+29185 getrandom("\x8f\xa4\xf4\x34\xd5\xd4\xb5\x53", 8, GRND_NONBLOCK) = 8
+29185 brk(NULL)                         = 0x555878bd2000
+29185 brk(0x555878bf3000)               = 0x555878bf3000
+29185 rt_sigaction(SIGCHLD, {sa_handler=0x55586c36672b, sa_mask=[ILL TRAP ABRT BUS KILL PIPE ALRM TERM CONT STOP TTIN TTOU XFSZ VTALRM WINCH IO PWR RT_1 RT_5 RT_8 RT_9 RT_10 RT_11 RT_12 RT_13 RT_14 RT_15], sa_flags=SA_RESTORER|SA_RESTART|SA_NOCLDSTOP, sa_restorer=0x7f913b18f520}, NULL, 8) = 0
+29185 openat(AT_FDCWD, "/sys/devices/system/cpu/online", O_RDONLY|O_CLOEXEC) = 3
+29185 read(3, "0-15\n", 1024)           = 5
+29185 close(3)                          = 0
+29185 openat(AT_FDCWD, "/sys/devices/system/cpu", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+29185 newfstatat(3, "", {st_mode=S_IFDIR|0755, st_size=0, ...}, AT_EMPTY_PATH) = 0
+29185 getdents64(3, 0x555878be3ee0 /* 31 entries */, 32768) = 896
+29185 getdents64(3, 0x555878be3ee0 /* 0 entries */, 32768) = 0
+29185 close(3)                          = 0
+29185 getpid()                          = 29185
+29185 sched_getaffinity(29185, 128, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]) = 32
+29185 newfstatat(AT_FDCWD, "/etc/nsswitch.conf", {st_mode=S_IFREG|0644, st_size=510, ...}, 0) = 0
+29185 newfstatat(AT_FDCWD, "/", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+29185 openat(AT_FDCWD, "/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 3
+29185 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=510, ...}, AT_EMPTY_PATH) = 0
+29185 read(3, "# /etc/nsswitch.conf\n#\n# Example"..., 4096) = 510
+29185 read(3, "", 4096)                 = 0
+29185 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=510, ...}, AT_EMPTY_PATH) = 0
+29185 close(3)                          = 0
+29185 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+29185 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=20287, ...}, AT_EMPTY_PATH) = 0
+29185 mmap(NULL, 20287, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f913b412000
+29185 close(3)                          = 0
+29185 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v3/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v3", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v2/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v2", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/tls/x86_64/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu/tls/x86_64/x86_64", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/tls/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu/tls/x86_64", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/tls/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu/tls/x86_64", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/tls/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu/tls", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/x86_64/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu/x86_64/x86_64", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu/x86_64", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu/x86_64", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu", {st_mode=S_IFDIR|0755, st_size=28672, ...}, 0) = 0
+29185 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v3/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v3", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v2/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v2", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/tls/x86_64/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/tls/x86_64/x86_64", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/tls/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/tls/x86_64", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/tls/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/tls/x86_64", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/tls/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/tls", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/x86_64/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/x86_64/x86_64", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/x86_64", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/x86_64", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu", {st_mode=S_IFDIR|0755, st_size=28672, ...}, 0) = 0
+29185 openat(AT_FDCWD, "/lib/glibc-hwcaps/x86-64-v3/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/lib/glibc-hwcaps/x86-64-v3", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/lib/glibc-hwcaps/x86-64-v2/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/lib/glibc-hwcaps/x86-64-v2", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/lib/tls/x86_64/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/lib/tls/x86_64/x86_64", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/lib/tls/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/lib/tls/x86_64", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/lib/tls/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/lib/tls/x86_64", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/lib/tls/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/lib/tls", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/lib/x86_64/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/lib/x86_64/x86_64", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/lib/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/lib/x86_64", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/lib/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/lib/x86_64", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/lib/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+29185 openat(AT_FDCWD, "/usr/lib/glibc-hwcaps/x86-64-v3/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/usr/lib/glibc-hwcaps/x86-64-v3", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/usr/lib/glibc-hwcaps/x86-64-v2/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/usr/lib/glibc-hwcaps/x86-64-v2", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/usr/lib/tls/x86_64/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/usr/lib/tls/x86_64/x86_64", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/usr/lib/tls/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/usr/lib/tls/x86_64", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/usr/lib/tls/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/usr/lib/tls/x86_64", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/usr/lib/tls/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/usr/lib/tls", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/usr/lib/x86_64/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/usr/lib/x86_64/x86_64", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/usr/lib/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/usr/lib/x86_64", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/usr/lib/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/usr/lib/x86_64", 0x7fffff25b9d0, 0) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/usr/lib/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 newfstatat(AT_FDCWD, "/usr/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+29185 munmap(0x7f913b412000, 20287)     = 0
+29185 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+29185 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=20287, ...}, AT_EMPTY_PATH) = 0
+29185 mmap(NULL, 20287, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f913b412000
+29185 close(3)                          = 0
+29185 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libnss_db-2.35.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/libnss_db-2.35.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/lib/libnss_db-2.35.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 openat(AT_FDCWD, "/usr/lib/libnss_db-2.35.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29185 munmap(0x7f913b412000, 20287)     = 0
+29185 openat(AT_FDCWD, "/etc/protocols", O_RDONLY|O_CLOEXEC) = 3
+29185 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=2932, ...}, AT_EMPTY_PATH) = 0
+29185 lseek(3, 0, SEEK_SET)             = 0
+29185 read(3, "# Internet (IP) protocols\n#\n# Up"..., 4096) = 2932
+29185 read(3, "", 4096)                 = 0
+29185 close(3)                          = 0
+29185 eventfd2(0, EFD_CLOEXEC)          = 3
+29185 fcntl(3, F_GETFL)                 = 0x2 (flags O_RDWR)
+29185 fcntl(3, F_SETFL, O_RDWR|O_NONBLOCK) = 0
+29185 fcntl(3, F_GETFL)                 = 0x802 (flags O_RDWR|O_NONBLOCK)
+29185 fcntl(3, F_SETFL, O_RDWR|O_NONBLOCK) = 0
+29185 getpid()                          = 29185
+29185 getpid()                          = 29185
+29185 getrandom("\x5c\x9c\xa9\xbd\xb0\x0b\xf8\xde\xc9\xe0\x1f\xf1\x23\x33\x00\x1d", 16, 0) = 16
+29185 getrandom("\x40\x70\x11\x11\xab\x12\x8a\x1b\xd6\x4e\xfe\x94\x5c\x12\x4b\x48", 16, 0) = 16
+29185 newfstatat(1, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x5), ...}, AT_EMPTY_PATH) = 0
+29185 write(1, "> ", 2)                 = 2
+29185 newfstatat(0, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x5), ...}, AT_EMPTY_PATH) = 0
+29185 read(0, "create 10\n", 1024)      = 10
+29185 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f913aa94c90) = 29303
+29303 set_robust_list(0x7f913aa94ca0, 24 <unfinished ...>
+29185 write(1, "Ok: 29303\n", 10 <unfinished ...>
+29303 <... set_robust_list resumed>)    = 0
+29185 <... write resumed>)              = 10
+29303 execve("./worker", ["./worker", "ipc:///tmp/node_10"], 0x7fffff25f1f8 /* 36 vars */ <unfinished ...>
+29185 write(1, "> ", 2)                 = 2
+29185 read(0,  <unfinished ...>
+29303 <... execve resumed>)             = 0
+29303 brk(NULL)                         = 0x55db1cc53000
+29303 arch_prctl(0x3001 /* ARCH_??? */, 0x7ffc458618b0) = -1 EINVAL (Invalid argument)
+29303 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb09095a000
+29303 access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+29303 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=20287, ...}, AT_EMPTY_PATH) = 0
+29303 mmap(NULL, 20287, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fb090955000
+29303 close(3)                          = 0
+29303 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libzmq.so.5", O_RDONLY|O_CLOEXEC) = 3
+29303 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\240\233\1\0\0\0\0\0"..., 832) = 832
+29303 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=634936, ...}, AT_EMPTY_PATH) = 0
+29303 mmap(NULL, 636784, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb0908b9000
+29303 mmap(0x7fb0908d1000, 397312, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x18000) = 0x7fb0908d1000
+29303 mmap(0x7fb090932000, 106496, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x79000) = 0x7fb090932000
+29303 mmap(0x7fb09094c000, 36864, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x92000) = 0x7fb09094c000
+29303 close(3)                          = 0
+29303 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+29303 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+29303 pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+29303 pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+29303 pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0I\17\357\204\3$\f\221\2039x\324\224\323\236S"..., 68, 896) = 68
+29303 newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+29303 pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+29303 mmap(NULL, 2264656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb090690000
+29303 mprotect(0x7fb0906b8000, 2023424, PROT_NONE) = 0
+29303 mmap(0x7fb0906b8000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7fb0906b8000
+29303 mmap(0x7fb09084d000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x7fb09084d000
+29303 mmap(0x7fb0908a6000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x215000) = 0x7fb0908a6000
+29303 mmap(0x7fb0908ac000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fb0908ac000
+29303 close(3)                          = 0
+29303 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libbsd.so.0", O_RDONLY|O_CLOEXEC) = 3
+29303 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29303 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=89096, ...}, AT_EMPTY_PATH) = 0
+29303 mmap(NULL, 94432, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb090678000
+29303 mprotect(0x7fb09067c000, 69632, PROT_NONE) = 0
+29303 mmap(0x7fb09067c000, 53248, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x7fb09067c000
+29303 mmap(0x7fb090689000, 12288, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x11000) = 0x7fb090689000
+29303 mmap(0x7fb09068d000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x14000) = 0x7fb09068d000
+29303 mmap(0x7fb09068f000, 224, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fb09068f000
+29303 close(3)                          = 0
+29303 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libsodium.so.23", O_RDONLY|O_CLOEXEC) = 3
+29303 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29303 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=355040, ...}, AT_EMPTY_PATH) = 0
+29303 mmap(NULL, 357440, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb090620000
+29303 mprotect(0x7fb09062c000, 303104, PROT_NONE) = 0
+29303 mmap(0x7fb09062c000, 229376, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xc000) = 0x7fb09062c000
+29303 mmap(0x7fb090664000, 69632, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x44000) = 0x7fb090664000
+29303 mmap(0x7fb090676000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x55000) = 0x7fb090676000
+29303 close(3)                          = 0
+29303 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpgm-5.3.so.0", O_RDONLY|O_CLOEXEC) = 3
+29303 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\340L\0\0\0\0\0\0"..., 832) = 832
+29303 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=310264, ...}, AT_EMPTY_PATH) = 0
+29303 mmap(NULL, 329808, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb0905cf000
+29303 mmap(0x7fb0905d3000, 172032, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x7fb0905d3000
+29303 mmap(0x7fb0905fd000, 118784, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2e000) = 0x7fb0905fd000
+29303 mmap(0x7fb09061a000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4a000) = 0x7fb09061a000
+29303 mmap(0x7fb09061c000, 14416, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fb09061c000
+29303 close(3)                          = 0
+29303 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libnorm.so.1", O_RDONLY|O_CLOEXEC) = 3
+29303 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0 \255\0\0\0\0\0\0"..., 832) = 832
+29303 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=497824, ...}, AT_EMPTY_PATH) = 0
+29303 mmap(NULL, 1223168, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb0904a4000
+29303 mprotect(0x7fb0904ae000, 446464, PROT_NONE) = 0
+29303 mmap(0x7fb0904ae000, 286720, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xa000) = 0x7fb0904ae000
+29303 mmap(0x7fb0904f4000, 155648, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x50000) = 0x7fb0904f4000
+29303 mmap(0x7fb09051b000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x76000) = 0x7fb09051b000
+29303 mmap(0x7fb09051f000, 719360, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fb09051f000
+29303 close(3)                          = 0
+29303 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb0904a2000
+29303 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgssapi_krb5.so.2", O_RDONLY|O_CLOEXEC) = 3
+29303 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29303 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=338648, ...}, AT_EMPTY_PATH) = 0
+29303 mmap(NULL, 340960, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb09044e000
+29303 mprotect(0x7fb090459000, 282624, PROT_NONE) = 0
+29303 mmap(0x7fb090459000, 229376, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xb000) = 0x7fb090459000
+29303 mmap(0x7fb090491000, 49152, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x43000) = 0x7fb090491000
+29303 mmap(0x7fb09049e000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4f000) = 0x7fb09049e000
+29303 close(3)                          = 0
+29303 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = 3
+29303 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29303 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=2260296, ...}, AT_EMPTY_PATH) = 0
+29303 mmap(NULL, 2275520, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb090222000
+29303 mprotect(0x7fb0902bc000, 1576960, PROT_NONE) = 0
+29303 mmap(0x7fb0902bc000, 1118208, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x9a000) = 0x7fb0902bc000
+29303 mmap(0x7fb0903cd000, 454656, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1ab000) = 0x7fb0903cd000
+29303 mmap(0x7fb09043d000, 57344, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x21a000) = 0x7fb09043d000
+29303 mmap(0x7fb09044b000, 10432, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fb09044b000
+29303 close(3)                          = 0
+29303 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
+29303 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29303 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=125488, ...}, AT_EMPTY_PATH) = 0
+29303 mmap(NULL, 127720, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb090202000
+29303 mmap(0x7fb090205000, 94208, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7fb090205000
+29303 mmap(0x7fb09021c000, 16384, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a000) = 0x7fb09021c000
+29303 mmap(0x7fb090220000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1d000) = 0x7fb090220000
+29303 close(3)                          = 0
+29303 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libmd.so.0", O_RDONLY|O_CLOEXEC) = 3
+29303 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29303 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=47472, ...}, AT_EMPTY_PATH) = 0
+29303 mmap(NULL, 49384, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb0901f5000
+29303 mmap(0x7fb0901f7000, 28672, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7fb0901f7000
+29303 mmap(0x7fb0901fe000, 8192, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x9000) = 0x7fb0901fe000
+29303 mmap(0x7fb090200000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xa000) = 0x7fb090200000
+29303 close(3)                          = 0
+29303 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+29303 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29303 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=21448, ...}, AT_EMPTY_PATH) = 0
+29303 mmap(NULL, 16424, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb0901f0000
+29303 mmap(0x7fb0901f1000, 4096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7fb0901f1000
+29303 mmap(0x7fb0901f2000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7fb0901f2000
+29303 mmap(0x7fb0901f3000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7fb0901f3000
+29303 close(3)                          = 0
+29303 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+29303 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29303 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=940560, ...}, AT_EMPTY_PATH) = 0
+29303 mmap(NULL, 942344, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb090109000
+29303 mmap(0x7fb090117000, 507904, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe000) = 0x7fb090117000
+29303 mmap(0x7fb090193000, 372736, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8a000) = 0x7fb090193000
+29303 mmap(0x7fb0901ee000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe4000) = 0x7fb0901ee000
+29303 close(3)                          = 0
+29303 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb090107000
+29303 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libkrb5.so.3", O_RDONLY|O_CLOEXEC) = 3
+29303 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29303 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=827936, ...}, AT_EMPTY_PATH) = 0
+29303 mmap(NULL, 830576, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb09003c000
+29303 mprotect(0x7fb09005d000, 634880, PROT_NONE) = 0
+29303 mmap(0x7fb09005d000, 380928, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x21000) = 0x7fb09005d000
+29303 mmap(0x7fb0900ba000, 249856, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x7e000) = 0x7fb0900ba000
+29303 mmap(0x7fb0900f8000, 61440, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xbb000) = 0x7fb0900f8000
+29303 close(3)                          = 0
+29303 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libk5crypto.so.3", O_RDONLY|O_CLOEXEC) = 3
+29303 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29303 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=182864, ...}, AT_EMPTY_PATH) = 0
+29303 mmap(NULL, 188472, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb09000d000
+29303 mprotect(0x7fb090011000, 163840, PROT_NONE) = 0
+29303 mmap(0x7fb090011000, 110592, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x7fb090011000
+29303 mmap(0x7fb09002c000, 49152, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1f000) = 0x7fb09002c000
+29303 mmap(0x7fb090039000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2b000) = 0x7fb090039000
+29303 mmap(0x7fb09003b000, 56, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fb09003b000
+29303 close(3)                          = 0
+29303 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libcom_err.so.2", O_RDONLY|O_CLOEXEC) = 3
+29303 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29303 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=18504, ...}, AT_EMPTY_PATH) = 0
+29303 mmap(NULL, 20552, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb090007000
+29303 mmap(0x7fb090009000, 4096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7fb090009000
+29303 mmap(0x7fb09000a000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7fb09000a000
+29303 mmap(0x7fb09000b000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7fb09000b000
+29303 close(3)                          = 0
+29303 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libkrb5support.so.0", O_RDONLY|O_CLOEXEC) = 3
+29303 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29303 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=52016, ...}, AT_EMPTY_PATH) = 0
+29303 mmap(NULL, 54224, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb08fff9000
+29303 mprotect(0x7fb08fffc000, 36864, PROT_NONE) = 0
+29303 mmap(0x7fb08fffc000, 24576, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7fb08fffc000
+29303 mmap(0x7fb090002000, 8192, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x9000) = 0x7fb090002000
+29303 mmap(0x7fb090005000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xb000) = 0x7fb090005000
+29303 close(3)                          = 0
+29303 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libkeyutils.so.1", O_RDONLY|O_CLOEXEC) = 3
+29303 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29303 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=22600, ...}, AT_EMPTY_PATH) = 0
+29303 mmap(NULL, 24592, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb08fff2000
+29303 mmap(0x7fb08fff4000, 8192, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7fb08fff4000
+29303 mmap(0x7fb08fff6000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x7fb08fff6000
+29303 mmap(0x7fb08fff7000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x7fb08fff7000
+29303 close(3)                          = 0
+29303 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libresolv.so.2", O_RDONLY|O_CLOEXEC) = 3
+29303 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29303 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=68552, ...}, AT_EMPTY_PATH) = 0
+29303 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb08fff0000
+29303 mmap(NULL, 80456, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fb08ffdc000
+29303 mmap(0x7fb08ffdf000, 40960, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7fb08ffdf000
+29303 mmap(0x7fb08ffe9000, 12288, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xd000) = 0x7fb08ffe9000
+29303 mmap(0x7fb08ffec000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xf000) = 0x7fb08ffec000
+29303 mmap(0x7fb08ffee000, 6728, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fb08ffee000
+29303 close(3)                          = 0
+29303 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb08ffda000
+29303 mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb08ffd7000
+29303 arch_prctl(ARCH_SET_FS, 0x7fb08ffd79c0) = 0
+29303 set_tid_address(0x7fb08ffd7c90)   = 29303
+29303 set_robust_list(0x7fb08ffd7ca0, 24) = 0
+29303 rseq(0x7fb08ffd8360, 0x20, 0, 0x53053053) = 0
+29303 mprotect(0x7fb0908a6000, 16384, PROT_READ) = 0
+29303 mprotect(0x7fb08ffec000, 4096, PROT_READ) = 0
+29303 mprotect(0x7fb08fff7000, 4096, PROT_READ) = 0
+29303 mprotect(0x7fb090005000, 4096, PROT_READ) = 0
+29303 mprotect(0x7fb09000b000, 4096, PROT_READ) = 0
+29303 mprotect(0x7fb090039000, 4096, PROT_READ) = 0
+29303 mprotect(0x7fb0900f8000, 53248, PROT_READ) = 0
+29303 mprotect(0x7fb0901ee000, 4096, PROT_READ) = 0
+29303 mprotect(0x7fb0901f3000, 4096, PROT_READ) = 0
+29303 mprotect(0x7fb090200000, 4096, PROT_READ) = 0
+29303 mprotect(0x7fb090220000, 4096, PROT_READ) = 0
+29303 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb08ffd5000
+29303 mprotect(0x7fb09043d000, 45056, PROT_READ) = 0
+29303 mprotect(0x7fb09049e000, 8192, PROT_READ) = 0
+29303 mprotect(0x7fb09051b000, 12288, PROT_READ) = 0
+29303 mprotect(0x7fb09061a000, 4096, PROT_READ) = 0
+29303 mprotect(0x7fb090676000, 4096, PROT_READ) = 0
+29303 mprotect(0x7fb09068d000, 4096, PROT_READ) = 0
+29303 mprotect(0x7fb09094c000, 32768, PROT_READ) = 0
+29303 mprotect(0x55db0be47000, 4096, PROT_READ) = 0
+29303 mprotect(0x7fb090994000, 8192, PROT_READ) = 0
+29303 prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+29303 munmap(0x7fb090955000, 20287)     = 0
+29303 getrandom("\x50\xde\x1f\xa7\xff\xc3\x6f\x45", 8, GRND_NONBLOCK) = 8
+29303 brk(NULL)                         = 0x55db1cc53000
+29303 brk(0x55db1cc74000)               = 0x55db1cc74000
+29303 openat(AT_FDCWD, "/sys/devices/system/cpu/online", O_RDONLY|O_CLOEXEC) = 3
+29303 read(3, "0-15\n", 1024)           = 5
+29303 close(3)                          = 0
+29303 openat(AT_FDCWD, "/sys/devices/system/cpu", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+29303 newfstatat(3, "", {st_mode=S_IFDIR|0755, st_size=0, ...}, AT_EMPTY_PATH) = 0
+29303 getdents64(3, 0x55db1cc64ee0 /* 31 entries */, 32768) = 896
+29303 getdents64(3, 0x55db1cc64ee0 /* 0 entries */, 32768) = 0
+29303 close(3)                          = 0
+29303 getpid()                          = 29303
+29303 sched_getaffinity(29303, 128, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]) = 32
+29303 newfstatat(AT_FDCWD, "/etc/nsswitch.conf", {st_mode=S_IFREG|0644, st_size=510, ...}, 0) = 0
+29303 newfstatat(AT_FDCWD, "/", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+29303 openat(AT_FDCWD, "/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 3
+29303 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=510, ...}, AT_EMPTY_PATH) = 0
+29303 read(3, "# /etc/nsswitch.conf\n#\n# Example"..., 4096) = 510
+29303 read(3, "", 4096)                 = 0
+29303 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=510, ...}, AT_EMPTY_PATH) = 0
+29303 close(3)                          = 0
+29303 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+29303 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=20287, ...}, AT_EMPTY_PATH) = 0
+29303 mmap(NULL, 20287, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fb090955000
+29303 close(3)                          = 0
+29303 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v3/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v3", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v2/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v2", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/tls/x86_64/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu/tls/x86_64/x86_64", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/tls/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu/tls/x86_64", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/tls/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu/tls/x86_64", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/tls/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu/tls", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/x86_64/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu/x86_64/x86_64", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu/x86_64", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu/x86_64", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu", {st_mode=S_IFDIR|0755, st_size=28672, ...}, 0) = 0
+29303 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v3/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v3", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v2/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v2", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/tls/x86_64/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/tls/x86_64/x86_64", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/tls/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/tls/x86_64", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/tls/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/tls/x86_64", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/tls/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/tls", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/x86_64/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/x86_64/x86_64", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/x86_64", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/x86_64", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu", {st_mode=S_IFDIR|0755, st_size=28672, ...}, 0) = 0
+29303 openat(AT_FDCWD, "/lib/glibc-hwcaps/x86-64-v3/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/lib/glibc-hwcaps/x86-64-v3", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/lib/glibc-hwcaps/x86-64-v2/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/lib/glibc-hwcaps/x86-64-v2", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/lib/tls/x86_64/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/lib/tls/x86_64/x86_64", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/lib/tls/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/lib/tls/x86_64", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/lib/tls/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/lib/tls/x86_64", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/lib/tls/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/lib/tls", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/lib/x86_64/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/lib/x86_64/x86_64", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/lib/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/lib/x86_64", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/lib/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/lib/x86_64", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/lib/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+29303 openat(AT_FDCWD, "/usr/lib/glibc-hwcaps/x86-64-v3/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/usr/lib/glibc-hwcaps/x86-64-v3", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/usr/lib/glibc-hwcaps/x86-64-v2/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/usr/lib/glibc-hwcaps/x86-64-v2", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/usr/lib/tls/x86_64/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/usr/lib/tls/x86_64/x86_64", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/usr/lib/tls/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/usr/lib/tls/x86_64", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/usr/lib/tls/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/usr/lib/tls/x86_64", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/usr/lib/tls/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/usr/lib/tls", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/usr/lib/x86_64/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/usr/lib/x86_64/x86_64", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/usr/lib/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/usr/lib/x86_64", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/usr/lib/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/usr/lib/x86_64", 0x7ffc4585e590, 0) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/usr/lib/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 newfstatat(AT_FDCWD, "/usr/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+29303 munmap(0x7fb090955000, 20287)     = 0
+29303 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+29303 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=20287, ...}, AT_EMPTY_PATH) = 0
+29303 mmap(NULL, 20287, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fb090955000
+29303 close(3)                          = 0
+29303 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libnss_db-2.35.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/libnss_db-2.35.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/lib/libnss_db-2.35.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 openat(AT_FDCWD, "/usr/lib/libnss_db-2.35.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29303 munmap(0x7fb090955000, 20287)     = 0
+29303 openat(AT_FDCWD, "/etc/protocols", O_RDONLY|O_CLOEXEC) = 3
+29303 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=2932, ...}, AT_EMPTY_PATH) = 0
+29303 lseek(3, 0, SEEK_SET)             = 0
+29303 read(3, "# Internet (IP) protocols\n#\n# Up"..., 4096) = 2932
+29303 read(3, "", 4096)                 = 0
+29303 close(3)                          = 0
+29303 eventfd2(0, EFD_CLOEXEC)          = 3
+29303 fcntl(3, F_GETFL)                 = 0x2 (flags O_RDWR)
+29303 fcntl(3, F_SETFL, O_RDWR|O_NONBLOCK) = 0
+29303 fcntl(3, F_GETFL)                 = 0x802 (flags O_RDWR|O_NONBLOCK)
+29303 fcntl(3, F_SETFL, O_RDWR|O_NONBLOCK) = 0
+29303 getpid()                          = 29303
+29303 getpid()                          = 29303
+29303 getrandom("\x21\xbe\xbb\xfd\xec\x1b\x84\x1f\xfe\x9f\x01\xd4\x52\x72\x93\x92", 16, 0) = 16
+29303 getrandom("\xee\x28\x70\x76\x65\x6b\xa6\x19\x85\x9d\x3c\x28\x01\x36\x7c\x57", 16, 0) = 16
+29303 eventfd2(0, EFD_CLOEXEC)          = 4
+29303 fcntl(4, F_GETFL)                 = 0x2 (flags O_RDWR)
+29303 fcntl(4, F_SETFL, O_RDWR|O_NONBLOCK) = 0
+29303 fcntl(4, F_GETFL)                 = 0x802 (flags O_RDWR|O_NONBLOCK)
+29303 fcntl(4, F_SETFL, O_RDWR|O_NONBLOCK) = 0
+29303 getpid()                          = 29303
+29303 epoll_create1(EPOLL_CLOEXEC)      = 5
+29303 epoll_ctl(5, EPOLL_CTL_ADD, 4, {events=0, data={u32=482759264, u64=94399568958048}}) = 0
+29303 epoll_ctl(5, EPOLL_CTL_MOD, 4, {events=EPOLLIN, data={u32=482759264, u64=94399568958048}}) = 0
+29303 getpid()                          = 29303
+29303 rt_sigaction(SIGRT_1, {sa_handler=0x7fb090721870, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fb0906d2520}, NULL, 8) = 0
+29303 rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+29303 mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fb08f7d4000
+29303 mprotect(0x7fb08f7d5000, 8388608, PROT_READ|PROT_WRITE) = 0
+29303 rt_sigprocmask(SIG_BLOCK, ~[], [], 8) = 0
+29303 clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7fb08ffd4910, parent_tid=0x7fb08ffd4910, exit_signal=0, stack=0x7fb08f7d4000, stack_size=0x7ffc80, tls=0x7fb08ffd4640} <unfinished ...>
+29304 rseq(0x7fb08ffd4fe0, 0x20, 0, 0x53053053 <unfinished ...>
+29303 <... clone3 resumed> => {parent_tid=[29304]}, 88) = 29304
+29304 <... rseq resumed>)               = 0
+29303 rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+29304 set_robust_list(0x7fb08ffd4920, 24 <unfinished ...>
+29303 <... rt_sigprocmask resumed>NULL, 8) = 0
+29304 <... set_robust_list resumed>)    = 0
+29303 eventfd2(0, EFD_CLOEXEC <unfinished ...>
+29304 rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+29303 <... eventfd2 resumed>)           = 6
+29304 <... rt_sigprocmask resumed>NULL, 8) = 0
+29303 fcntl(6, F_GETFL <unfinished ...>
+29304 rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1],  <unfinished ...>
+29303 <... fcntl resumed>)              = 0x2 (flags O_RDWR)
+29304 <... rt_sigprocmask resumed>NULL, 8) = 0
+29303 fcntl(6, F_SETFL, O_RDWR|O_NONBLOCK <unfinished ...>
+29304 sched_getparam(29304,  <unfinished ...>
+29303 <... fcntl resumed>)              = 0
+29304 <... sched_getparam resumed>[0])  = 0
+29303 fcntl(6, F_GETFL <unfinished ...>
+29304 sched_getscheduler(29304 <unfinished ...>
+29303 <... fcntl resumed>)              = 0x802 (flags O_RDWR|O_NONBLOCK)
+29304 <... sched_getscheduler resumed>) = 0 (SCHED_OTHER)
+29303 fcntl(6, F_SETFL, O_RDWR|O_NONBLOCK <unfinished ...>
+29304 sched_setscheduler(29304, SCHED_OTHER, [0] <unfinished ...>
+29303 <... fcntl resumed>)              = 0
+29304 <... sched_setscheduler resumed>) = 0
+29303 getpid( <unfinished ...>
+29304 prctl(PR_SET_NAME, "ZMQbg/Reaper" <unfinished ...>
+29303 <... getpid resumed>)             = 29303
+29304 <... prctl resumed>)              = 0
+29303 epoll_create1(EPOLL_CLOEXEC <unfinished ...>
+29304 epoll_wait(5,  <unfinished ...>
+29303 <... epoll_create1 resumed>)      = 7
+29303 epoll_ctl(7, EPOLL_CTL_ADD, 6, {events=0, data={u32=482779744, u64=94399568978528}}) = 0
+29303 epoll_ctl(7, EPOLL_CTL_MOD, 6, {events=EPOLLIN, data={u32=482779744, u64=94399568978528}}) = 0
+29303 mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fb08efd3000
+29303 mprotect(0x7fb08efd4000, 8388608, PROT_READ|PROT_WRITE) = 0
+29303 rt_sigprocmask(SIG_BLOCK, ~[], [], 8) = 0
+29303 clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7fb08f7d3910, parent_tid=0x7fb08f7d3910, exit_signal=0, stack=0x7fb08efd3000, stack_size=0x7ffc80, tls=0x7fb08f7d3640} <unfinished ...>
+29305 rseq(0x7fb08f7d3fe0, 0x20, 0, 0x53053053 <unfinished ...>
+29303 <... clone3 resumed> => {parent_tid=[29305]}, 88) = 29305
+29305 <... rseq resumed>)               = 0
+29303 rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+29305 set_robust_list(0x7fb08f7d3920, 24 <unfinished ...>
+29303 <... rt_sigprocmask resumed>NULL, 8) = 0
+29305 <... set_robust_list resumed>)    = 0
+29303 eventfd2(0, EFD_CLOEXEC <unfinished ...>
+29305 rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+29303 <... eventfd2 resumed>)           = 8
+29305 <... rt_sigprocmask resumed>NULL, 8) = 0
+29303 fcntl(8, F_GETFL <unfinished ...>
+29305 rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1],  <unfinished ...>
+29303 <... fcntl resumed>)              = 0x2 (flags O_RDWR)
+29305 <... rt_sigprocmask resumed>NULL, 8) = 0
+29303 fcntl(8, F_SETFL, O_RDWR|O_NONBLOCK <unfinished ...>
+29305 sched_getparam(29305,  <unfinished ...>
+29303 <... fcntl resumed>)              = 0
+29305 <... sched_getparam resumed>[0])  = 0
+29303 fcntl(8, F_GETFL <unfinished ...>
+29305 sched_getscheduler(29305 <unfinished ...>
+29303 <... fcntl resumed>)              = 0x802 (flags O_RDWR|O_NONBLOCK)
+29305 <... sched_getscheduler resumed>) = 0 (SCHED_OTHER)
+29303 fcntl(8, F_SETFL, O_RDWR|O_NONBLOCK <unfinished ...>
+29305 sched_setscheduler(29305, SCHED_OTHER, [0] <unfinished ...>
+29303 <... fcntl resumed>)              = 0
+29305 <... sched_setscheduler resumed>) = 0
+29303 getpid( <unfinished ...>
+29305 prctl(PR_SET_NAME, "ZMQbg/IO/0" <unfinished ...>
+29303 <... getpid resumed>)             = 29303
+29305 <... prctl resumed>)              = 0
+29303 getpid( <unfinished ...>
+29305 epoll_wait(7,  <unfinished ...>
+29303 <... getpid resumed>)             = 29303
+29303 poll([{fd=8, events=POLLIN}], 1, 0) = 0 (Timeout)
+29303 unlink("/tmp/node_10")            = -1 ENOENT (No such file or directory)
+29303 socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC, 0) = 9
+29303 bind(9, {sa_family=AF_UNIX, sun_path="/tmp/node_10"}, 14) = 0
+29303 listen(9, 100)                    = 0
+29303 getsockname(9, {sa_family=AF_UNIX, sun_path="/tmp/node_10"}, [128 => 15]) = 0
+29303 getpid()                          = 29303
+29303 write(6, "\1\0\0\0\0\0\0\0", 8 <unfinished ...>
+29305 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=482779744, u64=94399568978528}}], 256, -1) = 1
+29303 <... write resumed>)              = 8
+29305 getpid( <unfinished ...>
+29303 getpid( <unfinished ...>
+29305 <... getpid resumed>)             = 29303
+29303 <... getpid resumed>)             = 29303
+29305 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29303 write(8, "\1\0\0\0\0\0\0\0", 8 <unfinished ...>
+29305 <... poll resumed>)               = 1 ([{fd=6, revents=POLLIN}])
+29303 <... write resumed>)              = 8
+29305 getpid()                          = 29303
+29303 getpid( <unfinished ...>
+29305 read(6,  <unfinished ...>
+29303 <... getpid resumed>)             = 29303
+29305 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29303 poll([{fd=8, events=POLLIN}], 1, -1 <unfinished ...>
+29305 mmap(NULL, 134217728, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0 <unfinished ...>
+29303 <... poll resumed>)               = 1 ([{fd=8, revents=POLLIN}])
+29305 <... mmap resumed>)               = 0x7fb086fd3000
+29303 getpid( <unfinished ...>
+29305 munmap(0x7fb086fd3000, 16961536 <unfinished ...>
+29303 <... getpid resumed>)             = 29303
+29305 <... munmap resumed>)             = 0
+29303 read(8,  <unfinished ...>
+29305 munmap(0x7fb08c000000, 50147328 <unfinished ...>
+29303 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29305 <... munmap resumed>)             = 0
+29303 getpid( <unfinished ...>
+29305 mprotect(0x7fb088000000, 135168, PROT_READ|PROT_WRITE <unfinished ...>
+29303 <... getpid resumed>)             = 29303
+29305 <... mprotect resumed>)           = 0
+29303 poll([{fd=8, events=POLLIN}], 1, 0 <unfinished ...>
+29305 epoll_ctl(7, EPOLL_CTL_ADD, 9, {events=0, data={u32=2281704304, u64=140396172675952}} <unfinished ...>
+29303 <... poll resumed>)               = 0 (Timeout)
+29305 <... epoll_ctl resumed>)          = 0
+29303 getpid( <unfinished ...>
+29305 epoll_ctl(7, EPOLL_CTL_MOD, 9, {events=EPOLLIN, data={u32=2281704304, u64=140396172675952}} <unfinished ...>
+29303 <... getpid resumed>)             = 29303
+29305 <... epoll_ctl resumed>)          = 0
+29303 poll([{fd=8, events=POLLIN}], 1, -1 <unfinished ...>
+29305 getpid()                          = 29303
+29305 poll([{fd=6, events=POLLIN}], 1, 0) = 0 (Timeout)
+29305 epoll_wait(7,  <unfinished ...>
+29185 <... read resumed>"create 20\n", 1024) = 10
+29185 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f913aa94c90) = 29381
+29381 set_robust_list(0x7f913aa94ca0, 24) = 0
+29185 write(1, "Ok: 29381\n", 10 <unfinished ...>
+29381 execve("./worker", ["./worker", "ipc:///tmp/node_20"], 0x7fffff25f1f8 /* 36 vars */ <unfinished ...>
+29185 <... write resumed>)              = 10
+29185 write(1, "> ", 2)                 = 2
+29185 read(0,  <unfinished ...>
+29381 <... execve resumed>)             = 0
+29381 brk(NULL)                         = 0x555c731a0000
+29381 arch_prctl(0x3001 /* ARCH_??? */, 0x7ffe22244c10) = -1 EINVAL (Invalid argument)
+29381 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f311086c000
+29381 access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+29381 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=20287, ...}, AT_EMPTY_PATH) = 0
+29381 mmap(NULL, 20287, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f3110867000
+29381 close(3)                          = 0
+29381 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libzmq.so.5", O_RDONLY|O_CLOEXEC) = 3
+29381 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\240\233\1\0\0\0\0\0"..., 832) = 832
+29381 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=634936, ...}, AT_EMPTY_PATH) = 0
+29381 mmap(NULL, 636784, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f31107cb000
+29381 mmap(0x7f31107e3000, 397312, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x18000) = 0x7f31107e3000
+29381 mmap(0x7f3110844000, 106496, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x79000) = 0x7f3110844000
+29381 mmap(0x7f311085e000, 36864, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x92000) = 0x7f311085e000
+29381 close(3)                          = 0
+29381 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+29381 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+29381 pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+29381 pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+29381 pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0I\17\357\204\3$\f\221\2039x\324\224\323\236S"..., 68, 896) = 68
+29381 newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+29381 pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+29381 mmap(NULL, 2264656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f31105a2000
+29381 mprotect(0x7f31105ca000, 2023424, PROT_NONE) = 0
+29381 mmap(0x7f31105ca000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7f31105ca000
+29381 mmap(0x7f311075f000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x7f311075f000
+29381 mmap(0x7f31107b8000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x215000) = 0x7f31107b8000
+29381 mmap(0x7f31107be000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f31107be000
+29381 close(3)                          = 0
+29381 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libbsd.so.0", O_RDONLY|O_CLOEXEC) = 3
+29381 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29381 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=89096, ...}, AT_EMPTY_PATH) = 0
+29381 mmap(NULL, 94432, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f311058a000
+29381 mprotect(0x7f311058e000, 69632, PROT_NONE) = 0
+29381 mmap(0x7f311058e000, 53248, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x7f311058e000
+29381 mmap(0x7f311059b000, 12288, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x11000) = 0x7f311059b000
+29381 mmap(0x7f311059f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x14000) = 0x7f311059f000
+29381 mmap(0x7f31105a1000, 224, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f31105a1000
+29381 close(3)                          = 0
+29381 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libsodium.so.23", O_RDONLY|O_CLOEXEC) = 3
+29381 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29381 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=355040, ...}, AT_EMPTY_PATH) = 0
+29381 mmap(NULL, 357440, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f3110532000
+29381 mprotect(0x7f311053e000, 303104, PROT_NONE) = 0
+29381 mmap(0x7f311053e000, 229376, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xc000) = 0x7f311053e000
+29381 mmap(0x7f3110576000, 69632, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x44000) = 0x7f3110576000
+29381 mmap(0x7f3110588000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x55000) = 0x7f3110588000
+29381 close(3)                          = 0
+29381 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpgm-5.3.so.0", O_RDONLY|O_CLOEXEC) = 3
+29381 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\340L\0\0\0\0\0\0"..., 832) = 832
+29381 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=310264, ...}, AT_EMPTY_PATH) = 0
+29381 mmap(NULL, 329808, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f31104e1000
+29381 mmap(0x7f31104e5000, 172032, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x7f31104e5000
+29381 mmap(0x7f311050f000, 118784, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2e000) = 0x7f311050f000
+29381 mmap(0x7f311052c000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4a000) = 0x7f311052c000
+29381 mmap(0x7f311052e000, 14416, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f311052e000
+29381 close(3)                          = 0
+29381 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libnorm.so.1", O_RDONLY|O_CLOEXEC) = 3
+29381 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0 \255\0\0\0\0\0\0"..., 832) = 832
+29381 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=497824, ...}, AT_EMPTY_PATH) = 0
+29381 mmap(NULL, 1223168, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f31103b6000
+29381 mprotect(0x7f31103c0000, 446464, PROT_NONE) = 0
+29381 mmap(0x7f31103c0000, 286720, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xa000) = 0x7f31103c0000
+29381 mmap(0x7f3110406000, 155648, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x50000) = 0x7f3110406000
+29381 mmap(0x7f311042d000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x76000) = 0x7f311042d000
+29381 mmap(0x7f3110431000, 719360, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f3110431000
+29381 close(3)                          = 0
+29381 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f31103b4000
+29381 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgssapi_krb5.so.2", O_RDONLY|O_CLOEXEC) = 3
+29381 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29381 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=338648, ...}, AT_EMPTY_PATH) = 0
+29381 mmap(NULL, 340960, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f3110360000
+29381 mprotect(0x7f311036b000, 282624, PROT_NONE) = 0
+29381 mmap(0x7f311036b000, 229376, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xb000) = 0x7f311036b000
+29381 mmap(0x7f31103a3000, 49152, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x43000) = 0x7f31103a3000
+29381 mmap(0x7f31103b0000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4f000) = 0x7f31103b0000
+29381 close(3)                          = 0
+29381 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = 3
+29381 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29381 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=2260296, ...}, AT_EMPTY_PATH) = 0
+29381 mmap(NULL, 2275520, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f3110134000
+29381 mprotect(0x7f31101ce000, 1576960, PROT_NONE) = 0
+29381 mmap(0x7f31101ce000, 1118208, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x9a000) = 0x7f31101ce000
+29381 mmap(0x7f31102df000, 454656, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1ab000) = 0x7f31102df000
+29381 mmap(0x7f311034f000, 57344, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x21a000) = 0x7f311034f000
+29381 mmap(0x7f311035d000, 10432, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f311035d000
+29381 close(3)                          = 0
+29381 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
+29381 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29381 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=125488, ...}, AT_EMPTY_PATH) = 0
+29381 mmap(NULL, 127720, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f3110114000
+29381 mmap(0x7f3110117000, 94208, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7f3110117000
+29381 mmap(0x7f311012e000, 16384, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a000) = 0x7f311012e000
+29381 mmap(0x7f3110132000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1d000) = 0x7f3110132000
+29381 close(3)                          = 0
+29381 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libmd.so.0", O_RDONLY|O_CLOEXEC) = 3
+29381 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29381 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=47472, ...}, AT_EMPTY_PATH) = 0
+29381 mmap(NULL, 49384, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f3110107000
+29381 mmap(0x7f3110109000, 28672, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f3110109000
+29381 mmap(0x7f3110110000, 8192, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x9000) = 0x7f3110110000
+29381 mmap(0x7f3110112000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xa000) = 0x7f3110112000
+29381 close(3)                          = 0
+29381 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+29381 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29381 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=21448, ...}, AT_EMPTY_PATH) = 0
+29381 mmap(NULL, 16424, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f3110102000
+29381 mmap(0x7f3110103000, 4096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7f3110103000
+29381 mmap(0x7f3110104000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f3110104000
+29381 mmap(0x7f3110105000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f3110105000
+29381 close(3)                          = 0
+29381 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+29381 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29381 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=940560, ...}, AT_EMPTY_PATH) = 0
+29381 mmap(NULL, 942344, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f311001b000
+29381 mmap(0x7f3110029000, 507904, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe000) = 0x7f3110029000
+29381 mmap(0x7f31100a5000, 372736, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8a000) = 0x7f31100a5000
+29381 mmap(0x7f3110100000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe4000) = 0x7f3110100000
+29381 close(3)                          = 0
+29381 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f3110019000
+29381 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libkrb5.so.3", O_RDONLY|O_CLOEXEC) = 3
+29381 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29381 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=827936, ...}, AT_EMPTY_PATH) = 0
+29381 mmap(NULL, 830576, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f310ff4e000
+29381 mprotect(0x7f310ff6f000, 634880, PROT_NONE) = 0
+29381 mmap(0x7f310ff6f000, 380928, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x21000) = 0x7f310ff6f000
+29381 mmap(0x7f310ffcc000, 249856, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x7e000) = 0x7f310ffcc000
+29381 mmap(0x7f311000a000, 61440, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xbb000) = 0x7f311000a000
+29381 close(3)                          = 0
+29381 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libk5crypto.so.3", O_RDONLY|O_CLOEXEC) = 3
+29381 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29381 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=182864, ...}, AT_EMPTY_PATH) = 0
+29381 mmap(NULL, 188472, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f310ff1f000
+29381 mprotect(0x7f310ff23000, 163840, PROT_NONE) = 0
+29381 mmap(0x7f310ff23000, 110592, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x7f310ff23000
+29381 mmap(0x7f310ff3e000, 49152, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1f000) = 0x7f310ff3e000
+29381 mmap(0x7f310ff4b000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2b000) = 0x7f310ff4b000
+29381 mmap(0x7f310ff4d000, 56, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f310ff4d000
+29381 close(3)                          = 0
+29381 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libcom_err.so.2", O_RDONLY|O_CLOEXEC) = 3
+29381 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29381 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=18504, ...}, AT_EMPTY_PATH) = 0
+29381 mmap(NULL, 20552, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f310ff19000
+29381 mmap(0x7f310ff1b000, 4096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f310ff1b000
+29381 mmap(0x7f310ff1c000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7f310ff1c000
+29381 mmap(0x7f310ff1d000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7f310ff1d000
+29381 close(3)                          = 0
+29381 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libkrb5support.so.0", O_RDONLY|O_CLOEXEC) = 3
+29381 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29381 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=52016, ...}, AT_EMPTY_PATH) = 0
+29381 mmap(NULL, 54224, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f310ff0b000
+29381 mprotect(0x7f310ff0e000, 36864, PROT_NONE) = 0
+29381 mmap(0x7f310ff0e000, 24576, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7f310ff0e000
+29381 mmap(0x7f310ff14000, 8192, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x9000) = 0x7f310ff14000
+29381 mmap(0x7f310ff17000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xb000) = 0x7f310ff17000
+29381 close(3)                          = 0
+29381 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libkeyutils.so.1", O_RDONLY|O_CLOEXEC) = 3
+29381 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29381 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=22600, ...}, AT_EMPTY_PATH) = 0
+29381 mmap(NULL, 24592, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f310ff04000
+29381 mmap(0x7f310ff06000, 8192, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f310ff06000
+29381 mmap(0x7f310ff08000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x7f310ff08000
+29381 mmap(0x7f310ff09000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x7f310ff09000
+29381 close(3)                          = 0
+29381 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libresolv.so.2", O_RDONLY|O_CLOEXEC) = 3
+29381 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+29381 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=68552, ...}, AT_EMPTY_PATH) = 0
+29381 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f310ff02000
+29381 mmap(NULL, 80456, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f310feee000
+29381 mmap(0x7f310fef1000, 40960, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7f310fef1000
+29381 mmap(0x7f310fefb000, 12288, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xd000) = 0x7f310fefb000
+29381 mmap(0x7f310fefe000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xf000) = 0x7f310fefe000
+29381 mmap(0x7f310ff00000, 6728, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f310ff00000
+29381 close(3)                          = 0
+29381 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f310feec000
+29381 mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f310fee9000
+29381 arch_prctl(ARCH_SET_FS, 0x7f310fee99c0) = 0
+29381 set_tid_address(0x7f310fee9c90)   = 29381
+29381 set_robust_list(0x7f310fee9ca0, 24) = 0
+29381 rseq(0x7f310feea360, 0x20, 0, 0x53053053) = 0
+29381 mprotect(0x7f31107b8000, 16384, PROT_READ) = 0
+29381 mprotect(0x7f310fefe000, 4096, PROT_READ) = 0
+29381 mprotect(0x7f310ff09000, 4096, PROT_READ) = 0
+29381 mprotect(0x7f310ff17000, 4096, PROT_READ) = 0
+29381 mprotect(0x7f310ff1d000, 4096, PROT_READ) = 0
+29381 mprotect(0x7f310ff4b000, 4096, PROT_READ) = 0
+29381 mprotect(0x7f311000a000, 53248, PROT_READ) = 0
+29381 mprotect(0x7f3110100000, 4096, PROT_READ) = 0
+29381 mprotect(0x7f3110105000, 4096, PROT_READ) = 0
+29381 mprotect(0x7f3110112000, 4096, PROT_READ) = 0
+29381 mprotect(0x7f3110132000, 4096, PROT_READ) = 0
+29381 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f310fee7000
+29381 mprotect(0x7f311034f000, 45056, PROT_READ) = 0
+29381 mprotect(0x7f31103b0000, 8192, PROT_READ) = 0
+29381 mprotect(0x7f311042d000, 12288, PROT_READ) = 0
+29381 mprotect(0x7f311052c000, 4096, PROT_READ) = 0
+29381 mprotect(0x7f3110588000, 4096, PROT_READ) = 0
+29381 mprotect(0x7f311059f000, 4096, PROT_READ) = 0
+29381 mprotect(0x7f311085e000, 32768, PROT_READ) = 0
+29381 mprotect(0x555c4f75f000, 4096, PROT_READ) = 0
+29381 mprotect(0x7f31108a6000, 8192, PROT_READ) = 0
+29381 prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+29381 munmap(0x7f3110867000, 20287)     = 0
+29381 getrandom("\x8f\xa7\x37\xa4\x84\x8c\x30\x4a", 8, GRND_NONBLOCK) = 8
+29381 brk(NULL)                         = 0x555c731a0000
+29381 brk(0x555c731c1000)               = 0x555c731c1000
+29381 openat(AT_FDCWD, "/sys/devices/system/cpu/online", O_RDONLY|O_CLOEXEC) = 3
+29381 read(3, "0-15\n", 1024)           = 5
+29381 close(3)                          = 0
+29381 openat(AT_FDCWD, "/sys/devices/system/cpu", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+29381 newfstatat(3, "", {st_mode=S_IFDIR|0755, st_size=0, ...}, AT_EMPTY_PATH) = 0
+29381 getdents64(3, 0x555c731b1ee0 /* 31 entries */, 32768) = 896
+29381 getdents64(3, 0x555c731b1ee0 /* 0 entries */, 32768) = 0
+29381 close(3)                          = 0
+29381 getpid()                          = 29381
+29381 sched_getaffinity(29381, 128, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]) = 32
+29381 newfstatat(AT_FDCWD, "/etc/nsswitch.conf", {st_mode=S_IFREG|0644, st_size=510, ...}, 0) = 0
+29381 newfstatat(AT_FDCWD, "/", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+29381 openat(AT_FDCWD, "/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 3
+29381 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=510, ...}, AT_EMPTY_PATH) = 0
+29381 read(3, "# /etc/nsswitch.conf\n#\n# Example"..., 4096) = 510
+29381 read(3, "", 4096)                 = 0
+29381 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=510, ...}, AT_EMPTY_PATH) = 0
+29381 close(3)                          = 0
+29381 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+29381 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=20287, ...}, AT_EMPTY_PATH) = 0
+29381 mmap(NULL, 20287, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f3110867000
+29381 close(3)                          = 0
+29381 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v3/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v3", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v2/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v2", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/tls/x86_64/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu/tls/x86_64/x86_64", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/tls/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu/tls/x86_64", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/tls/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu/tls/x86_64", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/tls/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu/tls", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/x86_64/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu/x86_64/x86_64", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu/x86_64", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu/x86_64", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/lib/x86_64-linux-gnu", {st_mode=S_IFDIR|0755, st_size=28672, ...}, 0) = 0
+29381 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v3/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v3", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v2/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/glibc-hwcaps/x86-64-v2", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/tls/x86_64/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/tls/x86_64/x86_64", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/tls/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/tls/x86_64", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/tls/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/tls/x86_64", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/tls/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/tls", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/x86_64/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/x86_64/x86_64", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/x86_64", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/x86_64", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu", {st_mode=S_IFDIR|0755, st_size=28672, ...}, 0) = 0
+29381 openat(AT_FDCWD, "/lib/glibc-hwcaps/x86-64-v3/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/lib/glibc-hwcaps/x86-64-v3", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/lib/glibc-hwcaps/x86-64-v2/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/lib/glibc-hwcaps/x86-64-v2", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/lib/tls/x86_64/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/lib/tls/x86_64/x86_64", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/lib/tls/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/lib/tls/x86_64", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/lib/tls/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/lib/tls/x86_64", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/lib/tls/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/lib/tls", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/lib/x86_64/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/lib/x86_64/x86_64", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/lib/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/lib/x86_64", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/lib/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/lib/x86_64", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/lib/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+29381 openat(AT_FDCWD, "/usr/lib/glibc-hwcaps/x86-64-v3/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/usr/lib/glibc-hwcaps/x86-64-v3", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/usr/lib/glibc-hwcaps/x86-64-v2/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/usr/lib/glibc-hwcaps/x86-64-v2", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/usr/lib/tls/x86_64/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/usr/lib/tls/x86_64/x86_64", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/usr/lib/tls/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/usr/lib/tls/x86_64", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/usr/lib/tls/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/usr/lib/tls/x86_64", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/usr/lib/tls/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/usr/lib/tls", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/usr/lib/x86_64/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/usr/lib/x86_64/x86_64", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/usr/lib/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/usr/lib/x86_64", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/usr/lib/x86_64/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/usr/lib/x86_64", 0x7ffe222418f0, 0) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/usr/lib/libnss_db.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 newfstatat(AT_FDCWD, "/usr/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+29381 munmap(0x7f3110867000, 20287)     = 0
+29381 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+29381 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=20287, ...}, AT_EMPTY_PATH) = 0
+29381 mmap(NULL, 20287, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f3110867000
+29381 close(3)                          = 0
+29381 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libnss_db-2.35.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/libnss_db-2.35.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/lib/libnss_db-2.35.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 openat(AT_FDCWD, "/usr/lib/libnss_db-2.35.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+29381 munmap(0x7f3110867000, 20287)     = 0
+29381 openat(AT_FDCWD, "/etc/protocols", O_RDONLY|O_CLOEXEC) = 3
+29381 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=2932, ...}, AT_EMPTY_PATH) = 0
+29381 lseek(3, 0, SEEK_SET)             = 0
+29381 read(3, "# Internet (IP) protocols\n#\n# Up"..., 4096) = 2932
+29381 read(3, "", 4096)                 = 0
+29381 close(3)                          = 0
+29381 eventfd2(0, EFD_CLOEXEC)          = 3
+29381 fcntl(3, F_GETFL)                 = 0x2 (flags O_RDWR)
+29381 fcntl(3, F_SETFL, O_RDWR|O_NONBLOCK) = 0
+29381 fcntl(3, F_GETFL)                 = 0x802 (flags O_RDWR|O_NONBLOCK)
+29381 fcntl(3, F_SETFL, O_RDWR|O_NONBLOCK) = 0
+29381 getpid()                          = 29381
+29381 getpid()                          = 29381
+29381 getrandom("\x04\x44\xcc\x65\x5b\x49\x1b\x6d\x08\x74\x74\x44\xde\xe3\xc0\xa8", 16, 0) = 16
+29381 getrandom("\x30\x21\x5d\x18\x5a\x8b\x4e\x62\xfc\x53\x15\x30\xe6\x47\x62\xfe", 16, 0) = 16
+29381 eventfd2(0, EFD_CLOEXEC)          = 4
+29381 fcntl(4, F_GETFL)                 = 0x2 (flags O_RDWR)
+29381 fcntl(4, F_SETFL, O_RDWR|O_NONBLOCK) = 0
+29381 fcntl(4, F_GETFL)                 = 0x802 (flags O_RDWR|O_NONBLOCK)
+29381 fcntl(4, F_SETFL, O_RDWR|O_NONBLOCK) = 0
+29381 getpid()                          = 29381
+29381 epoll_create1(EPOLL_CLOEXEC)      = 5
+29381 epoll_ctl(5, EPOLL_CTL_ADD, 4, {events=0, data={u32=1931158112, u64=93855556510304}}) = 0
+29381 epoll_ctl(5, EPOLL_CTL_MOD, 4, {events=EPOLLIN, data={u32=1931158112, u64=93855556510304}}) = 0
+29381 getpid()                          = 29381
+29381 rt_sigaction(SIGRT_1, {sa_handler=0x7f3110633870, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f31105e4520}, NULL, 8) = 0
+29381 rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+29381 mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f310f6e6000
+29381 mprotect(0x7f310f6e7000, 8388608, PROT_READ|PROT_WRITE) = 0
+29381 rt_sigprocmask(SIG_BLOCK, ~[], [], 8) = 0
+29381 clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7f310fee6910, parent_tid=0x7f310fee6910, exit_signal=0, stack=0x7f310f6e6000, stack_size=0x7ffc80, tls=0x7f310fee6640} => {parent_tid=[29383]}, 88) = 29383
+29383 rseq(0x7f310fee6fe0, 0x20, 0, 0x53053053 <unfinished ...>
+29381 rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+29383 <... rseq resumed>)               = 0
+29381 <... rt_sigprocmask resumed>NULL, 8) = 0
+29383 set_robust_list(0x7f310fee6920, 24 <unfinished ...>
+29381 eventfd2(0, EFD_CLOEXEC <unfinished ...>
+29383 <... set_robust_list resumed>)    = 0
+29381 <... eventfd2 resumed>)           = 6
+29383 rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+29381 fcntl(6, F_GETFL <unfinished ...>
+29383 <... rt_sigprocmask resumed>NULL, 8) = 0
+29381 <... fcntl resumed>)              = 0x2 (flags O_RDWR)
+29383 rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1],  <unfinished ...>
+29381 fcntl(6, F_SETFL, O_RDWR|O_NONBLOCK <unfinished ...>
+29383 <... rt_sigprocmask resumed>NULL, 8) = 0
+29381 <... fcntl resumed>)              = 0
+29383 sched_getparam(29383,  <unfinished ...>
+29381 fcntl(6, F_GETFL <unfinished ...>
+29383 <... sched_getparam resumed>[0])  = 0
+29381 <... fcntl resumed>)              = 0x802 (flags O_RDWR|O_NONBLOCK)
+29383 sched_getscheduler(29383 <unfinished ...>
+29381 fcntl(6, F_SETFL, O_RDWR|O_NONBLOCK <unfinished ...>
+29383 <... sched_getscheduler resumed>) = 0 (SCHED_OTHER)
+29381 <... fcntl resumed>)              = 0
+29383 sched_setscheduler(29383, SCHED_OTHER, [0] <unfinished ...>
+29381 getpid( <unfinished ...>
+29383 <... sched_setscheduler resumed>) = 0
+29381 <... getpid resumed>)             = 29381
+29383 prctl(PR_SET_NAME, "ZMQbg/Reaper" <unfinished ...>
+29381 epoll_create1(EPOLL_CLOEXEC <unfinished ...>
+29383 <... prctl resumed>)              = 0
+29381 <... epoll_create1 resumed>)      = 7
+29383 epoll_wait(5,  <unfinished ...>
+29381 epoll_ctl(7, EPOLL_CTL_ADD, 6, {events=0, data={u32=1931178592, u64=93855556530784}}) = 0
+29381 epoll_ctl(7, EPOLL_CTL_MOD, 6, {events=EPOLLIN, data={u32=1931178592, u64=93855556530784}}) = 0
+29381 mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f310eee5000
+29381 mprotect(0x7f310eee6000, 8388608, PROT_READ|PROT_WRITE) = 0
+29381 rt_sigprocmask(SIG_BLOCK, ~[], [], 8) = 0
+29381 clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7f310f6e5910, parent_tid=0x7f310f6e5910, exit_signal=0, stack=0x7f310eee5000, stack_size=0x7ffc80, tls=0x7f310f6e5640} <unfinished ...>
+29384 rseq(0x7f310f6e5fe0, 0x20, 0, 0x53053053 <unfinished ...>
+29381 <... clone3 resumed> => {parent_tid=[29384]}, 88) = 29384
+29384 <... rseq resumed>)               = 0
+29381 rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+29384 set_robust_list(0x7f310f6e5920, 24 <unfinished ...>
+29381 <... rt_sigprocmask resumed>NULL, 8) = 0
+29384 <... set_robust_list resumed>)    = 0
+29381 eventfd2(0, EFD_CLOEXEC <unfinished ...>
+29384 rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+29381 <... eventfd2 resumed>)           = 8
+29384 <... rt_sigprocmask resumed>NULL, 8) = 0
+29381 fcntl(8, F_GETFL <unfinished ...>
+29384 rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1],  <unfinished ...>
+29381 <... fcntl resumed>)              = 0x2 (flags O_RDWR)
+29384 <... rt_sigprocmask resumed>NULL, 8) = 0
+29381 fcntl(8, F_SETFL, O_RDWR|O_NONBLOCK <unfinished ...>
+29384 sched_getparam(29384,  <unfinished ...>
+29381 <... fcntl resumed>)              = 0
+29384 <... sched_getparam resumed>[0])  = 0
+29384 sched_getscheduler(29384 <unfinished ...>
+29381 fcntl(8, F_GETFL <unfinished ...>
+29384 <... sched_getscheduler resumed>) = 0 (SCHED_OTHER)
+29381 <... fcntl resumed>)              = 0x802 (flags O_RDWR|O_NONBLOCK)
+29384 sched_setscheduler(29384, SCHED_OTHER, [0] <unfinished ...>
+29381 fcntl(8, F_SETFL, O_RDWR|O_NONBLOCK <unfinished ...>
+29384 <... sched_setscheduler resumed>) = 0
+29381 <... fcntl resumed>)              = 0
+29384 prctl(PR_SET_NAME, "ZMQbg/IO/0" <unfinished ...>
+29381 getpid( <unfinished ...>
+29384 <... prctl resumed>)              = 0
+29381 <... getpid resumed>)             = 29381
+29384 epoll_wait(7,  <unfinished ...>
+29381 getpid()                          = 29381
+29381 poll([{fd=8, events=POLLIN}], 1, 0) = 0 (Timeout)
+29381 unlink("/tmp/node_20")            = -1 ENOENT (No such file or directory)
+29381 socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC, 0) = 9
+29381 bind(9, {sa_family=AF_UNIX, sun_path="/tmp/node_20"}, 14) = 0
+29381 listen(9, 100)                    = 0
+29381 getsockname(9, {sa_family=AF_UNIX, sun_path="/tmp/node_20"}, [128 => 15]) = 0
+29381 getpid()                          = 29381
+29381 write(6, "\1\0\0\0\0\0\0\0", 8 <unfinished ...>
+29384 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=1931178592, u64=93855556530784}}], 256, -1) = 1
+29381 <... write resumed>)              = 8
+29384 getpid( <unfinished ...>
+29381 getpid( <unfinished ...>
+29384 <... getpid resumed>)             = 29381
+29381 <... getpid resumed>)             = 29381
+29384 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29381 write(8, "\1\0\0\0\0\0\0\0", 8 <unfinished ...>
+29384 <... poll resumed>)               = 1 ([{fd=6, revents=POLLIN}])
+29381 <... write resumed>)              = 8
+29384 getpid()                          = 29381
+29381 getpid( <unfinished ...>
+29384 read(6,  <unfinished ...>
+29381 <... getpid resumed>)             = 29381
+29384 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29381 poll([{fd=8, events=POLLIN}], 1, -1 <unfinished ...>
+29384 mmap(NULL, 134217728, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0 <unfinished ...>
+29381 <... poll resumed>)               = 1 ([{fd=8, revents=POLLIN}])
+29384 <... mmap resumed>)               = 0x7f3106ee5000
+29381 getpid( <unfinished ...>
+29384 munmap(0x7f3106ee5000, 17936384 <unfinished ...>
+29381 <... getpid resumed>)             = 29381
+29384 <... munmap resumed>)             = 0
+29381 read(8,  <unfinished ...>
+29384 munmap(0x7f310c000000, 49172480 <unfinished ...>
+29381 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29384 <... munmap resumed>)             = 0
+29381 getpid( <unfinished ...>
+29384 mprotect(0x7f3108000000, 135168, PROT_READ|PROT_WRITE <unfinished ...>
+29381 <... getpid resumed>)             = 29381
+29384 <... mprotect resumed>)           = 0
+29381 poll([{fd=8, events=POLLIN}], 1, 0 <unfinished ...>
+29384 epoll_ctl(7, EPOLL_CTL_ADD, 9, {events=0, data={u32=134220656, u64=139848564345712}} <unfinished ...>
+29381 <... poll resumed>)               = 0 (Timeout)
+29384 <... epoll_ctl resumed>)          = 0
+29381 getpid( <unfinished ...>
+29384 epoll_ctl(7, EPOLL_CTL_MOD, 9, {events=EPOLLIN, data={u32=134220656, u64=139848564345712}} <unfinished ...>
+29381 <... getpid resumed>)             = 29381
+29384 <... epoll_ctl resumed>)          = 0
+29381 poll([{fd=8, events=POLLIN}], 1, -1 <unfinished ...>
+29384 getpid()                          = 29381
+29384 poll([{fd=6, events=POLLIN}], 1, 0) = 0 (Timeout)
+29384 epoll_wait(7,  <unfinished ...>
+29185 <... read resumed>"ping 10\n", 1024) = 8
+29185 eventfd2(0, EFD_CLOEXEC)          = 4
+29185 fcntl(4, F_GETFL)                 = 0x2 (flags O_RDWR)
+29185 fcntl(4, F_SETFL, O_RDWR|O_NONBLOCK) = 0
+29185 fcntl(4, F_GETFL)                 = 0x802 (flags O_RDWR|O_NONBLOCK)
+29185 fcntl(4, F_SETFL, O_RDWR|O_NONBLOCK) = 0
+29185 getpid()                          = 29185
+29185 epoll_create1(EPOLL_CLOEXEC)      = 5
+29185 epoll_ctl(5, EPOLL_CTL_ADD, 4, {events=0, data={u32=2025755936, u64=93838471238944}}) = 0
+29185 epoll_ctl(5, EPOLL_CTL_MOD, 4, {events=EPOLLIN, data={u32=2025755936, u64=93838471238944}}) = 0
+29185 getpid()                          = 29185
+29185 rt_sigaction(SIGRT_1, {sa_handler=0x7f913b1de870, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f913b18f520}, NULL, 8) = 0
+29185 rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+29185 mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f913a291000
+29185 mprotect(0x7f913a292000, 8388608, PROT_READ|PROT_WRITE) = 0
+29185 rt_sigprocmask(SIG_BLOCK, ~[], [], 8) = 0
+29185 clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7f913aa91910, parent_tid=0x7f913aa91910, exit_signal=0, stack=0x7f913a291000, stack_size=0x7ffc80, tls=0x7f913aa91640} => {parent_tid=[29466]}, 88) = 29466
+29466 rseq(0x7f913aa91fe0, 0x20, 0, 0x53053053 <unfinished ...>
+29185 rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+29466 <... rseq resumed>)               = 0
+29185 <... rt_sigprocmask resumed>NULL, 8) = 0
+29466 set_robust_list(0x7f913aa91920, 24 <unfinished ...>
+29185 eventfd2(0, EFD_CLOEXEC <unfinished ...>
+29466 <... set_robust_list resumed>)    = 0
+29185 <... eventfd2 resumed>)           = 6
+29466 rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+29185 fcntl(6, F_GETFL <unfinished ...>
+29466 <... rt_sigprocmask resumed>NULL, 8) = 0
+29185 <... fcntl resumed>)              = 0x2 (flags O_RDWR)
+29466 rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1],  <unfinished ...>
+29185 fcntl(6, F_SETFL, O_RDWR|O_NONBLOCK <unfinished ...>
+29466 <... rt_sigprocmask resumed>NULL, 8) = 0
+29185 <... fcntl resumed>)              = 0
+29466 sched_getparam(29466,  <unfinished ...>
+29185 fcntl(6, F_GETFL <unfinished ...>
+29466 <... sched_getparam resumed>[0])  = 0
+29185 <... fcntl resumed>)              = 0x802 (flags O_RDWR|O_NONBLOCK)
+29466 sched_getscheduler(29466 <unfinished ...>
+29185 fcntl(6, F_SETFL, O_RDWR|O_NONBLOCK <unfinished ...>
+29466 <... sched_getscheduler resumed>) = 0 (SCHED_OTHER)
+29185 <... fcntl resumed>)              = 0
+29466 sched_setscheduler(29466, SCHED_OTHER, [0] <unfinished ...>
+29185 getpid( <unfinished ...>
+29466 <... sched_setscheduler resumed>) = 0
+29185 <... getpid resumed>)             = 29185
+29466 prctl(PR_SET_NAME, "ZMQbg/Reaper" <unfinished ...>
+29185 epoll_create1(EPOLL_CLOEXEC)      = 7
+29466 <... prctl resumed>)              = 0
+29185 epoll_ctl(7, EPOLL_CTL_ADD, 6, {events=0, data={u32=2025734752, u64=93838471217760}} <unfinished ...>
+29466 epoll_wait(5,  <unfinished ...>
+29185 <... epoll_ctl resumed>)          = 0
+29185 epoll_ctl(7, EPOLL_CTL_MOD, 6, {events=EPOLLIN, data={u32=2025734752, u64=93838471217760}}) = 0
+29185 mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f9139a90000
+29185 mprotect(0x7f9139a91000, 8388608, PROT_READ|PROT_WRITE) = 0
+29185 rt_sigprocmask(SIG_BLOCK, ~[], [], 8) = 0
+29185 clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7f913a290910, parent_tid=0x7f913a290910, exit_signal=0, stack=0x7f9139a90000, stack_size=0x7ffc80, tls=0x7f913a290640} => {parent_tid=[29467]}, 88) = 29467
+29467 rseq(0x7f913a290fe0, 0x20, 0, 0x53053053 <unfinished ...>
+29185 rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+29467 <... rseq resumed>)               = 0
+29185 <... rt_sigprocmask resumed>NULL, 8) = 0
+29467 set_robust_list(0x7f913a290920, 24 <unfinished ...>
+29185 eventfd2(0, EFD_CLOEXEC <unfinished ...>
+29467 <... set_robust_list resumed>)    = 0
+29185 <... eventfd2 resumed>)           = 8
+29467 rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+29185 fcntl(8, F_GETFL <unfinished ...>
+29467 <... rt_sigprocmask resumed>NULL, 8) = 0
+29185 <... fcntl resumed>)              = 0x2 (flags O_RDWR)
+29185 fcntl(8, F_SETFL, O_RDWR|O_NONBLOCK <unfinished ...>
+29467 rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1],  <unfinished ...>
+29185 <... fcntl resumed>)              = 0
+29467 <... rt_sigprocmask resumed>NULL, 8) = 0
+29185 fcntl(8, F_GETFL <unfinished ...>
+29467 sched_getparam(29467,  <unfinished ...>
+29185 <... fcntl resumed>)              = 0x802 (flags O_RDWR|O_NONBLOCK)
+29467 <... sched_getparam resumed>[0])  = 0
+29185 fcntl(8, F_SETFL, O_RDWR|O_NONBLOCK <unfinished ...>
+29467 sched_getscheduler(29467 <unfinished ...>
+29185 <... fcntl resumed>)              = 0
+29467 <... sched_getscheduler resumed>) = 0 (SCHED_OTHER)
+29185 getpid( <unfinished ...>
+29467 sched_setscheduler(29467, SCHED_OTHER, [0] <unfinished ...>
+29185 <... getpid resumed>)             = 29185
+29467 <... sched_setscheduler resumed>) = 0
+29185 getpid( <unfinished ...>
+29467 prctl(PR_SET_NAME, "ZMQbg/IO/0" <unfinished ...>
+29185 <... getpid resumed>)             = 29185
+29185 poll([{fd=8, events=POLLIN}], 1, 0 <unfinished ...>
+29467 <... prctl resumed>)              = 0
+29185 <... poll resumed>)               = 0 (Timeout)
+29467 epoll_wait(7,  <unfinished ...>
+29185 brk(0x555878c14000)               = 0x555878c14000
+29185 getpid()                          = 29185
+29185 write(6, "\1\0\0\0\0\0\0\0", 8)   = 8
+29467 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=2025734752, u64=93838471217760}}], 256, -1) = 1
+29185 getpid( <unfinished ...>
+29467 getpid( <unfinished ...>
+29185 <... getpid resumed>)             = 29185
+29467 <... getpid resumed>)             = 29185
+29185 write(8, "\1\0\0\0\0\0\0\0", 8 <unfinished ...>
+29467 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29185 <... write resumed>)              = 8
+29467 <... poll resumed>)               = 1 ([{fd=6, revents=POLLIN}])
+29185 getpid( <unfinished ...>
+29467 getpid( <unfinished ...>
+29185 <... getpid resumed>)             = 29185
+29467 <... getpid resumed>)             = 29185
+29185 poll([{fd=8, events=POLLIN}], 1, 0 <unfinished ...>
+29467 read(6,  <unfinished ...>
+29185 <... poll resumed>)               = 1 ([{fd=8, revents=POLLIN}])
+29467 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29185 getpid( <unfinished ...>
+29467 mmap(NULL, 134217728, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0 <unfinished ...>
+29185 <... getpid resumed>)             = 29185
+29467 <... mmap resumed>)               = 0x7f9131a90000
+29185 read(8,  <unfinished ...>
+29467 munmap(0x7f9131a90000, 39256064 <unfinished ...>
+29185 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29467 <... munmap resumed>)             = 0
+29185 getpid( <unfinished ...>
+29467 munmap(0x7f9138000000, 27852800 <unfinished ...>
+29185 <... getpid resumed>)             = 29185
+29467 <... munmap resumed>)             = 0
+29185 poll([{fd=8, events=POLLIN}], 1, 0 <unfinished ...>
+29467 mprotect(0x7f9134000000, 135168, PROT_READ|PROT_WRITE <unfinished ...>
+29185 <... poll resumed>)               = 0 (Timeout)
+29467 <... mprotect resumed>)           = 0
+29185 getpid()                          = 29185
+29467 socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC, 0 <unfinished ...>
+29185 poll([{fd=8, events=POLLIN}], 1, 1000 <unfinished ...>
+29467 <... socket resumed>)             = 9
+29467 fcntl(9, F_GETFL)                 = 0x2 (flags O_RDWR)
+29467 fcntl(9, F_SETFL, O_RDWR|O_NONBLOCK) = 0
+29467 connect(9, {sa_family=AF_UNIX, sun_path="/tmp/node_10"}, 14) = 0
+29305 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=2281704304, u64=140396172675952}}], 256, -1) = 1
+29467 epoll_ctl(7, EPOLL_CTL_ADD, 9, {events=0, data={u32=872419696, u64=140261619405168}} <unfinished ...>
+29305 accept4(9, NULL, NULL, SOCK_CLOEXEC <unfinished ...>
+29467 <... epoll_ctl resumed>)          = 0
+29305 <... accept4 resumed>)            = 10
+29467 getsockopt(9, SOL_SOCKET, SO_ERROR, [0], [4]) = 0
+29305 getpeername(10,  <unfinished ...>
+29467 epoll_ctl(7, EPOLL_CTL_DEL, 9, 0x7f9134001174) = 0
+29305 <... getpeername resumed>{sa_family=AF_UNIX}, [128 => 2]) = 0
+29467 getsockname(9, {sa_family=AF_UNIX}, [128 => 2]) = 0
+29305 getsockname(10,  <unfinished ...>
+29467 getpeername(9, {sa_family=AF_UNIX, sun_path="/tmp/node_10"}, [128 => 15]) = 0
+29305 <... getsockname resumed>{sa_family=AF_UNIX, sun_path="/tmp/node_10"}, [128 => 15]) = 0
+29467 getsockopt(9, SOL_SOCKET, SO_PEERCRED,  <unfinished ...>
+29305 getpeername(10,  <unfinished ...>
+29467 <... getsockopt resumed>{pid=29303, uid=1000, gid=1000}, [12]) = 0
+29305 <... getpeername resumed>{sa_family=AF_UNIX}, [128 => 2]) = 0
+29467 futex(0x7f913af0877c, FUTEX_WAKE_PRIVATE, 2147483647 <unfinished ...>
+29305 getsockopt(10, SOL_SOCKET, SO_PEERCRED,  <unfinished ...>
+29467 <... futex resumed>)              = 0
+29305 <... getsockopt resumed>{pid=29185, uid=1000, gid=1000}, [12]) = 0
+29467 futex(0x7f913af08788, FUTEX_WAKE_PRIVATE, 2147483647 <unfinished ...>
+29305 futex(0x7fb09044b77c, FUTEX_WAKE_PRIVATE, 2147483647 <unfinished ...>
+29467 <... futex resumed>)              = 0
+29305 <... futex resumed>)              = 0
+29467 fcntl(9, F_GETFL <unfinished ...>
+29305 futex(0x7fb09044b788, FUTEX_WAKE_PRIVATE, 2147483647 <unfinished ...>
+29467 <... fcntl resumed>)              = 0x802 (flags O_RDWR|O_NONBLOCK)
+29305 <... futex resumed>)              = 0
+29467 fcntl(9, F_SETFL, O_RDWR|O_NONBLOCK) = 0
+29305 fcntl(10, F_GETFL <unfinished ...>
+29467 epoll_ctl(7, EPOLL_CTL_ADD, 9, {events=0, data={u32=872419760, u64=140261619405232}} <unfinished ...>
+29305 <... fcntl resumed>)              = 0x2 (flags O_RDWR)
+29467 <... epoll_ctl resumed>)          = 0
+29305 fcntl(10, F_SETFL, O_RDWR|O_NONBLOCK <unfinished ...>
+29467 epoll_ctl(7, EPOLL_CTL_MOD, 9, {events=EPOLLIN, data={u32=872419760, u64=140261619405232}} <unfinished ...>
+29305 <... fcntl resumed>)              = 0
+29467 <... epoll_ctl resumed>)          = 0
+29305 getpid( <unfinished ...>
+29467 epoll_ctl(7, EPOLL_CTL_MOD, 9, {events=EPOLLIN|EPOLLOUT, data={u32=872419760, u64=140261619405232}} <unfinished ...>
+29305 <... getpid resumed>)             = 29303
+29467 <... epoll_ctl resumed>)          = 0
+29305 write(6, "\1\0\0\0\0\0\0\0", 8 <unfinished ...>
+29467 recvfrom(9,  <unfinished ...>
+29305 <... write resumed>)              = 8
+29467 <... recvfrom resumed>0x7f91340018b8, 12, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+29305 epoll_wait(7,  <unfinished ...>
+29467 getpid( <unfinished ...>
+29305 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=482779744, u64=94399568978528}}], 256, -1) = 1
+29467 <... getpid resumed>)             = 29185
+29305 getpid( <unfinished ...>
+29467 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29305 <... getpid resumed>)             = 29303
+29467 <... poll resumed>)               = 0 (Timeout)
+29305 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29467 epoll_wait(7,  <unfinished ...>
+29305 <... poll resumed>)               = 1 ([{fd=6, revents=POLLIN}])
+29467 <... epoll_wait resumed>[{events=EPOLLOUT, data={u32=872419760, u64=140261619405232}}], 256, 29999) = 1
+29305 getpid( <unfinished ...>
+29467 sendto(9, "\377\0\0\0\0\0\0\0\1\177", 10, 0, NULL, 0 <unfinished ...>
+29305 <... getpid resumed>)             = 29303
+29467 <... sendto resumed>)             = 10
+29305 read(6,  <unfinished ...>
+29467 epoll_ctl(7, EPOLL_CTL_MOD, 9, {events=EPOLLIN, data={u32=872419760, u64=140261619405232}} <unfinished ...>
+29305 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29467 <... epoll_ctl resumed>)          = 0
+29305 epoll_ctl(7, EPOLL_CTL_ADD, 10, {events=0, data={u32=2281704384, u64=140396172676032}} <unfinished ...>
+29467 epoll_wait(7,  <unfinished ...>
+29305 <... epoll_ctl resumed>)          = 0
+29305 epoll_ctl(7, EPOLL_CTL_MOD, 10, {events=EPOLLIN, data={u32=2281704384, u64=140396172676032}}) = 0
+29305 epoll_ctl(7, EPOLL_CTL_MOD, 10, {events=EPOLLIN|EPOLLOUT, data={u32=2281704384, u64=140396172676032}}) = 0
+29305 recvfrom(10, "\377\0\0\0\0\0\0\0\1\177", 12, 0, NULL, NULL) = 10
+29305 recvfrom(10, 0x7fb0880012d2, 2, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+29305 getpid()                          = 29303
+29305 poll([{fd=6, events=POLLIN}], 1, 0) = 0 (Timeout)
+29305 epoll_wait(7, [{events=EPOLLOUT, data={u32=2281704384, u64=140396172676032}}], 256, 29997) = 1
+29305 sendto(10, "\377\0\0\0\0\0\0\0\1\177\3", 11, 0, NULL, 0) = 11
+29467 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=872419760, u64=140261619405232}}], 256, 29998) = 1
+29305 epoll_ctl(7, EPOLL_CTL_MOD, 10, {events=EPOLLIN, data={u32=2281704384, u64=140396172676032}} <unfinished ...>
+29467 recvfrom(9,  <unfinished ...>
+29305 <... epoll_ctl resumed>)          = 0
+29467 <... recvfrom resumed>"\377\0\0\0\0\0\0\0\1\177\3", 12, 0, NULL, NULL) = 11
+29305 epoll_wait(7,  <unfinished ...>
+29467 epoll_ctl(7, EPOLL_CTL_MOD, 9, {events=EPOLLIN|EPOLLOUT, data={u32=872419760, u64=140261619405232}}) = 0
+29467 recvfrom(9, 0x7f91340018c3, 53, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+29467 epoll_wait(7, [{events=EPOLLOUT, data={u32=872419760, u64=140261619405232}}], 256, 29993) = 1
+29467 sendto(9, "\3\1NULL\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 54, 0, NULL, 0) = 54
+29305 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=2281704384, u64=140396172676032}}], 256, 29996) = 1
+29467 epoll_ctl(7, EPOLL_CTL_MOD, 9, {events=EPOLLIN, data={u32=872419760, u64=140261619405232}} <unfinished ...>
+29305 recvfrom(10,  <unfinished ...>
+29467 <... epoll_ctl resumed>)          = 0
+29305 <... recvfrom resumed>"\3\1", 2, 0, NULL, NULL) = 2
+29467 epoll_wait(7,  <unfinished ...>
+29305 epoll_ctl(7, EPOLL_CTL_MOD, 10, {events=EPOLLIN|EPOLLOUT, data={u32=2281704384, u64=140396172676032}}) = 0
+29305 recvfrom(10, "NULL\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 52, 0, NULL, NULL) = 52
+29305 recvfrom(10, 0x7fb088003d48, 8192, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+29305 epoll_wait(7, [{events=EPOLLOUT, data={u32=2281704384, u64=140396172676032}}], 256, 29993) = 1
+29305 sendto(10, "\1NULL\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 53, 0, NULL, 0 <unfinished ...>
+29467 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=872419760, u64=140261619405232}}], 256, 29992) = 1
+29305 <... sendto resumed>)             = 53
+29467 recvfrom(9,  <unfinished ...>
+29305 epoll_wait(7,  <unfinished ...>
+29467 <... recvfrom resumed>"\1NULL\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 53, 0, NULL, NULL) = 53
+29305 <... epoll_wait resumed>[{events=EPOLLOUT, data={u32=2281704384, u64=140396172676032}}], 256, 29992) = 1
+29467 epoll_ctl(7, EPOLL_CTL_MOD, 9, {events=EPOLLIN|EPOLLOUT, data={u32=872419760, u64=140261619405232}} <unfinished ...>
+29305 sendto(10, "\4\31\5READY\vSocket-Type\0\0\0\3REP", 27, 0, NULL, 0 <unfinished ...>
+29467 <... epoll_ctl resumed>)          = 0
+29305 <... sendto resumed>)             = 27
+29467 recvfrom(9,  <unfinished ...>
+29305 epoll_wait(7,  <unfinished ...>
+29467 <... recvfrom resumed>"\4\31\5READY\vSocket-Type\0\0\0\3REP", 8192, 0, NULL, NULL) = 27
+29305 <... epoll_wait resumed>[{events=EPOLLOUT, data={u32=2281704384, u64=140396172676032}}], 256, 29992) = 1
+29467 epoll_wait(7,  <unfinished ...>
+29305 epoll_ctl(7, EPOLL_CTL_MOD, 10, {events=EPOLLIN, data={u32=2281704384, u64=140396172676032}} <unfinished ...>
+29467 <... epoll_wait resumed>[{events=EPOLLOUT, data={u32=872419760, u64=140261619405232}}], 256, 29990) = 1
+29305 <... epoll_ctl resumed>)          = 0
+29467 getpid( <unfinished ...>
+29305 epoll_wait(7,  <unfinished ...>
+29467 <... getpid resumed>)             = 29185
+29467 write(8, "\1\0\0\0\0\0\0\0", 8 <unfinished ...>
+29185 <... poll resumed>)               = 1 ([{fd=8, revents=POLLIN}])
+29467 <... write resumed>)              = 8
+29185 getpid()                          = 29185
+29467 sendto(9, "\4&\5READY\vSocket-Type\0\0\0\3REQ\10Iden"..., 48, 0, NULL, 0 <unfinished ...>
+29185 read(8, "\1\0\0\0\0\0\0\0", 8)    = 8
+29467 <... sendto resumed>)             = 48
+29305 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=2281704384, u64=140396172676032}}], 256, 29991) = 1
+29185 getpid( <unfinished ...>
+29467 epoll_wait(7,  <unfinished ...>
+29185 <... getpid resumed>)             = 29185
+29305 recvfrom(10,  <unfinished ...>
+29185 poll([{fd=8, events=POLLIN}], 1, 0 <unfinished ...>
+29467 <... epoll_wait resumed>[{events=EPOLLOUT, data={u32=872419760, u64=140261619405232}}], 256, -1) = 1
+29185 <... poll resumed>)               = 0 (Timeout)
+29305 <... recvfrom resumed>"\4&\5READY\vSocket-Type\0\0\0\3REQ\10Iden"..., 8192, 0, NULL, NULL) = 48
+29185 getpid( <unfinished ...>
+29467 epoll_ctl(7, EPOLL_CTL_MOD, 9, {events=EPOLLIN, data={u32=872419760, u64=140261619405232}} <unfinished ...>
+29185 <... getpid resumed>)             = 29185
+29305 getpid( <unfinished ...>
+29185 poll([{fd=8, events=POLLIN}], 1, 983 <unfinished ...>
+29467 <... epoll_ctl resumed>)          = 0
+29305 <... getpid resumed>)             = 29303
+29467 epoll_wait(7,  <unfinished ...>
+29305 write(8, "\1\0\0\0\0\0\0\0", 8)   = 8
+29303 <... poll resumed>)               = 1 ([{fd=8, revents=POLLIN}])
+29305 epoll_ctl(7, EPOLL_CTL_MOD, 10, {events=EPOLLIN|EPOLLOUT, data={u32=2281704384, u64=140396172676032}} <unfinished ...>
+29303 getpid( <unfinished ...>
+29305 <... epoll_ctl resumed>)          = 0
+29303 <... getpid resumed>)             = 29303
+29305 epoll_ctl(7, EPOLL_CTL_MOD, 10, {events=EPOLLIN, data={u32=2281704384, u64=140396172676032}} <unfinished ...>
+29303 read(8,  <unfinished ...>
+29305 <... epoll_ctl resumed>)          = 0
+29303 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29305 epoll_wait(7,  <unfinished ...>
+29303 getpid()                          = 29303
+29303 write(6, "\1\0\0\0\0\0\0\0", 8 <unfinished ...>
+29305 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=482779744, u64=94399568978528}}], 256, -1) = 1
+29303 <... write resumed>)              = 8
+29305 getpid( <unfinished ...>
+29303 getpid( <unfinished ...>
+29305 <... getpid resumed>)             = 29303
+29303 <... getpid resumed>)             = 29303
+29305 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29303 poll([{fd=8, events=POLLIN}], 1, 0 <unfinished ...>
+29305 <... poll resumed>)               = 1 ([{fd=6, revents=POLLIN}])
+29303 <... poll resumed>)               = 0 (Timeout)
+29305 getpid( <unfinished ...>
+29303 getpid( <unfinished ...>
+29305 <... getpid resumed>)             = 29303
+29303 <... getpid resumed>)             = 29303
+29305 read(6,  <unfinished ...>
+29303 poll([{fd=8, events=POLLIN}], 1, 0 <unfinished ...>
+29305 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29303 <... poll resumed>)               = 0 (Timeout)
+29305 getpid( <unfinished ...>
+29303 getpid( <unfinished ...>
+29305 <... getpid resumed>)             = 29303
+29303 <... getpid resumed>)             = 29303
+29305 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29303 write(6, "\1\0\0\0\0\0\0\0", 8 <unfinished ...>
+29305 <... poll resumed>)               = 0 (Timeout)
+29303 <... write resumed>)              = 8
+29305 epoll_wait(7,  <unfinished ...>
+29303 getpid( <unfinished ...>
+29305 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=482779744, u64=94399568978528}}], 256, -1) = 1
+29303 <... getpid resumed>)             = 29303
+29305 getpid( <unfinished ...>
+29303 poll([{fd=8, events=POLLIN}], 1, -1 <unfinished ...>
+29305 <... getpid resumed>)             = 29303
+29305 poll([{fd=6, events=POLLIN}], 1, 0) = 1 ([{fd=6, revents=POLLIN}])
+29305 getpid()                          = 29303
+29305 read(6, "\1\0\0\0\0\0\0\0", 8)    = 8
+29305 epoll_ctl(7, EPOLL_CTL_MOD, 10, {events=EPOLLIN|EPOLLOUT, data={u32=2281704384, u64=140396172676032}}) = 0
+29305 getpid()                          = 29303
+29305 write(8, "\1\0\0\0\0\0\0\0", 8)   = 8
+29303 <... poll resumed>)               = 1 ([{fd=8, revents=POLLIN}])
+29305 sendto(10, "\1\0\0\6Ok: 1\0", 10, 0, NULL, 0 <unfinished ...>
+29303 getpid( <unfinished ...>
+29305 <... sendto resumed>)             = 10
+29303 <... getpid resumed>)             = 29303
+29467 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=872419760, u64=140261619405232}}], 256, -1) = 1
+29305 getpid( <unfinished ...>
+29467 recvfrom(9,  <unfinished ...>
+29303 read(8,  <unfinished ...>
+29467 <... recvfrom resumed>"\1\0\0\6Ok: 1\0", 8192, 0, NULL, NULL) = 10
+29305 <... getpid resumed>)             = 29303
+29467 getpid( <unfinished ...>
+29303 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29467 <... getpid resumed>)             = 29185
+29305 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29467 write(8, "\1\0\0\0\0\0\0\0", 8 <unfinished ...>
+29303 getpid( <unfinished ...>
+29305 <... poll resumed>)               = 0 (Timeout)
+29185 <... poll resumed>)               = 1 ([{fd=8, revents=POLLIN}])
+29467 <... write resumed>)              = 8
+29303 <... getpid resumed>)             = 29303
+29185 getpid( <unfinished ...>
+29467 epoll_wait(7,  <unfinished ...>
+29305 epoll_wait(7,  <unfinished ...>
+29185 <... getpid resumed>)             = 29185
+29303 poll([{fd=8, events=POLLIN}], 1, 0 <unfinished ...>
+29185 read(8,  <unfinished ...>
+29305 <... epoll_wait resumed>[{events=EPOLLOUT, data={u32=2281704384, u64=140396172676032}}], 256, -1) = 1
+29185 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29303 <... poll resumed>)               = 0 (Timeout)
+29185 getpid( <unfinished ...>
+29305 epoll_ctl(7, EPOLL_CTL_MOD, 10, {events=EPOLLIN, data={u32=2281704384, u64=140396172676032}} <unfinished ...>
+29185 <... getpid resumed>)             = 29185
+29303 getpid( <unfinished ...>
+29185 poll([{fd=8, events=POLLIN}], 1, 0 <unfinished ...>
+29305 <... epoll_ctl resumed>)          = 0
+29185 <... poll resumed>)               = 0 (Timeout)
+29303 <... getpid resumed>)             = 29303
+29185 getpid( <unfinished ...>
+29305 epoll_wait(7,  <unfinished ...>
+29185 <... getpid resumed>)             = 29185
+29303 poll([{fd=8, events=POLLIN}], 1, -1 <unfinished ...>
+29185 write(6, "\1\0\0\0\0\0\0\0", 8)   = 8
+29467 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=2025734752, u64=93838471217760}}], 256, -1) = 1
+29185 getpid()                          = 29185
+29467 getpid( <unfinished ...>
+29185 write(4, "\1\0\0\0\0\0\0\0", 8 <unfinished ...>
+29467 <... getpid resumed>)             = 29185
+29185 <... write resumed>)              = 8
+29467 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29466 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=2025755936, u64=93838471238944}}], 256, -1) = 1
+29185 write(1, "Ok: 1\n", 6 <unfinished ...>
+29467 <... poll resumed>)               = 1 ([{fd=6, revents=POLLIN}])
+29466 getpid( <unfinished ...>
+29467 getpid( <unfinished ...>
+29185 <... write resumed>)              = 6
+29466 <... getpid resumed>)             = 29185
+29185 write(1, "> ", 2 <unfinished ...>
+29467 <... getpid resumed>)             = 29185
+29466 getpid( <unfinished ...>
+29185 <... write resumed>)              = 2
+29467 read(6,  <unfinished ...>
+29185 read(0,  <unfinished ...>
+29466 <... getpid resumed>)             = 29185
+29467 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29466 poll([{fd=4, events=POLLIN}], 1, 0 <unfinished ...>
+29467 getpid( <unfinished ...>
+29466 <... poll resumed>)               = 1 ([{fd=4, revents=POLLIN}])
+29467 <... getpid resumed>)             = 29185
+29466 getpid( <unfinished ...>
+29467 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29466 <... getpid resumed>)             = 29185
+29467 <... poll resumed>)               = 0 (Timeout)
+29466 read(4,  <unfinished ...>
+29467 epoll_wait(7,  <unfinished ...>
+29466 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29466 mmap(NULL, 134217728, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x7f912c000000
+29466 munmap(0x7f9130000000, 67108864)  = 0
+29466 mprotect(0x7f912c000000, 135168, PROT_READ|PROT_WRITE) = 0
+29466 epoll_ctl(5, EPOLL_CTL_ADD, 8, {events=0, data={u32=738200432, u64=140261485185904}}) = 0
+29466 epoll_ctl(5, EPOLL_CTL_MOD, 8, {events=EPOLLIN, data={u32=738200432, u64=140261485185904}}) = 0
+29466 getpid()                          = 29185
+29466 write(6, "\1\0\0\0\0\0\0\0", 8)   = 8
+29467 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=2025734752, u64=93838471217760}}], 256, -1) = 1
+29466 getpid( <unfinished ...>
+29467 getpid( <unfinished ...>
+29466 <... getpid resumed>)             = 29185
+29467 <... getpid resumed>)             = 29185
+29466 getpid( <unfinished ...>
+29467 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29466 <... getpid resumed>)             = 29185
+29467 <... poll resumed>)               = 1 ([{fd=6, revents=POLLIN}])
+29466 poll([{fd=4, events=POLLIN}], 1, 0 <unfinished ...>
+29467 getpid()                          = 29185
+29466 <... poll resumed>)               = 0 (Timeout)
+29467 read(6,  <unfinished ...>
+29466 epoll_wait(5,  <unfinished ...>
+29467 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29467 epoll_ctl(7, EPOLL_CTL_MOD, 9, {events=EPOLLIN|EPOLLOUT, data={u32=872419760, u64=140261619405232}}) = 0
+29467 getpid()                          = 29185
+29467 write(8, "\1\0\0\0\0\0\0\0", 8)   = 8
+29466 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=738200432, u64=140261485185904}}], 256, -1) = 1
+29467 epoll_ctl(7, EPOLL_CTL_MOD, 9, {events=EPOLLIN, data={u32=872419760, u64=140261619405232}}) = 0
+29466 getpid( <unfinished ...>
+29467 getpid( <unfinished ...>
+29466 <... getpid resumed>)             = 29185
+29467 <... getpid resumed>)             = 29185
+29466 poll([{fd=8, events=POLLIN}], 1, 0 <unfinished ...>
+29467 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29466 <... poll resumed>)               = 1 ([{fd=8, revents=POLLIN}])
+29467 <... poll resumed>)               = 0 (Timeout)
+29467 epoll_wait(7,  <unfinished ...>
+29466 getpid()                          = 29185
+29466 read(8, "\1\0\0\0\0\0\0\0", 8)    = 8
+29466 getpid()                          = 29185
+29466 write(6, "\1\0\0\0\0\0\0\0", 8 <unfinished ...>
+29467 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=2025734752, u64=93838471217760}}], 256, 1000) = 1
+29466 <... write resumed>)              = 8
+29467 getpid( <unfinished ...>
+29466 getpid( <unfinished ...>
+29467 <... getpid resumed>)             = 29185
+29466 <... getpid resumed>)             = 29185
+29467 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29466 poll([{fd=8, events=POLLIN}], 1, 0 <unfinished ...>
+29467 <... poll resumed>)               = 1 ([{fd=6, revents=POLLIN}])
+29466 <... poll resumed>)               = 0 (Timeout)
+29467 getpid( <unfinished ...>
+29466 epoll_wait(5,  <unfinished ...>
+29467 <... getpid resumed>)             = 29185
+29467 read(6, "\1\0\0\0\0\0\0\0", 8)    = 8
+29467 getpid()                          = 29185
+29467 write(8, "\1\0\0\0\0\0\0\0", 8)   = 8
+29466 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=738200432, u64=140261485185904}}], 256, -1) = 1
+29467 epoll_ctl(7, EPOLL_CTL_DEL, 9, 0x7f91340011b4 <unfinished ...>
+29466 getpid( <unfinished ...>
+29467 <... epoll_ctl resumed>)          = 0
+29466 <... getpid resumed>)             = 29185
+29467 close(9 <unfinished ...>
+29466 poll([{fd=8, events=POLLIN}], 1, 0 <unfinished ...>
+29467 <... close resumed>)              = 0
+29466 <... poll resumed>)               = 1 ([{fd=8, revents=POLLIN}])
+29305 <... epoll_wait resumed>[{events=EPOLLIN|EPOLLHUP, data={u32=2281704384, u64=140396172676032}}], 256, -1) = 1
+29467 getpid( <unfinished ...>
+29466 getpid( <unfinished ...>
+29467 <... getpid resumed>)             = 29185
+29305 recvfrom(10,  <unfinished ...>
+29467 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29466 <... getpid resumed>)             = 29185
+29467 <... poll resumed>)               = 0 (Timeout)
+29305 <... recvfrom resumed>"", 8192, 0, NULL, NULL) = 0
+29467 epoll_wait(7,  <unfinished ...>
+29466 read(8,  <unfinished ...>
+29305 getpid( <unfinished ...>
+29466 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29305 <... getpid resumed>)             = 29303
+29466 getpid( <unfinished ...>
+29305 write(6, "\1\0\0\0\0\0\0\0", 8 <unfinished ...>
+29466 <... getpid resumed>)             = 29185
+29305 <... write resumed>)              = 8
+29466 poll([{fd=8, events=POLLIN}], 1, 0 <unfinished ...>
+29305 epoll_ctl(7, EPOLL_CTL_DEL, 10, 0x7fb088000bc4 <unfinished ...>
+29466 <... poll resumed>)               = 0 (Timeout)
+29305 <... epoll_ctl resumed>)          = 0
+29466 epoll_ctl(5, EPOLL_CTL_DEL, 8, 0x7f912c000b74 <unfinished ...>
+29305 close(10 <unfinished ...>
+29466 <... epoll_ctl resumed>)          = 0
+29305 <... close resumed>)              = 0
+29466 getpid( <unfinished ...>
+29305 epoll_wait(7,  <unfinished ...>
+29466 <... getpid resumed>)             = 29185
+29305 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=482779744, u64=94399568978528}}], 256, -1) = 1
+29466 write(4, "\1\0\0\0\0\0\0\0", 8 <unfinished ...>
+29305 getpid( <unfinished ...>
+29466 <... write resumed>)              = 8
+29305 <... getpid resumed>)             = 29303
+29466 close(8 <unfinished ...>
+29305 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29466 <... close resumed>)              = 0
+29305 <... poll resumed>)               = 1 ([{fd=6, revents=POLLIN}])
+29466 epoll_wait(5, [{events=EPOLLIN, data={u32=2025755936, u64=93838471238944}}], 256, -1) = 1
+29305 getpid( <unfinished ...>
+29466 getpid( <unfinished ...>
+29305 <... getpid resumed>)             = 29303
+29466 <... getpid resumed>)             = 29185
+29305 read(6,  <unfinished ...>
+29466 getpid( <unfinished ...>
+29305 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29466 <... getpid resumed>)             = 29185
+29305 getpid( <unfinished ...>
+29466 poll([{fd=4, events=POLLIN}], 1, 0 <unfinished ...>
+29305 <... getpid resumed>)             = 29303
+29466 <... poll resumed>)               = 1 ([{fd=4, revents=POLLIN}])
+29305 write(8, "\1\0\0\0\0\0\0\0", 8 <unfinished ...>
+29466 getpid( <unfinished ...>
+29305 <... write resumed>)              = 8
+29466 <... getpid resumed>)             = 29185
+29303 <... poll resumed>)               = 1 ([{fd=8, revents=POLLIN}])
+29466 read(4,  <unfinished ...>
+29305 getpid( <unfinished ...>
+29466 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29303 getpid( <unfinished ...>
+29466 getpid( <unfinished ...>
+29305 <... getpid resumed>)             = 29303
+29466 <... getpid resumed>)             = 29185
+29303 <... getpid resumed>)             = 29303
+29466 getpid( <unfinished ...>
+29305 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29466 <... getpid resumed>)             = 29185
+29303 read(8,  <unfinished ...>
+29466 poll([{fd=4, events=POLLIN}], 1, 0 <unfinished ...>
+29305 <... poll resumed>)               = 0 (Timeout)
+29466 <... poll resumed>)               = 0 (Timeout)
+29303 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29466 epoll_wait(5,  <unfinished ...>
+29305 epoll_wait(7,  <unfinished ...>
+29303 getpid()                          = 29303
+29303 poll([{fd=8, events=POLLIN}], 1, 0) = 0 (Timeout)
+29303 getpid()                          = 29303
+29303 write(6, "\1\0\0\0\0\0\0\0", 8 <unfinished ...>
+29305 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=482779744, u64=94399568978528}}], 256, -1) = 1
+29303 <... write resumed>)              = 8
+29305 getpid()                          = 29303
+29303 getpid( <unfinished ...>
+29305 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29303 <... getpid resumed>)             = 29303
+29305 <... poll resumed>)               = 1 ([{fd=6, revents=POLLIN}])
+29303 poll([{fd=8, events=POLLIN}], 1, -1 <unfinished ...>
+29305 getpid()                          = 29303
+29305 read(6, "\1\0\0\0\0\0\0\0", 8)    = 8
+29305 getpid()                          = 29303
+29305 write(8, "\1\0\0\0\0\0\0\0", 8)   = 8
+29303 <... poll resumed>)               = 1 ([{fd=8, revents=POLLIN}])
+29305 getpid( <unfinished ...>
+29303 getpid( <unfinished ...>
+29305 <... getpid resumed>)             = 29303
+29303 <... getpid resumed>)             = 29303
+29305 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29303 read(8,  <unfinished ...>
+29305 <... poll resumed>)               = 0 (Timeout)
+29303 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29305 epoll_wait(7,  <unfinished ...>
+29303 getpid()                          = 29303
+29303 poll([{fd=8, events=POLLIN}], 1, 0) = 0 (Timeout)
+29303 getpid()                          = 29303
+29303 poll([{fd=8, events=POLLIN}], 1, -1 <unfinished ...>
+29185 <... read resumed>"exec 10\n", 1024) = 8
+29185 write(1, "> ", 2)                 = 2
+29185 read(0, "abababa\n", 1024)        = 8
+29185 write(1, "> ", 2)                 = 2
+29185 read(0, "a\n", 1024)              = 2
+29185 eventfd2(0, EFD_CLOEXEC)          = 8
+29185 fcntl(8, F_GETFL)                 = 0x2 (flags O_RDWR)
+29185 fcntl(8, F_SETFL, O_RDWR|O_NONBLOCK) = 0
+29185 fcntl(8, F_GETFL)                 = 0x802 (flags O_RDWR|O_NONBLOCK)
+29185 fcntl(8, F_SETFL, O_RDWR|O_NONBLOCK) = 0
+29185 getpid()                          = 29185
+29185 getpid()                          = 29185
+29185 poll([{fd=8, events=POLLIN}], 1, 0) = 0 (Timeout)
+29185 getpid()                          = 29185
+29185 write(6, "\1\0\0\0\0\0\0\0", 8)   = 8
+29467 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=2025734752, u64=93838471217760}}], 256, -1) = 1
+29185 getpid( <unfinished ...>
+29467 getpid( <unfinished ...>
+29185 <... getpid resumed>)             = 29185
+29185 write(8, "\1\0\0\0\0\0\0\0", 8 <unfinished ...>
+29467 <... getpid resumed>)             = 29185
+29185 <... write resumed>)              = 8
+29185 getpid( <unfinished ...>
+29467 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29185 <... getpid resumed>)             = 29185
+29185 poll([{fd=8, events=POLLIN}], 1, 0 <unfinished ...>
+29467 <... poll resumed>)               = 1 ([{fd=6, revents=POLLIN}])
+29185 <... poll resumed>)               = 1 ([{fd=8, revents=POLLIN}])
+29185 getpid( <unfinished ...>
+29467 getpid( <unfinished ...>
+29185 <... getpid resumed>)             = 29185
+29185 read(8,  <unfinished ...>
+29467 <... getpid resumed>)             = 29185
+29185 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29467 read(6,  <unfinished ...>
+29185 getpid( <unfinished ...>
+29467 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29185 <... getpid resumed>)             = 29185
+29185 poll([{fd=8, events=POLLIN}], 1, 0 <unfinished ...>
+29467 socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC, 0 <unfinished ...>
+29185 <... poll resumed>)               = 0 (Timeout)
+29467 <... socket resumed>)             = 9
+29185 getpid( <unfinished ...>
+29467 fcntl(9, F_GETFL <unfinished ...>
+29185 <... getpid resumed>)             = 29185
+29467 <... fcntl resumed>)              = 0x2 (flags O_RDWR)
+29185 poll([{fd=8, events=POLLIN}], 1, 1000 <unfinished ...>
+29467 fcntl(9, F_SETFL, O_RDWR|O_NONBLOCK) = 0
+29467 connect(9, {sa_family=AF_UNIX, sun_path="/tmp/node_10"}, 14) = 0
+29305 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=2281704304, u64=140396172675952}}], 256, -1) = 1
+29467 epoll_ctl(7, EPOLL_CTL_ADD, 9, {events=0, data={u32=872422432, u64=140261619407904}} <unfinished ...>
+29305 accept4(9, NULL, NULL, SOCK_CLOEXEC <unfinished ...>
+29467 <... epoll_ctl resumed>)          = 0
+29305 <... accept4 resumed>)            = 10
+29467 getsockopt(9, SOL_SOCKET, SO_ERROR,  <unfinished ...>
+29305 getpeername(10,  <unfinished ...>
+29467 <... getsockopt resumed>[0], [4]) = 0
+29305 <... getpeername resumed>{sa_family=AF_UNIX}, [128 => 2]) = 0
+29467 epoll_ctl(7, EPOLL_CTL_DEL, 9, 0x7f9134001c24 <unfinished ...>
+29305 getsockname(10,  <unfinished ...>
+29467 <... epoll_ctl resumed>)          = 0
+29305 <... getsockname resumed>{sa_family=AF_UNIX, sun_path="/tmp/node_10"}, [128 => 15]) = 0
+29467 getsockname(9,  <unfinished ...>
+29305 getpeername(10,  <unfinished ...>
+29467 <... getsockname resumed>{sa_family=AF_UNIX}, [128 => 2]) = 0
+29305 <... getpeername resumed>{sa_family=AF_UNIX}, [128 => 2]) = 0
+29467 getpeername(9,  <unfinished ...>
+29305 getsockopt(10, SOL_SOCKET, SO_PEERCRED,  <unfinished ...>
+29467 <... getpeername resumed>{sa_family=AF_UNIX, sun_path="/tmp/node_10"}, [128 => 15]) = 0
+29305 <... getsockopt resumed>{pid=29185, uid=1000, gid=1000}, [12]) = 0
+29467 getsockopt(9, SOL_SOCKET, SO_PEERCRED,  <unfinished ...>
+29305 fcntl(10, F_GETFL <unfinished ...>
+29467 <... getsockopt resumed>{pid=29303, uid=1000, gid=1000}, [12]) = 0
+29305 <... fcntl resumed>)              = 0x2 (flags O_RDWR)
+29467 fcntl(9, F_GETFL <unfinished ...>
+29305 fcntl(10, F_SETFL, O_RDWR|O_NONBLOCK <unfinished ...>
+29467 <... fcntl resumed>)              = 0x802 (flags O_RDWR|O_NONBLOCK)
+29305 <... fcntl resumed>)              = 0
+29467 fcntl(9, F_SETFL, O_RDWR|O_NONBLOCK <unfinished ...>
+29305 getpid( <unfinished ...>
+29467 <... fcntl resumed>)              = 0
+29305 <... getpid resumed>)             = 29303
+29467 epoll_ctl(7, EPOLL_CTL_ADD, 9, {events=0, data={u32=872419760, u64=140261619405232}} <unfinished ...>
+29305 write(6, "\1\0\0\0\0\0\0\0", 8 <unfinished ...>
+29467 <... epoll_ctl resumed>)          = 0
+29305 <... write resumed>)              = 8
+29467 epoll_ctl(7, EPOLL_CTL_MOD, 9, {events=EPOLLIN, data={u32=872419760, u64=140261619405232}} <unfinished ...>
+29305 epoll_wait(7,  <unfinished ...>
+29467 <... epoll_ctl resumed>)          = 0
+29305 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=482779744, u64=94399568978528}}], 256, -1) = 1
+29467 epoll_ctl(7, EPOLL_CTL_MOD, 9, {events=EPOLLIN|EPOLLOUT, data={u32=872419760, u64=140261619405232}} <unfinished ...>
+29305 getpid( <unfinished ...>
+29467 <... epoll_ctl resumed>)          = 0
+29305 <... getpid resumed>)             = 29303
+29467 recvfrom(9,  <unfinished ...>
+29305 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29467 <... recvfrom resumed>0x7f91340027c8, 12, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+29305 <... poll resumed>)               = 1 ([{fd=6, revents=POLLIN}])
+29467 getpid( <unfinished ...>
+29305 getpid( <unfinished ...>
+29467 <... getpid resumed>)             = 29185
+29305 <... getpid resumed>)             = 29303
+29467 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29305 read(6,  <unfinished ...>
+29467 <... poll resumed>)               = 0 (Timeout)
+29305 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29467 epoll_wait(7,  <unfinished ...>
+29305 epoll_ctl(7, EPOLL_CTL_ADD, 10, {events=0, data={u32=2281771008, u64=140396172742656}} <unfinished ...>
+29467 <... epoll_wait resumed>[{events=EPOLLOUT, data={u32=872419760, u64=140261619405232}}], 256, 29999) = 1
+29305 <... epoll_ctl resumed>)          = 0
+29467 sendto(9, "\377\0\0\0\0\0\0\0\1\177", 10, 0, NULL, 0 <unfinished ...>
+29305 epoll_ctl(7, EPOLL_CTL_MOD, 10, {events=EPOLLIN, data={u32=2281771008, u64=140396172742656}} <unfinished ...>
+29467 <... sendto resumed>)             = 10
+29305 <... epoll_ctl resumed>)          = 0
+29467 epoll_ctl(7, EPOLL_CTL_MOD, 9, {events=EPOLLIN, data={u32=872419760, u64=140261619405232}} <unfinished ...>
+29305 epoll_ctl(7, EPOLL_CTL_MOD, 10, {events=EPOLLIN|EPOLLOUT, data={u32=2281771008, u64=140396172742656}} <unfinished ...>
+29467 <... epoll_ctl resumed>)          = 0
+29305 <... epoll_ctl resumed>)          = 0
+29467 epoll_wait(7,  <unfinished ...>
+29305 recvfrom(10, "\377\0\0\0\0\0\0\0\1\177", 12, 0, NULL, NULL) = 10
+29305 recvfrom(10, 0x7fb0880012d2, 2, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+29305 getpid()                          = 29303
+29305 poll([{fd=6, events=POLLIN}], 1, 0) = 0 (Timeout)
+29305 epoll_wait(7, [{events=EPOLLOUT, data={u32=2281771008, u64=140396172742656}}], 256, 29999) = 1
+29305 sendto(10, "\377\0\0\0\0\0\0\0\1\177\3", 11, 0, NULL, 0 <unfinished ...>
+29467 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=872419760, u64=140261619405232}}], 256, 29999) = 1
+29305 <... sendto resumed>)             = 11
+29467 recvfrom(9, "\377\0\0\0\0\0\0\0\1\177\3", 12, 0, NULL, NULL) = 11
+29305 epoll_ctl(7, EPOLL_CTL_MOD, 10, {events=EPOLLIN, data={u32=2281771008, u64=140396172742656}} <unfinished ...>
+29467 epoll_ctl(7, EPOLL_CTL_MOD, 9, {events=EPOLLIN|EPOLLOUT, data={u32=872419760, u64=140261619405232}} <unfinished ...>
+29305 <... epoll_ctl resumed>)          = 0
+29467 <... epoll_ctl resumed>)          = 0
+29305 epoll_wait(7,  <unfinished ...>
+29467 recvfrom(9, 0x7f91340027d3, 53, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+29467 epoll_wait(7, [{events=EPOLLOUT, data={u32=872419760, u64=140261619405232}}], 256, 29996) = 1
+29467 sendto(9, "\3\1NULL\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 54, 0, NULL, 0) = 54
+29305 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=2281771008, u64=140396172742656}}], 256, 29998) = 1
+29467 epoll_ctl(7, EPOLL_CTL_MOD, 9, {events=EPOLLIN, data={u32=872419760, u64=140261619405232}} <unfinished ...>
+29305 recvfrom(10,  <unfinished ...>
+29467 <... epoll_ctl resumed>)          = 0
+29305 <... recvfrom resumed>"\3\1", 2, 0, NULL, NULL) = 2
+29467 epoll_wait(7,  <unfinished ...>
+29305 epoll_ctl(7, EPOLL_CTL_MOD, 10, {events=EPOLLIN|EPOLLOUT, data={u32=2281771008, u64=140396172742656}}) = 0
+29305 recvfrom(10, "NULL\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 52, 0, NULL, NULL) = 52
+29305 recvfrom(10, 0x7fb088003d48, 8192, 0, NULL, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+29305 epoll_wait(7, [{events=EPOLLOUT, data={u32=2281771008, u64=140396172742656}}], 256, 29995) = 1
+29305 sendto(10, "\1NULL\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 53, 0, NULL, 0 <unfinished ...>
+29467 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=872419760, u64=140261619405232}}], 256, 29995) = 1
+29305 <... sendto resumed>)             = 53
+29467 recvfrom(9,  <unfinished ...>
+29305 epoll_wait(7,  <unfinished ...>
+29467 <... recvfrom resumed>"\1NULL\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 53, 0, NULL, NULL) = 53
+29305 <... epoll_wait resumed>[{events=EPOLLOUT, data={u32=2281771008, u64=140396172742656}}], 256, 29994) = 1
+29467 epoll_ctl(7, EPOLL_CTL_MOD, 9, {events=EPOLLIN|EPOLLOUT, data={u32=872419760, u64=140261619405232}} <unfinished ...>
+29305 sendto(10, "\4\31\5READY\vSocket-Type\0\0\0\3REP", 27, 0, NULL, 0 <unfinished ...>
+29467 <... epoll_ctl resumed>)          = 0
+29305 <... sendto resumed>)             = 27
+29467 recvfrom(9,  <unfinished ...>
+29305 epoll_wait(7,  <unfinished ...>
+29467 <... recvfrom resumed>"\4\31\5READY\vSocket-Type\0\0\0\3REP", 8192, 0, NULL, NULL) = 27
+29305 <... epoll_wait resumed>[{events=EPOLLOUT, data={u32=2281771008, u64=140396172742656}}], 256, 29994) = 1
+29467 epoll_wait(7,  <unfinished ...>
+29305 epoll_ctl(7, EPOLL_CTL_MOD, 10, {events=EPOLLIN, data={u32=2281771008, u64=140396172742656}} <unfinished ...>
+29467 <... epoll_wait resumed>[{events=EPOLLOUT, data={u32=872419760, u64=140261619405232}}], 256, 29993) = 1
+29305 <... epoll_ctl resumed>)          = 0
+29467 getpid( <unfinished ...>
+29305 epoll_wait(7,  <unfinished ...>
+29467 <... getpid resumed>)             = 29185
+29467 write(8, "\1\0\0\0\0\0\0\0", 8 <unfinished ...>
+29185 <... poll resumed>)               = 1 ([{fd=8, revents=POLLIN}])
+29467 <... write resumed>)              = 8
+29185 getpid( <unfinished ...>
+29467 sendto(9, "\4&\5READY\vSocket-Type\0\0\0\3REQ\10Iden"..., 58, 0, NULL, 0 <unfinished ...>
+29185 <... getpid resumed>)             = 29185
+29185 read(8,  <unfinished ...>
+29467 <... sendto resumed>)             = 58
+29305 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=2281771008, u64=140396172742656}}], 256, 29994) = 1
+29185 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29467 epoll_wait(7,  <unfinished ...>
+29185 getpid( <unfinished ...>
+29305 recvfrom(10,  <unfinished ...>
+29185 <... getpid resumed>)             = 29185
+29467 <... epoll_wait resumed>[{events=EPOLLOUT, data={u32=872419760, u64=140261619405232}}], 256, -1) = 1
+29185 poll([{fd=8, events=POLLIN}], 1, 0 <unfinished ...>
+29305 <... recvfrom resumed>"\4&\5READY\vSocket-Type\0\0\0\3REQ\10Iden"..., 8192, 0, NULL, NULL) = 58
+29185 <... poll resumed>)               = 0 (Timeout)
+29467 epoll_ctl(7, EPOLL_CTL_MOD, 9, {events=EPOLLIN, data={u32=872419760, u64=140261619405232}} <unfinished ...>
+29185 getpid( <unfinished ...>
+29467 <... epoll_ctl resumed>)          = 0
+29305 getpid( <unfinished ...>
+29185 <... getpid resumed>)             = 29185
+29467 epoll_wait(7,  <unfinished ...>
+29185 poll([{fd=8, events=POLLIN}], 1, 988 <unfinished ...>
+29305 <... getpid resumed>)             = 29303
+29305 write(8, "\1\0\0\0\0\0\0\0", 8)   = 8
+29303 <... poll resumed>)               = 1 ([{fd=8, revents=POLLIN}])
+29305 epoll_ctl(7, EPOLL_CTL_MOD, 10, {events=EPOLLIN|EPOLLOUT, data={u32=2281771008, u64=140396172742656}} <unfinished ...>
+29303 getpid( <unfinished ...>
+29305 <... epoll_ctl resumed>)          = 0
+29303 <... getpid resumed>)             = 29303
+29305 epoll_ctl(7, EPOLL_CTL_MOD, 10, {events=EPOLLIN, data={u32=2281771008, u64=140396172742656}} <unfinished ...>
+29303 read(8,  <unfinished ...>
+29305 <... epoll_ctl resumed>)          = 0
+29303 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29305 epoll_wait(7,  <unfinished ...>
+29303 getpid()                          = 29303
+29303 write(6, "\1\0\0\0\0\0\0\0", 8 <unfinished ...>
+29305 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=482779744, u64=94399568978528}}], 256, -1) = 1
+29303 <... write resumed>)              = 8
+29305 getpid( <unfinished ...>
+29303 getpid( <unfinished ...>
+29305 <... getpid resumed>)             = 29303
+29303 <... getpid resumed>)             = 29303
+29305 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29303 poll([{fd=8, events=POLLIN}], 1, 0 <unfinished ...>
+29305 <... poll resumed>)               = 1 ([{fd=6, revents=POLLIN}])
+29303 <... poll resumed>)               = 0 (Timeout)
+29305 getpid( <unfinished ...>
+29303 getpid( <unfinished ...>
+29305 <... getpid resumed>)             = 29303
+29303 <... getpid resumed>)             = 29303
+29305 read(6,  <unfinished ...>
+29303 poll([{fd=8, events=POLLIN}], 1, 0 <unfinished ...>
+29305 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29303 <... poll resumed>)               = 0 (Timeout)
+29305 getpid( <unfinished ...>
+29303 getpid( <unfinished ...>
+29305 <... getpid resumed>)             = 29303
+29303 <... getpid resumed>)             = 29303
+29305 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29303 write(6, "\1\0\0\0\0\0\0\0", 8 <unfinished ...>
+29305 <... poll resumed>)               = 0 (Timeout)
+29303 <... write resumed>)              = 8
+29305 epoll_wait(7,  <unfinished ...>
+29303 getpid( <unfinished ...>
+29305 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=482779744, u64=94399568978528}}], 256, -1) = 1
+29303 <... getpid resumed>)             = 29303
+29305 getpid( <unfinished ...>
+29303 poll([{fd=8, events=POLLIN}], 1, -1 <unfinished ...>
+29305 <... getpid resumed>)             = 29303
+29305 poll([{fd=6, events=POLLIN}], 1, 0) = 1 ([{fd=6, revents=POLLIN}])
+29305 getpid()                          = 29303
+29305 read(6, "\1\0\0\0\0\0\0\0", 8)    = 8
+29305 epoll_ctl(7, EPOLL_CTL_MOD, 10, {events=EPOLLIN|EPOLLOUT, data={u32=2281771008, u64=140396172742656}}) = 0
+29305 getpid()                          = 29303
+29305 write(8, "\1\0\0\0\0\0\0\0", 8)   = 8
+29303 <... poll resumed>)               = 1 ([{fd=8, revents=POLLIN}])
+29305 sendto(10, "\1\0\0\nOk:0;2;4;6", 14, 0, NULL, 0 <unfinished ...>
+29303 getpid( <unfinished ...>
+29467 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=872419760, u64=140261619405232}}], 256, -1) = 1
+29305 <... sendto resumed>)             = 14
+29303 <... getpid resumed>)             = 29303
+29467 recvfrom(9,  <unfinished ...>
+29305 getpid( <unfinished ...>
+29467 <... recvfrom resumed>"\1\0\0\nOk:0;2;4;6", 8192, 0, NULL, NULL) = 14
+29303 read(8,  <unfinished ...>
+29305 <... getpid resumed>)             = 29303
+29467 getpid( <unfinished ...>
+29305 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29303 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29467 <... getpid resumed>)             = 29185
+29305 <... poll resumed>)               = 0 (Timeout)
+29467 write(8, "\1\0\0\0\0\0\0\0", 8 <unfinished ...>
+29303 getpid( <unfinished ...>
+29305 epoll_wait(7,  <unfinished ...>
+29467 <... write resumed>)              = 8
+29303 <... getpid resumed>)             = 29303
+29185 <... poll resumed>)               = 1 ([{fd=8, revents=POLLIN}])
+29467 epoll_wait(7,  <unfinished ...>
+29305 <... epoll_wait resumed>[{events=EPOLLOUT, data={u32=2281771008, u64=140396172742656}}], 256, -1) = 1
+29185 getpid( <unfinished ...>
+29303 poll([{fd=8, events=POLLIN}], 1, 0 <unfinished ...>
+29185 <... getpid resumed>)             = 29185
+29305 epoll_ctl(7, EPOLL_CTL_MOD, 10, {events=EPOLLIN, data={u32=2281771008, u64=140396172742656}} <unfinished ...>
+29185 read(8,  <unfinished ...>
+29303 <... poll resumed>)               = 0 (Timeout)
+29185 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29305 <... epoll_ctl resumed>)          = 0
+29303 getpid( <unfinished ...>
+29185 getpid( <unfinished ...>
+29305 epoll_wait(7,  <unfinished ...>
+29185 <... getpid resumed>)             = 29185
+29303 <... getpid resumed>)             = 29303
+29185 poll([{fd=8, events=POLLIN}], 1, 0 <unfinished ...>
+29303 poll([{fd=8, events=POLLIN}], 1, -1 <unfinished ...>
+29185 <... poll resumed>)               = 0 (Timeout)
+29185 getpid()                          = 29185
+29185 write(6, "\1\0\0\0\0\0\0\0", 8)   = 8
+29467 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=2025734752, u64=93838471217760}}], 256, -1) = 1
+29185 getpid( <unfinished ...>
+29467 getpid( <unfinished ...>
+29185 <... getpid resumed>)             = 29185
+29467 <... getpid resumed>)             = 29185
+29185 write(4, "\1\0\0\0\0\0\0\0", 8 <unfinished ...>
+29467 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29185 <... write resumed>)              = 8
+29467 <... poll resumed>)               = 1 ([{fd=6, revents=POLLIN}])
+29466 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=2025755936, u64=93838471238944}}], 256, -1) = 1
+29185 write(1, "Ok:0;2;4;6\n", 11 <unfinished ...>
+29467 getpid( <unfinished ...>
+29466 getpid( <unfinished ...>
+29467 <... getpid resumed>)             = 29185
+29185 <... write resumed>)              = 11
+29466 <... getpid resumed>)             = 29185
+29467 read(6,  <unfinished ...>
+29185 write(1, "> ", 2 <unfinished ...>
+29466 getpid( <unfinished ...>
+29467 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29185 <... write resumed>)              = 2
+29466 <... getpid resumed>)             = 29185
+29185 read(0,  <unfinished ...>
+29467 getpid( <unfinished ...>
+29466 poll([{fd=4, events=POLLIN}], 1, 0 <unfinished ...>
+29467 <... getpid resumed>)             = 29185
+29466 <... poll resumed>)               = 1 ([{fd=4, revents=POLLIN}])
+29467 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29466 getpid( <unfinished ...>
+29467 <... poll resumed>)               = 0 (Timeout)
+29466 <... getpid resumed>)             = 29185
+29467 epoll_wait(7,  <unfinished ...>
+29466 read(4, "\1\0\0\0\0\0\0\0", 8)    = 8
+29466 epoll_ctl(5, EPOLL_CTL_ADD, 8, {events=0, data={u32=738200432, u64=140261485185904}}) = 0
+29466 epoll_ctl(5, EPOLL_CTL_MOD, 8, {events=EPOLLIN, data={u32=738200432, u64=140261485185904}}) = 0
+29466 getpid()                          = 29185
+29466 write(6, "\1\0\0\0\0\0\0\0", 8 <unfinished ...>
+29467 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=2025734752, u64=93838471217760}}], 256, -1) = 1
+29466 <... write resumed>)              = 8
+29467 getpid( <unfinished ...>
+29466 getpid( <unfinished ...>
+29467 <... getpid resumed>)             = 29185
+29466 <... getpid resumed>)             = 29185
+29467 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29466 getpid( <unfinished ...>
+29467 <... poll resumed>)               = 1 ([{fd=6, revents=POLLIN}])
+29466 <... getpid resumed>)             = 29185
+29467 getpid()                          = 29185
+29466 poll([{fd=4, events=POLLIN}], 1, 0 <unfinished ...>
+29467 read(6,  <unfinished ...>
+29466 <... poll resumed>)               = 0 (Timeout)
+29467 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29466 epoll_wait(5,  <unfinished ...>
+29467 epoll_ctl(7, EPOLL_CTL_MOD, 9, {events=EPOLLIN|EPOLLOUT, data={u32=872419760, u64=140261619405232}}) = 0
+29467 getpid()                          = 29185
+29467 write(8, "\1\0\0\0\0\0\0\0", 8)   = 8
+29466 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=738200432, u64=140261485185904}}], 256, -1) = 1
+29467 epoll_ctl(7, EPOLL_CTL_MOD, 9, {events=EPOLLIN, data={u32=872419760, u64=140261619405232}} <unfinished ...>
+29466 getpid( <unfinished ...>
+29467 <... epoll_ctl resumed>)          = 0
+29466 <... getpid resumed>)             = 29185
+29467 getpid( <unfinished ...>
+29466 poll([{fd=8, events=POLLIN}], 1, 0 <unfinished ...>
+29467 <... getpid resumed>)             = 29185
+29466 <... poll resumed>)               = 1 ([{fd=8, revents=POLLIN}])
+29467 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29466 getpid( <unfinished ...>
+29467 <... poll resumed>)               = 0 (Timeout)
+29466 <... getpid resumed>)             = 29185
+29467 epoll_wait(7,  <unfinished ...>
+29466 read(8, "\1\0\0\0\0\0\0\0", 8)    = 8
+29466 getpid()                          = 29185
+29466 write(6, "\1\0\0\0\0\0\0\0", 8 <unfinished ...>
+29467 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=2025734752, u64=93838471217760}}], 256, 999) = 1
+29466 <... write resumed>)              = 8
+29467 getpid( <unfinished ...>
+29466 getpid( <unfinished ...>
+29467 <... getpid resumed>)             = 29185
+29466 <... getpid resumed>)             = 29185
+29467 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29466 poll([{fd=8, events=POLLIN}], 1, 0 <unfinished ...>
+29467 <... poll resumed>)               = 1 ([{fd=6, revents=POLLIN}])
+29466 <... poll resumed>)               = 0 (Timeout)
+29467 getpid( <unfinished ...>
+29466 epoll_wait(5,  <unfinished ...>
+29467 <... getpid resumed>)             = 29185
+29467 read(6, "\1\0\0\0\0\0\0\0", 8)    = 8
+29467 getpid()                          = 29185
+29467 write(8, "\1\0\0\0\0\0\0\0", 8)   = 8
+29466 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=738200432, u64=140261485185904}}], 256, -1) = 1
+29467 epoll_ctl(7, EPOLL_CTL_DEL, 9, 0x7f91340011b4 <unfinished ...>
+29466 getpid( <unfinished ...>
+29467 <... epoll_ctl resumed>)          = 0
+29466 <... getpid resumed>)             = 29185
+29467 close(9 <unfinished ...>
+29466 poll([{fd=8, events=POLLIN}], 1, 0 <unfinished ...>
+29467 <... close resumed>)              = 0
+29466 <... poll resumed>)               = 1 ([{fd=8, revents=POLLIN}])
+29305 <... epoll_wait resumed>[{events=EPOLLIN|EPOLLHUP, data={u32=2281771008, u64=140396172742656}}], 256, -1) = 1
+29467 getpid( <unfinished ...>
+29466 getpid( <unfinished ...>
+29467 <... getpid resumed>)             = 29185
+29305 recvfrom(10,  <unfinished ...>
+29467 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29466 <... getpid resumed>)             = 29185
+29467 <... poll resumed>)               = 0 (Timeout)
+29305 <... recvfrom resumed>"", 8192, 0, NULL, NULL) = 0
+29467 epoll_wait(7,  <unfinished ...>
+29466 read(8,  <unfinished ...>
+29305 getpid( <unfinished ...>
+29466 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29305 <... getpid resumed>)             = 29303
+29466 getpid( <unfinished ...>
+29305 write(6, "\1\0\0\0\0\0\0\0", 8 <unfinished ...>
+29466 <... getpid resumed>)             = 29185
+29305 <... write resumed>)              = 8
+29466 poll([{fd=8, events=POLLIN}], 1, 0 <unfinished ...>
+29305 epoll_ctl(7, EPOLL_CTL_DEL, 10, 0x7fb088011004 <unfinished ...>
+29466 <... poll resumed>)               = 0 (Timeout)
+29305 <... epoll_ctl resumed>)          = 0
+29466 epoll_ctl(5, EPOLL_CTL_DEL, 8, 0x7f912c000b74 <unfinished ...>
+29305 close(10 <unfinished ...>
+29466 <... epoll_ctl resumed>)          = 0
+29466 getpid( <unfinished ...>
+29305 <... close resumed>)              = 0
+29466 <... getpid resumed>)             = 29185
+29305 epoll_wait(7,  <unfinished ...>
+29466 write(4, "\1\0\0\0\0\0\0\0", 8 <unfinished ...>
+29305 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=482779744, u64=94399568978528}}], 256, -1) = 1
+29466 <... write resumed>)              = 8
+29305 getpid( <unfinished ...>
+29466 close(8 <unfinished ...>
+29305 <... getpid resumed>)             = 29303
+29466 <... close resumed>)              = 0
+29305 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29466 epoll_wait(5,  <unfinished ...>
+29305 <... poll resumed>)               = 1 ([{fd=6, revents=POLLIN}])
+29466 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=2025755936, u64=93838471238944}}], 256, -1) = 1
+29305 getpid( <unfinished ...>
+29466 getpid( <unfinished ...>
+29305 <... getpid resumed>)             = 29303
+29466 <... getpid resumed>)             = 29185
+29305 read(6,  <unfinished ...>
+29466 getpid( <unfinished ...>
+29305 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29466 <... getpid resumed>)             = 29185
+29305 getpid( <unfinished ...>
+29466 poll([{fd=4, events=POLLIN}], 1, 0 <unfinished ...>
+29305 <... getpid resumed>)             = 29303
+29466 <... poll resumed>)               = 1 ([{fd=4, revents=POLLIN}])
+29305 write(8, "\1\0\0\0\0\0\0\0", 8 <unfinished ...>
+29466 getpid()                          = 29185
+29305 <... write resumed>)              = 8
+29466 read(4,  <unfinished ...>
+29303 <... poll resumed>)               = 1 ([{fd=8, revents=POLLIN}])
+29466 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29305 getpid( <unfinished ...>
+29466 getpid( <unfinished ...>
+29303 getpid( <unfinished ...>
+29466 <... getpid resumed>)             = 29185
+29305 <... getpid resumed>)             = 29303
+29466 getpid( <unfinished ...>
+29303 <... getpid resumed>)             = 29303
+29466 <... getpid resumed>)             = 29185
+29305 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29466 poll([{fd=4, events=POLLIN}], 1, 0 <unfinished ...>
+29303 read(8,  <unfinished ...>
+29305 <... poll resumed>)               = 0 (Timeout)
+29466 <... poll resumed>)               = 0 (Timeout)
+29303 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29466 epoll_wait(5,  <unfinished ...>
+29305 epoll_wait(7,  <unfinished ...>
+29303 getpid()                          = 29303
+29303 poll([{fd=8, events=POLLIN}], 1, 0) = 0 (Timeout)
+29303 getpid()                          = 29303
+29303 write(6, "\1\0\0\0\0\0\0\0", 8 <unfinished ...>
+29305 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=482779744, u64=94399568978528}}], 256, -1) = 1
+29303 <... write resumed>)              = 8
+29305 getpid( <unfinished ...>
+29303 getpid( <unfinished ...>
+29305 <... getpid resumed>)             = 29303
+29303 <... getpid resumed>)             = 29303
+29305 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29303 poll([{fd=8, events=POLLIN}], 1, -1 <unfinished ...>
+29305 <... poll resumed>)               = 1 ([{fd=6, revents=POLLIN}])
+29305 getpid()                          = 29303
+29305 read(6, "\1\0\0\0\0\0\0\0", 8)    = 8
+29305 getpid()                          = 29303
+29305 write(8, "\1\0\0\0\0\0\0\0", 8)   = 8
+29303 <... poll resumed>)               = 1 ([{fd=8, revents=POLLIN}])
+29305 getpid()                          = 29303
+29303 getpid( <unfinished ...>
+29305 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29303 <... getpid resumed>)             = 29303
+29305 <... poll resumed>)               = 0 (Timeout)
+29303 read(8,  <unfinished ...>
+29305 epoll_wait(7,  <unfinished ...>
+29303 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29303 getpid()                          = 29303
+29303 poll([{fd=8, events=POLLIN}], 1, 0) = 0 (Timeout)
+29303 getpid()                          = 29303
+29303 poll([{fd=8, events=POLLIN}], 1, -1 <unfinished ...>
+29185 <... read resumed>"exit\n", 1024) = 5
+29185 kill(29303, SIGTERM)              = 0
+29303 <... poll resumed>)               = ? ERESTART_RESTARTBLOCK (Interrupted by signal)
+29185 wait4(29303,  <unfinished ...>
+29303 --- SIGTERM {si_signo=SIGTERM, si_code=SI_USER, si_pid=29185, si_uid=1000} ---
+29305 <... epoll_wait resumed>)         = ? <unavailable>
+29304 <... epoll_wait resumed> <unfinished ...>) = ?
+29304 +++ killed by SIGTERM +++
+29305 +++ killed by SIGTERM +++
+29303 +++ killed by SIGTERM +++
+29185 <... wait4 resumed>NULL, 0, NULL) = 29303
+29185 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_KILLED, si_pid=29303, si_uid=1000, si_status=SIGTERM, si_utime=0, si_stime=3} ---
+29185 wait4(-1, NULL, WNOHANG, NULL)    = 0
+29185 rt_sigreturn({mask=[]})           = 29303
+29185 unlink("/tmp/node_10")            = 0
+29185 kill(29381, SIGTERM)              = 0
+29381 <... poll resumed>)               = ? ERESTART_RESTARTBLOCK (Interrupted by signal)
+29185 wait4(29381,  <unfinished ...>
+29381 --- SIGTERM {si_signo=SIGTERM, si_code=SI_USER, si_pid=29185, si_uid=1000} ---
+29384 <... epoll_wait resumed> <unfinished ...>) = ?
+29383 <... epoll_wait resumed> <unfinished ...>) = ?
+29384 +++ killed by SIGTERM +++
+29383 +++ killed by SIGTERM +++
+29381 +++ killed by SIGTERM +++
+29185 <... wait4 resumed>NULL, 0, NULL) = 29381
+29185 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_KILLED, si_pid=29381, si_uid=1000, si_status=SIGTERM, si_utime=0, si_stime=4} ---
+29185 wait4(-1, NULL, WNOHANG, NULL)    = -1 ECHILD (No child processes)
+29185 rt_sigreturn({mask=[]})           = 29381
+29185 unlink("/tmp/node_20")            = 0
+29185 getpid()                          = 29185
+29185 write(4, "\1\0\0\0\0\0\0\0", 8)   = 8
+29466 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=2025755936, u64=93838471238944}}], 256, -1) = 1
+29185 getpid( <unfinished ...>
+29466 getpid( <unfinished ...>
+29185 <... getpid resumed>)             = 29185
+29466 <... getpid resumed>)             = 29185
+29185 getpid( <unfinished ...>
+29466 getpid( <unfinished ...>
+29185 <... getpid resumed>)             = 29185
+29466 <... getpid resumed>)             = 29185
+29185 poll([{fd=3, events=POLLIN}], 1, -1 <unfinished ...>
+29466 poll([{fd=4, events=POLLIN}], 1, 0) = 1 ([{fd=4, revents=POLLIN}])
+29466 getpid()                          = 29185
+29466 read(4, "\1\0\0\0\0\0\0\0", 8)    = 8
+29466 getpid()                          = 29185
+29466 write(3, "\1\0\0\0\0\0\0\0", 8 <unfinished ...>
+29185 <... poll resumed>)               = 1 ([{fd=3, revents=POLLIN}])
+29466 <... write resumed>)              = 8
+29185 getpid( <unfinished ...>
+29466 epoll_ctl(5, EPOLL_CTL_DEL, 4, 0x555878be9524 <unfinished ...>
+29185 <... getpid resumed>)             = 29185
+29466 <... epoll_ctl resumed>)          = 0
+29185 read(3,  <unfinished ...>
+29466 getpid( <unfinished ...>
+29185 <... read resumed>"\1\0\0\0\0\0\0\0", 8) = 8
+29466 <... getpid resumed>)             = 29185
+29185 getpid( <unfinished ...>
+29466 getpid( <unfinished ...>
+29185 <... getpid resumed>)             = 29185
+29466 <... getpid resumed>)             = 29185
+29185 write(6, "\1\0\0\0\0\0\0\0", 8 <unfinished ...>
+29466 poll([{fd=4, events=POLLIN}], 1, 0 <unfinished ...>
+29185 <... write resumed>)              = 8
+29466 <... poll resumed>)               = 0 (Timeout)
+29185 futex(0x7f913a290910, FUTEX_WAIT_BITSET|FUTEX_CLOCK_REALTIME, 29467, NULL, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+29467 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=2025734752, u64=93838471217760}}], 256, -1) = 1
+29466 rt_sigprocmask(SIG_BLOCK, ~[RT_1],  <unfinished ...>
+29467 getpid( <unfinished ...>
+29466 <... rt_sigprocmask resumed>NULL, 8) = 0
+29467 <... getpid resumed>)             = 29185
+29466 madvise(0x7f913a291000, 8368128, MADV_DONTNEED <unfinished ...>
+29467 poll([{fd=6, events=POLLIN}], 1, 0 <unfinished ...>
+29466 <... madvise resumed>)            = 0
+29467 <... poll resumed>)               = 1 ([{fd=6, revents=POLLIN}])
+29466 exit(0 <unfinished ...>
+29467 getpid( <unfinished ...>
+29466 <... exit resumed>)               = ?
+29467 <... getpid resumed>)             = 29185
+29466 +++ exited with 0 +++
+29467 read(6, "\1\0\0\0\0\0\0\0", 8)    = 8
+29467 epoll_ctl(7, EPOLL_CTL_DEL, 6, 0x555878be4264) = 0
+29467 getpid()                          = 29185
+29467 poll([{fd=6, events=POLLIN}], 1, 0) = 0 (Timeout)
+29467 rt_sigprocmask(SIG_BLOCK, ~[RT_1], NULL, 8) = 0
+29467 madvise(0x7f9139a90000, 8368128, MADV_DONTNEED) = 0
+29467 exit(0)                           = ?
+29185 <... futex resumed>)              = 0
+29467 +++ exited with 0 +++
+29185 close(7)                          = 0
+29185 close(6)                          = 0
+29185 close(5)                          = 0
+29185 close(4)                          = 0
+29185 close(3)                          = 0
+29185 write(1, "Exiting...\n", 11)      = 11
+29185 exit_group(0)                     = ?
+29185 +++ exited with 0 +++
