@@ -1,0 +1,7 @@
+{
+    "jobs": [
+        { "name": "A", "dependencies": ["C"] },
+        { "name": "B", "dependencies": ["A"] },
+        { "name": "C", "dependencies": ["B"] }
+    ]
+}
