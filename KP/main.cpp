@@ -39,52 +39,35 @@ public:
     }
 
     void execute() {
-        std::vector<std::thread> threads;
         std::queue<std::string> readyQueue;
-
-        // Initialize ready queue with jobs that have no dependencies
+    
+        // Инициализируем очередь задач без зависимостей
         for (auto& job : jobs) {
             if (job->dependencies.empty()) {
                 readyQueue.push(job->name);
             }
         }
-
-        // Start threads for all jobs
-        for (auto& job : jobs) {
-            threads.emplace_back(&DAGExecutor::runJob, this, job->name);
-        }
-
-        // Main loop to process ready jobs
+    
+        // Основной цикл выполнения DAG
         while (!readyQueue.empty()) {
             std::string jobName = readyQueue.front();
             readyQueue.pop();
-
-            // Mark job as completed
+    
+            // Выполняем задание
+            runJob(jobName);
+    
+            // Обновляем зависимости
             {
                 std::lock_guard<std::mutex> lock(mtx);
-                jobsByName[jobName]->completed = true;
-                std::cout << "Job " << jobName << " completed successfully." << std::endl;
-            }
-
-            // Signal dependent jobs
-            for (auto& dependent : adjList[jobName]) {
-                {
-                    std::lock_guard<std::mutex> lock(mtx);
+                for (auto& dependent : adjList[jobName]) {
                     if (--inDegree[dependent] == 0) {
                         readyQueue.push(dependent);
                     }
                 }
             }
         }
-
-        // Wait for all threads to finish
-        for (auto& thread : threads) {
-            if (thread.joinable()) {
-                thread.join();
-            }
-        }
-
-        // Check if any job failed
+    
+        // Проверяем наличие ошибок
         if (failureFlag) {
             std::cerr << "DAG execution failed due to job failure." << std::endl;
             exit(1);
@@ -137,53 +120,63 @@ private:
     }
 
     
-    bool validateDAG() {/////////
+    bool validateDAG() {
         std::queue<std::string> queue;
         std::unordered_map<std::string, int> localInDegree = inDegree;
-
-        // Initialize queue with jobs that have no dependencies
+    
+        // Ищем все стартовые вершины
         for (auto& job : jobs) {
             if (localInDegree[job->name] == 0) {
                 queue.push(job->name);
             }
         }
-
+    
+        if (queue.empty()) {
+            throw std::runtime_error("No start job found in DAG.");
+        }
+    
         int count = 0;
         while (!queue.empty()) {
             std::string u = queue.front();
             queue.pop();
             count++;
-
+    
             for (auto& v : adjList[u]) {
                 if (--localInDegree[v] == 0) {
                     queue.push(v);
                 }
             }
         }
+    
+        if (count != jobs.size()) {
+            throw std::runtime_error("Cycle detected in DAG.");
+        }
+    
+        return true;
+    }    
 
-        // If count != jobs.size(), то есть цикл
-        return count == jobs.size();
-    }
-
-    bool isConnected() {//////////
+    bool isConnected() {
         std::unordered_set<std::string> visited;
-        std::string startJob = "";
-
-        // Find a start job (no dependencies)
+        
+        // Ищем все стартовые вершины (inDegree == 0)
+        std::vector<std::string> startJobs;
         for (auto& job : jobs) {
             if (job->dependencies.empty()) {
-                startJob = job->name;
-                break;
+                startJobs.push_back(job->name);
             }
         }
-
-        if (startJob.empty()) {
-            return false; // No start job found
+    
+        if (startJobs.empty()) {
+            return false; // Если нет стартовых задач
         }
-
-        dfs(startJob, visited);
-        return visited.size() == jobs.size();
-    }
+    
+        // Запускаем DFS для всех стартовых задач
+        for (const auto& startJob : startJobs) {
+            dfs(startJob, visited);
+        }
+    
+        return visited.size() == jobs.size(); // Проверяем, дошли ли до всех вершин
+    }    
 
     void dfs(const std::string& u, std::unordered_set<std::string>& visited) {//////////
         visited.insert(u);
