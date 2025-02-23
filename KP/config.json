@@ -1,20 +1,8 @@
 {
     "jobs": [
-        {
-            "name": "A",
-            "dependencies": []
-        },
-        {
-            "name": "B",
-            "dependencies": ["A"]
-        },
-        {
-            "name": "C",
-            "dependencies": ["A"]
-        },
-        {
-            "name": "D",
-            "dependencies": ["B", "C"]
-        }
+        { "name": "A", "dependencies": [] },
+        { "name": "B", "dependencies": ["A"] },
+        { "name": "C", "dependencies": ["A"] },
+        { "name": "D", "dependencies": ["B", "C"] }
     ]
 }
