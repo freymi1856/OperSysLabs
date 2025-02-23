@@ -25,7 +25,7 @@ struct Job {
 
 class DAGExecutor {
 public:
-    DAGExecutor(const std::string& filename) {/////
+    DAGExecutor(const std::string& filename) {
         parseConfig(filename);
         if (!validateDAG()) {
             throw std::runtime_error("Cycle detected in DAG.");
@@ -84,7 +84,7 @@ private:
     std::mutex mtx;
     std::atomic<bool> failureFlag{false};
 
-    void parseConfig(const std::string& filename) {/////
+    void parseConfig(const std::string& filename) {
         std::ifstream file(filename);
         if (!file.is_open()) {
             throw std::runtime_error("Could not open file: " + filename);
@@ -131,10 +131,6 @@ private:
             }
         }
     
-        if (queue.empty()) {
-            throw std::runtime_error("No start job found in DAG.");
-        }
-    
         int count = 0;
         while (!queue.empty()) {
             std::string u = queue.front();
@@ -148,11 +144,8 @@ private:
             }
         }
     
-        if (count != jobs.size()) {
-            throw std::runtime_error("Cycle detected in DAG.");
-        }
-    
-        return true;
+        // Если количество посещённых задач не совпадает с общим числом задач — есть цикл
+        return count == static_cast<int>(jobs.size());
     }    
 
     bool isConnected() {
@@ -178,7 +171,7 @@ private:
         return visited.size() == jobs.size(); // Проверяем, дошли ли до всех вершин
     }    
 
-    void dfs(const std::string& u, std::unordered_set<std::string>& visited) {//////////
+    void dfs(const std::string& u, std::unordered_set<std::string>& visited) {
         visited.insert(u);
         for (auto& v : adjList[u]) {
             if (visited.find(v) == visited.end()) {
@@ -187,7 +180,7 @@ private:
         }
     }
 
-    bool hasStartAndEndJobs() {///////
+    bool hasStartAndEndJobs() {
         int startCount = 0;
         int endCount = 0;
 
@@ -210,7 +203,7 @@ private:
         return startCount > 0 && endCount > 0;
     }
 
-    void runJob(const std::string& name) {////////////////////
+    void runJob(const std::string& name) {
         try {
             // Simulate job execution
             std::this_thread::sleep_for(std::chrono::seconds(1));
