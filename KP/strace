@@ -1,0 +1,84 @@
+15586 execve("./dag_executor", ["./dag_executor", "config.json"], 0x7ffefee66f90 /* 36 vars */) = 0
+15586 brk(NULL)                         = 0x56168e4fe000
+15586 arch_prctl(0x3001 /* ARCH_??? */, 0x7ffc7c1acd80) = -1 EINVAL (Invalid argument)
+15586 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fea106a7000
+15586 access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+15586 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+15586 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=20287, ...}, AT_EMPTY_PATH) = 0
+15586 mmap(NULL, 20287, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fea106a2000
+15586 close(3)                          = 0
+15586 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = 3
+15586 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+15586 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=2260296, ...}, AT_EMPTY_PATH) = 0
+15586 mmap(NULL, 2275520, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fea10476000
+15586 mprotect(0x7fea10510000, 1576960, PROT_NONE) = 0
+15586 mmap(0x7fea10510000, 1118208, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x9a000) = 0x7fea10510000
+15586 mmap(0x7fea10621000, 454656, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1ab000) = 0x7fea10621000
+15586 mmap(0x7fea10691000, 57344, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x21a000) = 0x7fea10691000
+15586 mmap(0x7fea1069f000, 10432, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fea1069f000
+15586 close(3)                          = 0
+15586 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
+15586 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+15586 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=125488, ...}, AT_EMPTY_PATH) = 0
+15586 mmap(NULL, 127720, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fea10456000
+15586 mmap(0x7fea10459000, 94208, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7fea10459000
+15586 mmap(0x7fea10470000, 16384, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a000) = 0x7fea10470000
+15586 mmap(0x7fea10474000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1d000) = 0x7fea10474000
+15586 close(3)                          = 0
+15586 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+15586 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+15586 pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+15586 pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+15586 pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0I\17\357\204\3$\f\221\2039x\324\224\323\236S"..., 68, 896) = 68
+15586 newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+15586 pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+15586 mmap(NULL, 2264656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fea1022d000
+15586 mprotect(0x7fea10255000, 2023424, PROT_NONE) = 0
+15586 mmap(0x7fea10255000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7fea10255000
+15586 mmap(0x7fea103ea000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x7fea103ea000
+15586 mmap(0x7fea10443000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x215000) = 0x7fea10443000
+15586 mmap(0x7fea10449000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fea10449000
+15586 close(3)                          = 0
+15586 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+15586 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+15586 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=940560, ...}, AT_EMPTY_PATH) = 0
+15586 mmap(NULL, 942344, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fea10146000
+15586 mmap(0x7fea10154000, 507904, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe000) = 0x7fea10154000
+15586 mmap(0x7fea101d0000, 372736, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8a000) = 0x7fea101d0000
+15586 mmap(0x7fea1022b000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe4000) = 0x7fea1022b000
+15586 close(3)                          = 0
+15586 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fea10144000
+15586 arch_prctl(ARCH_SET_FS, 0x7fea101453c0) = 0
+15586 set_tid_address(0x7fea10145690)   = 15586
+15586 set_robust_list(0x7fea101456a0, 24) = 0
+15586 rseq(0x7fea10145d60, 0x20, 0, 0x53053053) = 0
+15586 mprotect(0x7fea10443000, 16384, PROT_READ) = 0
+15586 mprotect(0x7fea1022b000, 4096, PROT_READ) = 0
+15586 mprotect(0x7fea10474000, 4096, PROT_READ) = 0
+15586 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fea10142000
+15586 mprotect(0x7fea10691000, 45056, PROT_READ) = 0
+15586 mprotect(0x56168bbf3000, 4096, PROT_READ) = 0
+15586 mprotect(0x7fea106e1000, 8192, PROT_READ) = 0
+15586 prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+15586 munmap(0x7fea106a2000, 20287)     = 0
+15586 getrandom("\x6c\xde\xa2\x11\xb6\x6f\xee\xc8", 8, GRND_NONBLOCK) = 8
+15586 brk(NULL)                         = 0x56168e4fe000
+15586 brk(0x56168e51f000)               = 0x56168e51f000
+15586 futex(0x7fea1069f77c, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+15586 openat(AT_FDCWD, "config.json", O_RDONLY) = 3
+15586 read(3, "{\n    \"jobs\": [\n        { \"name\""..., 8191) = 217
+15586 close(3)                          = 0
+15586 newfstatat(1, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x4), ...}, AT_EMPTY_PATH) = 0
+15586 write(1, "Start job: A\n", 13)    = 13
+15586 write(1, "End job: D\n", 11)      = 11
+15586 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=1, tv_nsec=0}, 0x7ffc7c1acb70) = 0
+15586 write(1, "Job A completed successfully.\n", 30) = 30
+15586 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=1, tv_nsec=0}, 0x7ffc7c1acb70) = 0
+15586 write(1, "Job B completed successfully.\n", 30) = 30
+15586 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=1, tv_nsec=0}, 0x7ffc7c1acb70) = 0
+15586 write(1, "Job C completed successfully.\n", 30) = 30
+15586 clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=1, tv_nsec=0}, 0x7ffc7c1acb70) = 0
+15586 write(1, "Job D completed successfully.\n", 30) = 30
+15586 write(1, "DAG execution completed successf"..., 38) = 38
+15586 exit_group(0)                     = ?
+15586 +++ exited with 0 +++

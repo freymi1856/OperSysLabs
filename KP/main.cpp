@@ -92,7 +92,7 @@ private:
         json j;
         file >> j;
 
-        // Parse jobs and dependencies
+        // Создаем задачи и заполняем список завичимостей
         for (auto& elem : j["jobs"]) {
             auto job = std::make_unique<Job>();
             job->name = elem["name"];
@@ -100,7 +100,7 @@ private:
             jobs.push_back(std::move(job));
         }
 
-        // Build adjacency list and in-degree map
+        // Инициализируем список смежности и количество входящих ребер
         for (auto& job : jobs) {
             adjList[job->name] = {};
             inDegree[job->name] = 0;
@@ -113,7 +113,6 @@ private:
             }
         }
 
-        // Populate jobsByName
         for (auto& job : jobs) {
             jobsByName[job->name] = job.get();
         }
@@ -144,7 +143,7 @@ private:
             }
         }
     
-        // Если количество посещённых задач не совпадает с общим числом задач — есть цикл
+        // Если количество посещенных задач не совпадает с общим числом задач — есть цикл
         return count == static_cast<int>(jobs.size());
     }    
 
@@ -184,7 +183,7 @@ private:
         int startCount = 0;
         int endCount = 0;
 
-        // Check for start jobs (no dependencies)
+        // Проверяем на стартовые джобы
         for (auto& job : jobs) {
             if (job->dependencies.empty()) {
                 startCount++;
@@ -192,7 +191,7 @@ private:
             }
         }
 
-        // Check for end jobs (no dependents)
+        // Проверяем на конечные джобы
         for (auto& job : jobs) {
             if (adjList[job->name].empty()) {
                 endCount++;
@@ -205,7 +204,7 @@ private:
 
     void runJob(const std::string& name) {
         try {
-            // Simulate job execution
+            // Имитируем выполнение джобы
             std::this_thread::sleep_for(std::chrono::seconds(1));
             std::lock_guard<std::mutex> lock(mtx);
             jobsByName[name]->completed = true;
